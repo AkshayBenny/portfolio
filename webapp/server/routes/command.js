@@ -2,28 +2,32 @@ const router = require('express').Router();
 const Command = require('../models/Command');
 
 //Create new command
-router.post('/command', async (req, res) => {
+router.post('/', async (req, res) => {
   const newCommand = new Command(req.body);
   try {
     const savedCommand = await newCommand.save();
-    res.status(200).json(savedCommand);
+    res
+      .status(200)
+      .json({ message: 'New command added successfully', savedCommand });
   } catch (error) {
-    res.status(500).json(error);
+    res
+      .status(500)
+      .json({ message: 'Could not add new command', error: error });
   }
 });
 
 //get all commands
-router.get('/command', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     let commands = await Command.find().sort({ createdAt: -1 }).limit(1);
     res.status(200).json(commands);
   } catch (error) {
-    res.status(500).json({ message: 'Could not fetch commands', error });
+    res.status(500).json({ message: 'Could not fetch all commands', error });
   }
 });
 
 //get a command based on ID
-router.get('/command/find/:id', async (req, res) => {
+router.get('/find/:id', async (req, res) => {
   try {
     const command = await Command.findById(req.params.id);
 
