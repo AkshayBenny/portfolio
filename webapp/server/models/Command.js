@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const CommandSchema = new Schema(
   {
-    id:{type:String, required:true},
+    id: { type: String },
     command: { type: String, required: true },
   },
   { timestamps: true }
