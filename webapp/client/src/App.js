@@ -3,7 +3,7 @@ import useSpeechToText from 'react-hook-speech-to-text';
 
 export default function App() {
   const [data, setData] = useState([]);
-  const [voiceCommand, setVoiceCommand] = useState("")
+  const [voiceCommand, setVoiceCommand] = useState('');
   const {
     error,
     interimResult,
@@ -17,25 +17,32 @@ export default function App() {
   });
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/commands')
-      .then((res) => res.json())
+    try {
+      fetch('http://localhost:8000/api/commands')
+        .then((res) => res.json())
 
-      .then((data) => setData(data));
+        .then((data) => setData(data));
+    } catch (error) {
+      console.log('Error fetching data: ' + error);
+    }
   }, []);
 
   useEffect(() => {
-   
-    fetch('http://localhost:8000/api/commands', {
-      method: 'POST',
-      
-      // headers:{
+    try {
+      fetch('http://localhost:8000/api/commands', {
+        method: 'POST',
 
-      // }
-    })
-      .then((res) => res.json())
-
-      .then((data) => setData(data));
-  }, [voiceCommand]);
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then((res) => res.json())
+        .then((myRes) => console.log(myRes));
+    } catch (error) {
+      console.log('Error posting data: ' + error);
+    }
+  }, [voiceCommand, data]);
 
   console.log(data);
   if (error) return <p>Web Speech API is not available in this browser 🤷‍</p>;
@@ -54,10 +61,9 @@ export default function App() {
         </button>
         <ul>
           {results.map((result) => {
-            setVoiceCommand(result)
-            return (
-            <li  key={result.timestamp}>{result.transcript}</li>
-          )})}
+            setVoiceCommand(result);
+            return <li key={result.timestamp}>{result.transcript}</li>;
+          })}
           {interimResult && <li>{interimResult}</li>}
         </ul>
       </div>
