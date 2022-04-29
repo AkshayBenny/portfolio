@@ -20,7 +20,8 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     let commands = await Command.find().sort({ createdAt: -1 }).limit(1);
-    res.status(200).json(commands);
+    let command = commands[0].command;
+    res.status(200).json(command);
   } catch (error) {
     res.status(500).json({ message: 'Could not fetch all commands', error });
   }
