@@ -6,7 +6,9 @@ const CommandSchema = new Schema(
   {
     id: { type: String },
     command: { type: String, required: true },
+    read: { type: Boolean, required: true, default: false },
   },
+
   { timestamps: true }
 );
 

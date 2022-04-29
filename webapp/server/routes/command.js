@@ -30,37 +30,36 @@ router.get('/', async (req, res) => {
 router.get('/find/:id', async (req, res) => {
   try {
     const command = await Command.findById(req.params.id);
-
     res.status(200).json(command);
   } catch (error) {
     res.status(500).json(error);
   }
 });
 
-//update product
-// router.put('/:id', verifyTokenAndAuthorization, async (req, res) => {
-//   try {
-//     const updatedProduct = await Product.findByIdAndUpdate(
-//       req.params.id,
-//       {
-//         $set: req.body,
-//       },
-//       { new: true }
-//     );
-//     res.status(200).json(updatedProduct);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+// delete command
+router.delete('/:id', async (req, res) => {
+  try {
+    await Product.findByIdAndDelete(req.params.id);
+    res.status(200).json('Product has been deleted...');
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
 
-//delete
-// router.delete('/:id', verifyTokenAndAuthorization, async (req, res) => {
-//   try {
-//     await Product.findByIdAndDelete(req.params.id);
-//     res.status(200).json('Product has been deleted...');
-//   } catch (error) {
-//     res.status(500).json(error);
-//   }
-// });
+//update command status
+router.put('/:id', async (req, res) => {
+  try {
+    const updatedCommand = await Product.findByIdAndUpdate(
+      req.params.id,
+      {
+        $set: req.body,
+      },
+      { new: true }
+    );
+    res.status(200).json(updatedCommand);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;

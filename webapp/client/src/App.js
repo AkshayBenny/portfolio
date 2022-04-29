@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import useSpeechToText from 'react-hook-speech-to-text';
 
 export default function App() {
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
   const [voiceCommand, setVoiceCommand] = useState('');
+
   const {
     error,
     interimResult,
@@ -16,35 +17,36 @@ export default function App() {
     useLegacyResults: false,
   });
 
-  useEffect(() => {
-    try {
-      fetch('http://localhost:8000/api/commands')
-        .then((res) => res.json())
+  // useEffect(() => {
+  //   try {
+  //     fetch('http://localhost:8000/api/commands')
+  //       .then((res) => res.json())
 
-        .then((data) => setData(data));
-    } catch (error) {
-      console.log('Error fetching data: ' + error);
-    }
-  }, []);
+  //       .then((data) => setData(data));
+  //   } catch (error) {
+  //     console.log('Error fetching data: ' + error);
+  //   }
+  // }, []);
+  console.log(voiceCommand);
 
-  useEffect(() => {
-    try {
-      fetch('http://localhost:8000/api/commands', {
-        method: 'POST',
+  // useEffect(() => {
+  //   try {
+  //     fetch('http://localhost:8000/api/commands', {
+  //       method: 'POST',
 
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-        .then((res) => res.json())
-        .then((myRes) => console.log(myRes));
-    } catch (error) {
-      console.log('Error posting data: ' + error);
-    }
-  }, [voiceCommand, data]);
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify(voiceCommand),
+  //     })
+  //       .then((res) => res.json())
+  //       .then((myRes) => console.log(myRes));
+  //   } catch (error) {
+  //     console.log('Error posting data: ' + error);
+  //   }
+  // }, [voiceCommand]);
 
-  console.log(data);
+  // console.log(data);
   if (error) return <p>Web Speech API is not available in this browser 🤷‍</p>;
 
   return (
@@ -61,7 +63,20 @@ export default function App() {
         </button>
         <ul>
           {results.map((result) => {
-            setVoiceCommand(result);
+            try {
+              fetch('http://localhost:8000/api/commands', {
+                method: 'POST',
+
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ command: result.transcript }),
+              })
+                .then((res) => res.json())
+                .then((myRes) => console.log(myRes));
+            } catch (error) {
+              console.log('Error posting data: ' + error);
+            }
             return <li key={result.timestamp}>{result.transcript}</li>;
           })}
           {interimResult && <li>{interimResult}</li>}
