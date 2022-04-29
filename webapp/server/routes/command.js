@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-//get all commands
+//get latest commands
 router.get('/', async (req, res) => {
   try {
     let commands = await Command.find().sort({ createdAt: -1 }).limit(1);
