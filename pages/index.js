@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import About from '../components/About'
 import Hero from '../components/Hero'
 import Portfolio from '../components/Portfolio'
 
@@ -16,9 +17,10 @@ export default function Home() {
         />
       </Head>
 
-      <main className='bg-black min-h-screen  md:px-16 font-Poppins'>
+      <main className='bg-black min-h-screen font-Poppins'>
         <Hero />
         <Portfolio />
+        <About />
       </main>
     </div>
   )
