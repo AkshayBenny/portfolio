@@ -2,4 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@layer base {
+  .gradient-text {
+    text-transform: uppercase;
+    background: linear-gradient(to right, #1745a9 0%, #a019df 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

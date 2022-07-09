@@ -3,18 +3,16 @@ import { ArrowRightIcon } from '@heroicons/react/outline'
 const ProjectCard = ({ order, image, title, desc, tag, gitLink, liveLink }) => {
   const tags = tag.split(',')
   return (
-    <div className='xl:grid grid-cols-2 gap-12 text-white'>
+    <div className='lg:grid grid-cols-2 gap-12 text-white'>
       <img
         src={image}
         alt={title}
-        className={`order-${
-          order === 1 ? 1 : 2
-        }  rounded-2xl w-full object-cover aspect-video`}
+        className={`order-${order}  rounded-2xl w-full object-cover h-full`}
       />
       <div
         className={`order-${
-          order === 2 ? 2 : 1
-        } flex flex-col justify-between order-1`}
+          order == 1 ? 2 : 1
+        } flex flex-col justify-between pt-12 lg:pt-0`}
       >
         <div className='flex flex-col space-y-[16px]'>
           <p className='font-bold text-base px-4 py-1 bg-white bg-opacity-5  max-w-fit rounded-full'>
@@ -37,7 +35,7 @@ const ProjectCard = ({ order, image, title, desc, tag, gitLink, liveLink }) => {
             })}
           </div>
         </div>
-        <div className='flex items-center gap-12 font-semibold text-base'>
+        <div className='flex items-center gap-12 font-semibold text-base pt-20'>
           <div className='flex items-center gap-2 cursor-pointer group'>
             <a href={liveLink}>Live Demo</a>
             <ArrowRightIcon className='h-4 group-hover:rotate-[-45deg] transition' />
