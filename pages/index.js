@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import About from '../components/About'
+import Form from '../components/Form'
 import Hero from '../components/Hero'
 import Portfolio from '../components/Portfolio'
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Hero />
         <Portfolio />
         <About />
+        <Form />
       </main>
     </div>
   )
