@@ -1,13 +1,29 @@
 import { ChevronDownIcon } from '@heroicons/react/outline'
+import Image from 'next/image'
 
 export default function Hero() {
   return (
-    <div className='lg:h-[90vh] max-w-screen w-full lg:grid lg:grid-cols-2 lg:gap-[52px]'>
-      <img
-        className='lg:order-2 h-[403px] w-full object-cover lg:rounded-tl-[16px] lg:h-[601px]  lg:ml-auto'
-        src='https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1158&q=80'
-        alt='Picture of Akshay Benny'
-      />
+    <div className='lg:h-[75vh] max-w-screen w-full lg:grid lg:grid-cols-2 lg:gap-[52px] '>
+      <div className='lg:order-2 lg:ml-auto max-h-fit lg:my-auto'>
+        <div className='grid lg:hidden max-h-fit'>
+          <Image
+            height={601}
+            width={916}
+            className='lg:order-2  lg:rounded-tl-[16px]  my-auto  object-cover'
+            src='https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1158&q=80'
+            alt='Picture of Akshay Benny'
+          />
+        </div>
+        <div className='lg:grid hidden max-h-fit'>
+          <Image
+            height={601}
+            width={616}
+            className='lg:order-2  lg:rounded-tl-[16px]  my-auto  object-cover'
+            src='https://images.unsplash.com/photo-1493863641943-9b68992a8d07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1158&q=80'
+            alt='Picture of Akshay Benny'
+          />
+        </div>
+      </div>
       <div className='lg:order-1 px-6 lg:px-0 lg:pl-16 pt-9 lg:pt-0 lg:my-auto'>
         <div className='flex items-center gap-4 pb-2'>
           <div className='w-[49px] h-[2px] bg-white'></div>

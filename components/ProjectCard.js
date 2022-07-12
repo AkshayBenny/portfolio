@@ -11,7 +11,7 @@ const ProjectCard = ({ order, image, title, desc, tag, gitLink, liveLink }) => {
       />
       <div
         className={`order-${
-          order == 1 ? 2 : 1
+          order === 1 ? 2 : 1
         } flex flex-col justify-between pt-12 lg:pt-0`}
       >
         <div className='flex flex-col space-y-[16px]'>
