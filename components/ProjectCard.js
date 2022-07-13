@@ -12,8 +12,12 @@ const ProjectCard = ({
   const tags = tag.split(',')
 
   return (
-    <div className='lg:grid grid-cols-2 gap-12 text-white'>
-      <div className={`relative order-${number % 2 === 0 ? 1 : -1}`}>
+    <div
+      className={`lg:flex justify-around  gap-12 text-white ${
+        number % 2 === 0 && 'flex-row-reverse'
+      }`}
+    >
+      <div className='relative'>
         <img
           src={image}
           alt={title}
@@ -23,11 +27,7 @@ const ProjectCard = ({
           Project
         </p>
       </div>
-      <div
-        className={`order-${
-          number % 2 === 1 ? 1 : -1
-        } flex flex-col justify-between pt-12 lg:pt-0`}
-      >
+      <div className='flex flex-col justify-between pt-12 lg:pt-0'>
         <div className='flex flex-col space-y-[16px]'>
           <h1 className='font-semibold text-[40px] xl:text-[32px] tracking-[-1px] xl:tracking-[-0.5px]'>
             {title}

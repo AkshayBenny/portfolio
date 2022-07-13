@@ -11,6 +11,7 @@ const OtherCard = ({ data }) => {
           height={378}
           width={752}
           className='object-cover rounded-2xl'
+          alt=''
         />
       </div>
       <div className='lg:hidden flex z-0'>
@@ -19,6 +20,7 @@ const OtherCard = ({ data }) => {
           height={478}
           width={1052}
           className='object-cover rounded-2xl '
+          alt=''
         />
       </div>
       <div className='absolute w-full h-full bottom-0 left-0 rounded-2xl bg-gradient-to-t from-black to-transparent group-hover:opacity-[64%] group-hover:to-black z-10'></div>

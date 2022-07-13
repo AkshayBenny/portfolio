@@ -31,7 +31,7 @@ const Other = () => {
       <h1 className='text-center font-semibold text-[32px] lg:text-[40px] pb-12 lg:pb-[72px] tracking-[-1px]'>
         Other works
       </h1>
-      <div className='lg:grid grid-cols-2 gap-12 w-full gap-y-12 flex flex-col gap-y-12'>
+      <div className='lg:grid grid-cols-2 gap-12 w-full gap-y-12 flex flex-col '>
         {otherData.map((data, index) => {
           return <OtherCard key={index} data={data} />
         })}
