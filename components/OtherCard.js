@@ -2,40 +2,37 @@ import Image from 'next/image'
 import { ArrowRightIcon } from '@heroicons/react/solid'
 
 const OtherCard = ({ data }) => {
-  console.log(data)
   return (
     <div className='w-full relative text-white group'>
       <div className='hidden lg:flex z-0'>
-        <Image
+        <img
           src={data.image}
-          height={378}
-          width={752}
-          className='object-cover rounded-2xl'
+          className='object-cover rounded-2xl w-full h-[278px]'
           alt=''
         />
       </div>
       <div className='lg:hidden flex z-0'>
-        <Image
+        <img
           src={data.image}
-          height={478}
-          width={1052}
-          className='object-cover rounded-2xl '
+          className='object-cover rounded-2xl w-full h-[278px]'
           alt=''
         />
       </div>
-      <div className='absolute w-full h-full bottom-0 left-0 rounded-2xl bg-gradient-to-t from-black to-transparent group-hover:opacity-[64%] group-hover:to-black z-10'></div>
-      <div className='absolute group-hover:top-9 group-hover:left-9  bottom-[25px] left-9 z-20'>
-        <h1 className='font-medium text-2xl tracking-[-0.25px]'>{data.name}</h1>
-        <div className='hidden group-hover:flex flex-col '>
-          <p className=' text-base leading-6 pt-4 font-normal opacity-[64%]'>
+      <div className='absolute w-full h-full bottom-0 left-0 rounded-2xl bg-gradient-to-t from-black  group-hover:opacity-[64%] opacity-[64%] lg:opacity-80  to-black lg:to-transparent group-hover:to-black z-10'></div>
+      <div className='absolute top-9 left-9 group-hover:top-9 group-hover:left-9  lg:top-52 z-20'>
+        <h1 className='font-medium text-2xl tracking-[-0.25px]'>
+          {data.name}
+        </h1>
+        <div className='flex lg:hidden  group-hover:flex flex-col '>
+          <p className='text-base leading-6 pt-4 font-normal opacity-[64%] mr-7'>
             {data.desc}
           </p>
         </div>
       </div>
-      <div className='absolute bottom-9 left-9 hidden group-hover:flex  gap-4 z-50'>
+      <div className='absolute bottom-9 left-9 flex lg:hidden group-hover:flex  gap-4 z-50'>
         <button className='bg-white text-base font-semibold px-4 py-3 text-black rounded-lg flex items-center justify-center gap-[10px]'>
           View Code
-          <span className=''>
+          <span>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 24 24'
@@ -50,7 +47,7 @@ const OtherCard = ({ data }) => {
         <button className='bg-white text-base font-semibold px-4 py-3 text-black rounded-lg flex items-center justify-center gap-[10px]'>
           Live Demo
           <span className=''>
-            <ArrowRightIcon className='text-black h-4 rotate-[-45deg]'/>
+            <ArrowRightIcon className='text-black h-4 rotate-[-45deg]' />
           </span>
         </button>
       </div>
