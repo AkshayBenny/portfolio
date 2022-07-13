@@ -1,23 +1,31 @@
 import { ArrowRightIcon } from '@heroicons/react/outline'
 
-const ProjectCard = ({ order, image, title, desc, tag, gitLink, liveLink }) => {
+
+const ProjectCard = ({
+  number,
+  image,
+  title,
+  desc,
+  tag,
+  gitLink,
+  liveLink,
+}) => {
   const tags = tag.split(',')
+
   return (
     <div className='lg:grid grid-cols-2 gap-12 text-white'>
-      <div className='relative'>
+      <div className={`relative order-${number % 2 === 0 ? 1 : -1}`}>
         <img
           src={image}
           alt={title}
-          className={`order-${order}  rounded-2xl w-full object-cover h-full `}
+          className='rounded-2xl w-full object-cover h-full'
         />
         <p className='font-bold text-base px-4 py-1 bg-black bg-opacity-[64%]  max-w-fit rounded-full absolute top-[10px] left-[10px] z-100'>
           Project
         </p>
       </div>
       <div
-        className={`order-${
-          order === 1 ? 2 : 1
-        } flex flex-col justify-between pt-12 lg:pt-0`}
+        className={`order-${number % 2 === 1 ? 1 : -1} flex flex-col justify-between pt-12 lg:pt-0`}
       >
         <div className='flex flex-col space-y-[16px]'>
           <h1 className='font-semibold text-[40px] xl:text-[32px] tracking-[-1px] xl:tracking-[-0.5px]'>

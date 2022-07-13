@@ -34,11 +34,7 @@ const About = () => {
             alt='Picture of Akshay Benny'
           />
         </div>
-        {/* <img
-          className='rounded-2xl  w-full max-h-[363px] sm:max-h-[763px] lg:max-h-[963px]  object-cover'
-          src='https://images.unsplash.com/photo-1522556189639-b150ed9c4330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
-          alt='Picture of Akshay Benny'
-        /> */}
+
         <div className='flex flex-col justify-between mt-[48px] lg:mt-0'>
           <div>
             <h1 className='font-semibold text-[24px] lg:text-[32px] tracking-[-0.5px]'>
