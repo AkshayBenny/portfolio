@@ -11,7 +11,7 @@ const About = () => {
     'Firebase',
   ]
   return (
-    <div className=' text-white pt-[100px] px-6 lg:px-16'>
+    <div className=' text-white mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'>
       <h1 className='text-center font-semibold text-[32px] lg:text-[40px] pb-12 lg:pb-[72px] tracking-[-1px]'>
         About me
       </h1>
@@ -42,7 +42,7 @@ const About = () => {
         <div className='flex flex-col justify-between mt-[48px] lg:mt-0'>
           <div>
             <h1 className='font-semibold text-[24px] lg:text-[32px] tracking-[-0.5px]'>
-              Hello World!
+              Nice to meet you !
             </h1>
             <p className='text-base opacity-[64%] leading-[26px] pt-6'>
               Diam auctor orci, quis nunc eleifend in tempor, eros, vehicula.
@@ -51,7 +51,11 @@ const About = () => {
               id habitant. Aliquet morbi integer eget iaculis egestas mauris nec
               tortor.
             </p>
-
+            <button className='w-fit cursor-pointer bg-gradient-to-r from-[#1745A9] to-[#A019DF] text-white px-8 py-[14px] rounded-lg mt-12  font-medium text-[16px]'>
+              Download CV
+            </button>
+          </div>
+          <div>
             <h2 className='text-2xl font-medium pt-12 pb-6'>Skills</h2>
             <div className='flex flex-wrap gap-4'>
               {skills.map((skill, index) => {
@@ -65,11 +69,6 @@ const About = () => {
                 )
               })}
             </div>
-          </div>
-          <div className='bg-gradient-to-r from-[#1745A9] to-[#A019DF] h-[52px] w-[174px] rounded-lg flex items-center justify-center mt-[48px] lg:mt-0'>
-            <button className='w-[172px] h-[50px] bg-black font-semibold rounded-lg  '>
-              <p className='gradient-text'>Download CV</p>
-            </button>
           </div>
         </div>
       </div>
