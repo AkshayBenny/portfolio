@@ -11,7 +11,7 @@ const About = () => {
     'Firebase',
   ]
   return (
-    <div className=' text-white mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'>
+    <div className='text-white mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'>
       <h1 className='text-center font-semibold text-[32px] lg:text-[40px] pb-12 lg:pb-[72px] tracking-[-1px]'>
         About me
       </h1>
@@ -20,7 +20,7 @@ const About = () => {
           <Image
             height={651}
             width={751}
-            className='rounded-2xl  w-full max-h-[363px] sm:max-h-[763px] lg:max-h-[963px]  object-cover'
+            className='rounded-2xl w-full object-cover'
             src='https://images.unsplash.com/photo-1522556189639-b150ed9c4330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
             alt='Picture of Akshay Benny'
           />

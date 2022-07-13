@@ -33,7 +33,7 @@ const ProjectCard = ({
             {title}
           </h1>
           <p className='text-[20px] leading-[33px]'>{desc}</p>
-          <div className='hidden xl:flex flex-wrap gap-4'>
+          <div className='flex  xl:flex flex-wrap gap-4'>
             {tags.map((tag, index) => {
               return (
                 <p
