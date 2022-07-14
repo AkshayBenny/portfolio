@@ -9,6 +9,7 @@ import Portfolio from '../components/Portfolio'
 import SmoothScroll from '../components/SmoothScroll.component'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import Footer from '../components/Footer'
 
 export default function Home() {
   const goToTop = () => {
@@ -67,7 +68,7 @@ export default function Home() {
                 }}
                 whileTap={{ scale: 1 }}
                 onClick={goToTop}
-                className='scrollToTop-btn  text-white cursor-pointer  fixed bottom-5  right-10 z-100'
+                className='scrollToTop-btn  text-white cursor-pointer  fixed bottom-16  right-10 z-100'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -84,6 +85,8 @@ export default function Home() {
               </motion.button>
             )}
           </AnimatePresence>
+
+          <Footer />
         </div>
       </main>
     </div>

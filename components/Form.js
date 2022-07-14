@@ -2,7 +2,7 @@ import React from 'react'
 
 const Form = () => {
   return (
-    <div className='text-white pt-[100px] max-w-[882px] mx-auto px-6'>
+    <div className='text-white pt-[100px] max-w-[882px] mx-auto px-6 pb-[100px] '>
       <h1 className='text-center font-semibold text-[32px] lg:text-[40px]   tracking-[-1px]'>
         Get in touch
       </h1>
