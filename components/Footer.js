@@ -58,7 +58,8 @@ const Footer = () => {
         </div>
         <div>
           <p>
-            Designed by <span>Sreemikil T Manoharan</span>
+            <span className='opacity-[64%] text-base'>Designed by</span>{' '}
+            <span className='font-semibold'>Sreemikil T Manoharan</span>
           </p>
         </div>
       </div>
