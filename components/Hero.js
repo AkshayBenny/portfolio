@@ -1,21 +1,20 @@
 import { ChevronDownIcon } from '@heroicons/react/outline'
-import Image from 'next/image'
 
 export default function Hero() {
   return (
     <div className='lg:h-[75vh] max-w-screen w-full my-auto '>
-      <div className='flex flex-col items-start lg:items-center justify-center h-full px-6 lg:px-0'>
+      <div className='pt-[147px] lg:pt-0 flex flex-col items-start lg:items-center justify-center h-full px-6 lg:px-0'>
         <div className='flex items-center gap-4 pb-2'>
-          <div className='w-[49px] h-[2px] bg-white'></div>
-          <h4 className='text-white font-medium text-2xl tracking-[-0.25px] '>
+          <div className='w-[21px] lg:w-[49px] h-[2px] bg-white'></div>
+          <h4 className='text-white font-medium text-lg lg:text-2xl tracking-[-0.25px] '>
             Hello world
           </h4>
           <div className='w-[49px] h-[2px] bg-white lg:flex hidden'></div>
         </div>
-        <h1 className='text-white tracking-[-1px] lg:tracking-[-1.25px] font-semibold text-[40px] lg:text-[56px] pb-4'>
+        <h1 className='text-white tracking-[-1px] lg:tracking-[-1.25px] font-semibold text-[56px] pb-4 max-w-[150px] sm:max-w-none'>
           I&apos;m Akshay Benny
         </h1>
-        <p className='pb-12 max-w-[659px] lg:text-center'>
+        <p className='pb-12 max-w-[459px] lg:max-w-[659px] lg:text-center'>
           <span className='text-white text-[20px] opacity-[64%]'>I am a </span>
           <span className='font-bold text-white text-[20px] opacity-100'>
             Full Stack Developer

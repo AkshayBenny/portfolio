@@ -1,11 +1,14 @@
-import React from 'react'
+import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
+import { useState } from 'react'
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  console.log(isOpen)
   return (
-    <header>
-      <div className='text-white w-full h-[72px]  items-center justify-between px-16 hidden lg:flex'>
+    <header className='relative z-100'>
+      <div className='text-white w-full h-[72px]  items-center justify-between lg:px-16 px-6 flex'>
         <div>.akshay</div>
-        <div>
+        <div className='hidden lg:flex'>
           <ul className='flex items-center justify-between gap-4'>
             <li className='cursor-pointer'>Projects</li>
             <li className='cursor-pointer'>Other</li>
@@ -13,7 +16,7 @@ const Header = () => {
             <li className='cursor-pointer'>Contact</li>
           </ul>
         </div>
-        <div>
+        <div className='hidden lg:flex'>
           <ul className='flex items-center justify-between gap-4'>
             <li>
               <svg
@@ -59,10 +62,33 @@ const Header = () => {
             </li>
           </ul>
         </div>
+        {!isOpen ? (
+          <div
+            className='flex lg:hidden items-center justify-center cursor-pointer'
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <MenuAlt1Icon className='h-6 text-white' />
+          </div>
+        ) : (
+          <div
+            className='flex lg:hidden items-center justify-center cursor-pointer'
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <XIcon className='h-6 text-white' />
+          </div>
+        )}
+        {isOpen && (
+          <nav className='absolute h-80  w-full bg-black top-16 left-0 z-100  px-6 space-y-[24px] backdrop-filter backdrop-blur-xl bg-opacity-0'>
+            <p className='font-semibold text-base pt-12'>Projects</p>
+            <p className='font-semibold text-base '>Other</p>
+            <p className='font-semibold text-base '>About</p>
+            <p className='font-semibold text-base '>Contact</p>
+          </nav>
+        )}
       </div>
-      <div className='h-[72px] w-full bg-black sticky'></div>
     </header>
   )
 }
 
 export default Header
+//backdrop-filter backdrop-blur-xl bg-opacity-0
