@@ -1,4 +1,5 @@
 import { ArrowRightIcon } from '@heroicons/react/outline'
+import { motion } from 'framer-motion'
 
 const ProjectCard = ({
   number,

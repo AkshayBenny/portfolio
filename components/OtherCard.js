@@ -1,9 +1,17 @@
 import Image from 'next/image'
 import { ArrowRightIcon } from '@heroicons/react/solid'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useState } from 'react'
 
 const OtherCard = ({ data }) => {
+  const [hover, setHover] = useState(false)
+
   return (
-    <div className='w-full relative text-white group'>
+    <div
+      onHoverStart={() => setHover(true)}
+      onHoverEnd={() => setHover(false)}
+      className='w-full relative text-white group'
+    >
       <div className='hidden lg:flex z-0'>
         <img
           src={data.image}
@@ -18,17 +26,31 @@ const OtherCard = ({ data }) => {
           alt=''
         />
       </div>
-      <div className='absolute w-full h-full bottom-0 left-0 rounded-2xl bg-gradient-to-t from-black  group-hover:opacity-[64%] opacity-[64%] lg:opacity-80  to-black lg:to-transparent group-hover:to-black z-10'></div>
-      <div className='absolute top-9 left-9 group-hover:top-9 group-hover:left-9  lg:top-52 z-20'>
-        <h1 className='font-medium text-2xl tracking-[-0.25px]'>
-          {data.name}
-        </h1>
+      <AnimatePresence>
+        <motion.div
+          whileHover={{
+            opacity: '64%',
+            transition: { duration: 1 },
+          }}
+          className='absolute w-full h-full bottom-0 left-0 rounded-2xl bg-gradient-to-t from-black   opacity-[64%] lg:opacity-80  to-black lg:to-transparent group-hover:to-black z-10'
+        ></motion.div>
+      </AnimatePresence>
+      <motion.div
+        whileHover={{
+          position: 'absolute',
+          duration: 1,
+          top: '36px',
+          left: '36px',
+        }}
+        className='absolute top-9 left-9 lg:top-52 z-20'
+      >
+        <h1 className='font-medium text-2xl tracking-[-0.25px]'>{data.name}</h1>
         <div className='flex lg:hidden  group-hover:flex flex-col '>
           <p className='text-base leading-6 pt-4 font-normal opacity-[64%] mr-7'>
             {data.desc}
           </p>
         </div>
-      </div>
+      </motion.div>
       <div className='absolute bottom-9 left-9 flex lg:hidden group-hover:flex  gap-4 z-50'>
         <button className='bg-white text-base font-semibold px-4 py-3 text-black rounded-lg flex items-center justify-center gap-[10px]'>
           View Code

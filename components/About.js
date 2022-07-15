@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const About = () => {
   const skills = [
@@ -47,9 +48,12 @@ const About = () => {
               id habitant. Aliquet morbi integer eget iaculis egestas mauris nec
               tortor.
             </p>
-            <button className='w-fit cursor-pointer bg-gradient-to-r from-[#1745A9] to-[#A019DF] text-white px-8 py-[14px] rounded-lg mt-12  font-medium text-[16px]'>
+            <motion.button
+              whileHover={{ backgroundColor: '#A019DF' }}
+              className='w-fit cursor-pointer bg-gradient-to-r from-[#1745A9] to-[#A019DF] text-white px-8 py-[14px] rounded-lg mt-12  font-medium text-[16px]'
+            >
               Download CV
-            </button>
+            </motion.button>
           </div>
           <div>
             <h2 className='text-2xl font-medium pt-12 pb-6'>Skills</h2>

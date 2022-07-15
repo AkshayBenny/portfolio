@@ -47,16 +47,15 @@ export default function Home() {
         <div className='absolute top-96  w-[700px] h-[700px] rounded-full bg-[#9951ec]  filter blur-3xl opacity-50 animate-blob z-0' ></div> */}
 
         <Header />
-
-        <div className=' max-w-[2000px] 3xl:mx-auto h-fit relative'>
-          <Hero />
-          <Portfolio />
-          <Other />
-          <About />
-          <Form />
-          {/* <SmoothScroll>
+        <AnimatePresence>
+          <div className=' max-w-[2000px] 3xl:mx-auto h-fit relative'>
+            <Hero />
+            <Portfolio />
+            <Other />
+            <About />
+            <Form />
+            {/* <SmoothScroll>
           </SmoothScroll> */}
-          <AnimatePresence>
             {scrollPosition > 100 && (
               <motion.button
                 initial={{ y: 100, opacity: 0 }}
@@ -84,10 +83,10 @@ export default function Home() {
                 </svg>
               </motion.button>
             )}
-          </AnimatePresence>
 
-          <Footer />
-        </div>
+            <Footer />
+          </div>
+        </AnimatePresence>
       </main>
     </div>
   )

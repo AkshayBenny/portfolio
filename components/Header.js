@@ -1,11 +1,15 @@
 import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
-
+import { motion } from 'framer-motion'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
-  console.log(isOpen)
+
   return (
-    <header className='relative z-100'>
+    <motion.header
+      initial={{  opacity: 0 }}
+      animate={{  opacity: 1 }}
+      className='relative z-100'
+    >
       <div className='text-white w-full h-[72px]  items-center justify-between lg:px-16 px-6 flex'>
         <div>.akshay</div>
         <div className='hidden lg:flex'>
@@ -86,7 +90,7 @@ const Header = () => {
           </nav>
         )}
       </div>
-    </header>
+    </motion.header>
   )
 }
 
