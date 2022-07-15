@@ -23,7 +23,19 @@ const ProjectCard = ({
       opacity: 1,
     },
   }
+
+  const linkHoverVariants = {
+    initial: {
+      rotateZ: '0deg',
+    },
+    hover: {
+      rotateZ: '45deg',
+      scale: 1.4,
+      backgroundColor: '#6068DB',
+    },
+  }
   const [isHovered, setIsHovered] = useState(false)
+
   function handleMouseEnter() {
     setIsHovered(true)
   }
@@ -79,7 +91,9 @@ const ProjectCard = ({
         <div className='flex items-center gap-12 font-semibold text-base pt-20 '>
           <div className='flex items-center gap-2 cursor-pointer group '>
             <a href={liveLink}>Live Demo</a>
-            <ArrowRightIcon className='h-6 group-hover:rotate-[-45deg] rotate-[-45deg] lg:rotate-[0deg]  transition bg-[#6068DB] lg:bg-opacity-0 rounded-full m-[6px] p-1' />
+            <div>
+              <ArrowRightIcon className='h-6 group-hover:rotate-[-45deg] group-hover:bg-opacity-[100%] rotate-[-45deg] lg:rotate-[0deg]  transition bg-[#6068DB] lg:bg-opacity-0  rounded-full m-[6px] p-1' />
+            </div>
           </div>
           <a href={gitLink}>Git Demo</a>
         </div>
