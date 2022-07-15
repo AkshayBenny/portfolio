@@ -3,12 +3,12 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const underLineVariants = {
+  const navbarVariants = {
     hidden: {
-      width: 0,
+      height: 0,
       opacity: 0,
     },
-    hover: { width: '100%', opacity: 1 },
+    visible: { height: '244px', opacity: 1 },
   }
 
   return (
@@ -17,7 +17,7 @@ const Header = () => {
       animate={{ opacity: 1 }}
       className='relative z-100'
     >
-      <div className='text-white w-full h-[72px]  items-center justify-between lg:px-16 px-6 flex'>
+      <div className='text-white w-full h-[72px]  items-center justify-between lg:px-16 px-6 flex '>
         <div>.akshay</div>
         <div className='hidden lg:flex'>
           <div className='flex items-center justify-between gap-4 font-semibold'>
@@ -26,7 +26,7 @@ const Header = () => {
                 href='#'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
-                <span className='link opacity-[64%] group-hover:opacity-100 link-underline link-underline-white text-white'>
+                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1 transition'>
                   Project
                 </span>
               </a>
@@ -36,7 +36,7 @@ const Header = () => {
                 href='#'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
-                <span className='link opacity-[64%] group-hover:opacity-100 link-underline link-underline-white text-white'>
+                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1'>
                   Other
                 </span>
               </a>
@@ -46,7 +46,7 @@ const Header = () => {
                 href='#'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
-                <span className='link opacity-[64%] group-hover:opacity-100 link-underline link-underline-white text-white'>
+                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1'>
                   About
                 </span>
               </a>
@@ -56,7 +56,7 @@ const Header = () => {
                 href='#'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
-                <span className='link opacity-[64%] group-hover:opacity-100 link-underline link-underline-white text-white'>
+                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1'>
                   Contact
                 </span>
               </a>
@@ -125,12 +125,19 @@ const Header = () => {
           </div>
         )}
         {isOpen && (
-          <nav className='absolute h-80  w-full bg-black top-16 left-0 z-100  px-6 space-y-[24px] backdrop-filter backdrop-blur-xl bg-opacity-0'>
-            <p className='font-semibold text-base pt-12'>Projects</p>
-            <p className='font-semibold text-base '>Other</p>
-            <p className='font-semibold text-base '>About</p>
-            <p className='font-semibold text-base '>Contact</p>
-          </nav>
+          <motion.nav
+            variants={navbarVariants}
+            initial='hidden'
+            animate='visible'
+            className='backdrop-blur-xl backdrop-filter-none absolute  w-full bg-black top-16 left-0 z-10  px-6 space-y-[24px] '
+          >
+            <p className='font-semibold text-base pt-10 cursor-pointer'>
+              Projects
+            </p>
+            <p className='font-semibold text-base  cursor-pointer'>Other</p>
+            <p className='font-semibold text-base  cursor-pointer'>About</p>
+            <p className='font-semibold text-base  cursor-pointer'>Contact</p>
+          </motion.nav>
         )}
       </div>
     </motion.header>
