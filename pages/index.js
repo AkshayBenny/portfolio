@@ -93,7 +93,7 @@ export default function Home() {
                 }}
                 whileTap={{ scale: 1 }}
                 onClick={goToTop}
-                className='scrollToTop-btn  text-white cursor-pointer  fixed bottom-8  right-10 z-100'
+                className='scrollToTop-btn  text-white cursor-pointer  fixed bottom-8  right-10 z-50'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'

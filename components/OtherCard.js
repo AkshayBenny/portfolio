@@ -42,7 +42,7 @@ const OtherCard = ({ data }) => {
           top: '36px',
           left: '36px',
         }}
-        className='absolute top-9 left-9 lg:top-52 z-20'
+        className='absolute top-9 left-9 lg:top-52 z-10'
       >
         <h1 className='font-medium text-2xl tracking-[-0.25px]'>{data.name}</h1>
         <div className='flex lg:hidden  group-hover:flex flex-col '>
@@ -51,7 +51,7 @@ const OtherCard = ({ data }) => {
           </p>
         </div>
       </motion.div>
-      <div className='absolute bottom-9 left-9 flex lg:hidden group-hover:flex  gap-4 z-50'>
+      <div className='absolute bottom-9 left-9 flex lg:hidden group-hover:flex  gap-4 z-20'>
         <button className='bg-white text-base font-semibold px-4 py-3 text-black rounded-lg flex items-center justify-center gap-[10px]'>
           View Code
           <span>

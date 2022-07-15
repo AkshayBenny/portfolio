@@ -1,6 +1,6 @@
 import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const navbarVariants = {
@@ -124,21 +124,23 @@ const Header = () => {
             <XIcon className='h-6 text-white' />
           </div>
         )}
-        {isOpen && (
-          <motion.nav
-            variants={navbarVariants}
-            initial='hidden'
-            animate='visible'
-            className='backdrop-blur-xl backdrop-filter-none absolute  w-full bg-black top-16 left-0 z-10  px-6 space-y-[24px] '
-          >
-            <p className='font-semibold text-base pt-10 cursor-pointer'>
-              Projects
-            </p>
-            <p className='font-semibold text-base  cursor-pointer'>Other</p>
-            <p className='font-semibold text-base  cursor-pointer'>About</p>
-            <p className='font-semibold text-base  cursor-pointer'>Contact</p>
-          </motion.nav>
-        )}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.nav
+              variants={navbarVariants}
+              initial='hidden'
+              animate='visible'
+              className='backdrop-filter backdrop-blur-sm absolute  w-full bg-black top-16 left-0 z-10  px-6 space-y-[24px] '
+            >
+              <p className='font-semibold text-base pt-10 cursor-pointer'>
+                Projects
+              </p>
+              <p className='font-semibold text-base  cursor-pointer'>Other</p>
+              <p className='font-semibold text-base  cursor-pointer'>About</p>
+              <p className='font-semibold text-base  cursor-pointer'>Contact</p>
+            </motion.nav>
+          )}
+        </AnimatePresence>
       </div>
     </motion.header>
   )
