@@ -29,6 +29,16 @@ export default function Home() {
 
     return () => window.removeEventListener('scroll', updatePosition)
   }, [])
+
+  const lazyLoadVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 1,
+      },
+    },
+  }
   return (
     <div>
       <Head>
@@ -48,12 +58,28 @@ export default function Home() {
 
         <Header />
         <AnimatePresence>
-          <div className=' max-w-[2000px] 3xl:mx-auto h-fit relative'>
-            <Hero />
-            <Portfolio />
-            <Other />
-            <About />
-            <Form />
+          <motion.div
+            variants={lazyLoadVariants}
+            animate='visible'
+            initial='hidden'
+            className=' max-w-[2000px] 3xl:mx-auto h-fit relative'
+          >
+            <motion.div variants={lazyLoadVariants}>
+              <Hero />
+            </motion.div>
+            <motion.div variants={lazyLoadVariants}>
+              <Portfolio />
+            </motion.div>
+            <motion.div variants={lazyLoadVariants}>
+              <Other />
+            </motion.div>
+            <motion.div variants={lazyLoadVariants}>
+              <About />
+            </motion.div>
+            <motion.div variants={lazyLoadVariants}>
+              <Form />
+            </motion.div>
+
             {/* <SmoothScroll>
           </SmoothScroll> */}
             {scrollPosition > 100 && (
@@ -67,7 +93,7 @@ export default function Home() {
                 }}
                 whileTap={{ scale: 1 }}
                 onClick={goToTop}
-                className='scrollToTop-btn  text-white cursor-pointer  fixed bottom-16  right-10 z-100'
+                className='scrollToTop-btn  text-white cursor-pointer  fixed bottom-8  right-10 z-100'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -85,7 +111,7 @@ export default function Home() {
             )}
 
             <Footer />
-          </div>
+          </motion.div>
         </AnimatePresence>
       </main>
     </div>

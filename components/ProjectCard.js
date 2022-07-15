@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from '@heroicons/react/outline'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 const ProjectCard = ({
   number,
@@ -12,9 +13,30 @@ const ProjectCard = ({
 }) => {
   const tags = tag.split(',')
 
+  const underLineVariants = {
+    hidden: {
+      width: 0,
+      opacity: 0,
+    },
+    hover: {
+      width: '75%',
+      opacity: 1,
+    },
+  }
+  const [isHovered, setIsHovered] = useState(false)
+  function handleMouseEnter() {
+    setIsHovered(true)
+  }
+
+  function handleMouseLeave() {
+    setIsHovered(false)
+  }
+
   return (
     <div
-      className={`lg:flex justify-around  gap-12 text-white ${
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className={`lg:flex justify-around  gap-12 text-white  ${
         number % 2 === 0 && 'flex-row-reverse'
       }`}
     >
@@ -29,10 +51,17 @@ const ProjectCard = ({
         </p>
       </div>
       <div className='flex flex-col justify-between pt-12 lg:pt-0'>
-        <div className='flex flex-col space-y-[16px]'>
-          <h1 className='font-semibold text-[40px] xl:text-[32px] tracking-[-1px] xl:tracking-[-0.5px]'>
-            {title}
-          </h1>
+        <div className='flex flex-col space-y-[16px] '>
+          <div className='relative w-fit'>
+            <h1 className='font-semibold text-[40px] xl:text-[32px] tracking-[-1px] xl:tracking-[-0.5px] '>
+              {title}
+            </h1>
+            <motion.div
+              variants={underLineVariants}
+              animate={isHovered ? 'hover' : 'initial'}
+              className='absolute h-3 w-0 hover:w-3/4 transition  bg-violet-500 z-0 top-7 mix-blend-screen lg:flex hidden'
+            ></motion.div>
+          </div>
           <p className='text-[20px] leading-[33px]'>{desc}</p>
           <div className='flex  xl:flex flex-wrap gap-4'>
             {tags.map((tag, index) => {
