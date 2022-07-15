@@ -24,16 +24,6 @@ const ProjectCard = ({
     },
   }
 
-  const linkHoverVariants = {
-    initial: {
-      rotateZ: '0deg',
-    },
-    hover: {
-      rotateZ: '45deg',
-      scale: 1.4,
-      backgroundColor: '#6068DB',
-    },
-  }
   const [isHovered, setIsHovered] = useState(false)
 
   function handleMouseEnter() {

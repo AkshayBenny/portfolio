@@ -3,22 +3,65 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const underLineVariants = {
+    hidden: {
+      width: 0,
+      opacity: 0,
+    },
+    hover: { width: '100%', opacity: 1 },
+  }
 
   return (
     <motion.header
-      initial={{  opacity: 0 }}
-      animate={{  opacity: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       className='relative z-100'
     >
       <div className='text-white w-full h-[72px]  items-center justify-between lg:px-16 px-6 flex'>
         <div>.akshay</div>
         <div className='hidden lg:flex'>
-          <ul className='flex items-center justify-between gap-4'>
-            <li className='cursor-pointer'>Projects</li>
-            <li className='cursor-pointer'>Other</li>
-            <li className='cursor-pointer'>About</li>
-            <li className='cursor-pointer'>Contact</li>
-          </ul>
+          <div className='flex items-center justify-between gap-4 font-semibold'>
+            <div className='relative group'>
+              <a
+                href='#'
+                className='font-display max-w-sm text-base font-bold leading-tight'
+              >
+                <span className='link opacity-[64%] group-hover:opacity-100 link-underline link-underline-white text-white'>
+                  Project
+                </span>
+              </a>
+            </div>
+            <div className='relative group'>
+              <a
+                href='#'
+                className='font-display max-w-sm text-base font-bold leading-tight'
+              >
+                <span className='link opacity-[64%] group-hover:opacity-100 link-underline link-underline-white text-white'>
+                  Other
+                </span>
+              </a>
+            </div>
+            <div className='relative group'>
+              <a
+                href='#'
+                className='font-display max-w-sm text-base font-bold leading-tight'
+              >
+                <span className='link opacity-[64%] group-hover:opacity-100 link-underline link-underline-white text-white'>
+                  About
+                </span>
+              </a>
+            </div>
+            <div className='relative group'>
+              <a
+                href='#'
+                className='font-display max-w-sm text-base font-bold leading-tight'
+              >
+                <span className='link opacity-[64%] group-hover:opacity-100 link-underline link-underline-white text-white'>
+                  Contact
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
         <div className='hidden lg:flex'>
           <ul className='flex items-center justify-between gap-4'>
@@ -95,4 +138,3 @@ const Header = () => {
 }
 
 export default Header
-//backdrop-filter backdrop-blur-xl bg-opacity-0
