@@ -6,10 +6,45 @@ import { useState } from 'react'
 const OtherCard = ({ data }) => {
   const [hover, setHover] = useState(false)
 
+  function handleMouseEnter() {
+    setHover(true)
+  }
+
+  function handleMouseLeave() {
+    setHover(false)
+  }
+
+  const hoverVariants = {
+    hover: {
+      opacity: '64%',
+    },
+    hidden: {
+      opacity: '0%',
+    },
+    textHover: {
+      position: 'absolute',
+      top: '36px',
+      left: '36px',
+      opacity: 1,
+    },
+  }
+
+  const textHoverVariants = {
+    hidden: {
+      opacity: 0,
+      visibility: 'hidden',
+    },
+    hover: {
+      opacity: 1,
+      display: 'flex',
+      flexDirection: 'column',
+    },
+  }
+
   return (
     <div
-      onHoverStart={() => setHover(true)}
-      onHoverEnd={() => setHover(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       className='w-full relative text-white group'
     >
       <div className='hidden lg:flex z-0'>
@@ -26,27 +61,32 @@ const OtherCard = ({ data }) => {
           alt=''
         />
       </div>
-      <AnimatePresence>
-        <motion.div
-          whileHover={{
-            opacity: '64%',
-            transition: { duration: 1 },
-          }}
-          className='absolute w-full h-full bottom-0 left-0 rounded-2xl bg-gradient-to-t from-black   opacity-[64%] lg:opacity-80  to-black lg:to-transparent group-hover:to-black z-10'
-        ></motion.div>
-      </AnimatePresence>
       <motion.div
-        whileHover={{
-          position: 'absolute',
-          duration: 1,
-          top: '36px',
-          left: '36px',
-        }}
+        variants={hoverVariants}
+        initial='hover'
+        animate={hover && 'hover'}
+        className='lg:absolute lg:w-full lg:h-full lg:bottom-0 lg:left-0 lg:rounded-2xl lg:bg-gradient-to-t lg:from-black    lg:opacity-80 lg:to-transparent group-hover:to-black lg:z-10'
+      ></motion.div>
+      <motion.div className='absolute w-full h-full bottom-0 left-0 rounded-2xl bg-gradient-to-t from-black   opacity-[64%] lg:hidden flex  to-black lg:to-transparent group-hover:to-black z-10'></motion.div>
+
+      <motion.div
+        variants={hoverVariants}
+        animate={hover ? 'textHover' : 'hidden'}
         className='absolute top-9 left-9 lg:top-52 z-10'
       >
         <h1 className='font-medium text-2xl tracking-[-0.25px]'>{data.name}</h1>
-        <div className='flex lg:hidden  group-hover:flex flex-col '>
-          <p className='text-base leading-6 pt-4 font-normal opacity-[64%] mr-7'>
+
+        <div className='hidden lg:flex'>
+          <motion.p
+            variants={textHoverVariants}
+            animate={hover ? 'hover' : 'hidden'}
+            className='text-base leading-6 pt-4 font-normal opacity-[64%] mr-7 hidden lg:visible'
+          >
+            {data.desc}
+          </motion.p>
+        </div>
+        <div>
+          <p className='text-base leading-6 pt-4 font-normal opacity-[64%] mr-7 lg:hidden visible'>
             {data.desc}
           </p>
         </div>
