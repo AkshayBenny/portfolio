@@ -22,6 +22,8 @@ export default async function handler(req, res) {
       <p><strong>Message:</strong> ${message}</p>
       `,
     })
-  } catch (error) {}
+  } catch (error) {
+    console.log(error)
+  }
   res.status(200).json(req.body)
 }

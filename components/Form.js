@@ -12,7 +12,7 @@ const Form = () => {
   } = useForm()
   const [isLoading, setIsLoading] = useState(false)
   const [resError, setResError] = useState('')
-  console.log(resError)
+
   const onSubmitForm = async (values) => {
     let config = {
       method: 'post',
@@ -46,7 +46,10 @@ const Form = () => {
         Already use Dlex? Sign in so we can tailor your support experience. If
         that’s not possible, we’d still like to hear from you.
       </p>
-      <form className='pt-12 space-y-[24px] '>
+      <form
+        onSubmit={handleSubmit(onSubmitForm)}
+        className='pt-12 space-y-[24px] '
+      >
         <div className='md:grid grid-cols-2 gap-6 space-y-[24px] md:space-y-0'>
           <div className='flex flex-col items-start space-y-[8px]'>
             <label className='text-[20px]'>Your name</label>
@@ -126,7 +129,6 @@ const Form = () => {
         </div>
         <div className='w-full flex justify-end'>
           <button
-            onClick={handleSubmit(onSubmitForm)}
             type='submit'
             className={`cursor-pointer bg-gradient-to-r from-[#1745A9] to-[#A019DF] text-white px-8 py-[14px] rounded-lg mt-12  font-medium text-[16px] ${
               isLoading ? 'hidden' : 'flex'
