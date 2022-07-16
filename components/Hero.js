@@ -19,7 +19,7 @@ export default function Hero() {
       animate='visible'
       className='lg:h-[75vh] max-w-screen w-full my-auto '
     >
-      <div className='pt-[147px] lg:pt-0 flex flex-col items-start lg:items-center justify-center h-full px-6 lg:px-0 '>
+      <div className='pt-[100px] lg:pt-0 flex flex-col items-start lg:items-center justify-center h-full px-6 lg:px-0 '>
         <motion.div
           variants={lazyLoadVariants}
           className='flex items-center gap-4 pb-2'
