@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import profilePic from '../public/profilePic.png'
-import { motion, AnimatePresence } from 'framer-motion'
+import profilePic from '../public/profilePic.jpg'
+import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
 const About = () => {

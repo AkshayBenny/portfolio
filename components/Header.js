@@ -28,10 +28,8 @@ const Header = () => {
   const pathVariants = {
     initial: {
       pathLength: 0,
-      opacity: 0,
     },
     hover: {
-      
       pathLength: [0, 1, 0, 1],
       transiiton: {
         yoyo: Infinity,
