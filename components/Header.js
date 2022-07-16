@@ -1,6 +1,7 @@
 import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { HashLink as Link } from 'react-router-hash-link'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const navbarVariants = {
@@ -23,7 +24,7 @@ const Header = () => {
           <div className='flex items-center justify-between gap-4 font-semibold'>
             <div className='relative group'>
               <a
-                href='#'
+                href='#project'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
                 <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1 transition'>
@@ -33,7 +34,7 @@ const Header = () => {
             </div>
             <div className='relative group'>
               <a
-                href='#'
+                href='#other'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
                 <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1'>
@@ -43,7 +44,7 @@ const Header = () => {
             </div>
             <div className='relative group'>
               <a
-                href='#'
+                href='#about'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
                 <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1'>
@@ -53,7 +54,7 @@ const Header = () => {
             </div>
             <div className='relative group'>
               <a
-                href='#'
+                href='#contact'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
                 <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1'>
@@ -132,12 +133,30 @@ const Header = () => {
               animate='visible'
               className='backdrop-filter backdrop-blur-sm absolute  w-full bg-black top-16 left-0 z-10  px-6 space-y-[24px] '
             >
-              <p className='font-semibold text-base pt-10 cursor-pointer'>
+              <a
+                href='#project'
+                className='font-semibold text-base pt-10 cursor-pointer'
+              >
                 Projects
-              </p>
-              <p className='font-semibold text-base  cursor-pointer'>Other</p>
-              <p className='font-semibold text-base  cursor-pointer'>About</p>
-              <p className='font-semibold text-base  cursor-pointer'>Contact</p>
+              </a>
+              <a
+                href='#other'
+                className='font-semibold text-base  cursor-pointer'
+              >
+                Other
+              </a>
+              <a
+                href='#about'
+                className='font-semibold text-base  cursor-pointer'
+              >
+                About
+              </a>
+              <a
+                href='#contact'
+                className='font-semibold text-base  cursor-pointer'
+              >
+                Contact
+              </a>
             </motion.nav>
           )}
         </AnimatePresence>

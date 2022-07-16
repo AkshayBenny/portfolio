@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard'
 
 export default function Portfolio() {
   return (
-    <div className='pt-[173px] lg:pt-[100px] text-white px-6 lg:px-16 max-w-[1400px] mx-auto'>
+    <section id='project' className='pt-[173px] lg:pt-[100px] text-white px-6 lg:px-16 max-w-[1400px] mx-auto'>
       <h2 className='text-center text-[20px] pb-[10px] tracking-[-1px]'>
         Portfolio
       </h2>
@@ -48,6 +48,6 @@ export default function Portfolio() {
           number={4}
         />
       </div>
-    </div>
+    </section>
   )
 }

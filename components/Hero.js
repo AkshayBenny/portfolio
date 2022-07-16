@@ -12,7 +12,8 @@ export default function Hero() {
     },
   }
   return (
-    <motion.div
+    <motion.section
+      id='home'
       variants={lazyLoadVariants}
       initial='hidden'
       animate='visible'
@@ -55,6 +56,6 @@ export default function Hero() {
           <ChevronDownIcon className='h-4' />
         </motion.div>
       </div>
-    </motion.div>
+    </motion.section>
   )
 }

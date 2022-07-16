@@ -27,7 +27,7 @@ const Other = () => {
     },
   ]
   return (
-    <div className='text-white mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'>
+    <section id='other' className='text-white mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'>
       <h1 className='text-center font-semibold text-[32px] lg:text-[40px] pb-12 lg:pb-[72px] tracking-[-1px]'>
         Other works
       </h1>
@@ -36,7 +36,7 @@ const Other = () => {
           return <OtherCard key={index} data={data} />
         })}
       </div>
-    </div>
+    </section>
   )
 }
 

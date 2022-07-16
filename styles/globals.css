@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
   .gradient-text {
     text-transform: uppercase;
     background: linear-gradient(to right, #1745a9 0%, #a019df 100%);
@@ -19,7 +22,7 @@
     -moz-transition: background-size 0.3s ease-in;
     -ms-transition: background-size 0.3s ease-in;
     -o-transition: background-size 0.3s ease-in;
-}
+  }
 
   .link-underline-white {
     background-image: linear-gradient(transparent, transparent),
