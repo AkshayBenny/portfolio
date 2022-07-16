@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import { useState } from 'react'
 import Loader from './Loader'
+import { motion } from 'framer-motion'
 
 const Form = () => {
   const {
@@ -40,7 +41,15 @@ const Form = () => {
   }
 
   return (
-    <section
+    <motion.section
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true }}
+      transition={{ duration: 0.3 }}
+      variants={{
+        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0, scale: 0 },
+      }}
       id='contact'
       className='relative text-white pt-[100px] max-w-[882px] mx-auto px-6 pb-[100px] '
     >
@@ -154,7 +163,7 @@ const Form = () => {
           )}
         </div>
       </form>
-    </section>
+    </motion.section>
   )
 }
 

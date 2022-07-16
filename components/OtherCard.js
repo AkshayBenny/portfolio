@@ -54,7 +54,15 @@ const OtherCard = ({ data }) => {
   }
 
   return (
-    <div
+    <motion.div
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true }}
+      transition={{ duration: 0.3 }}
+      variants={{
+        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0, scale: 0 },
+      }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className='w-full relative text-white group'
@@ -156,7 +164,7 @@ const OtherCard = ({ data }) => {
           </button>
         </motion.div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -44,7 +44,15 @@ const About = () => {
     },
   }
   return (
-    <section
+    <motion.section
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true }}
+      transition={{ duration: 0.3 }}
+      variants={{
+        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0, scale: 0 },
+      }}
       id='about'
       className='relative text-white mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'
     >
@@ -118,7 +126,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
