@@ -1,7 +1,29 @@
 import { ChevronDownIcon } from '@heroicons/react/outline'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 export default function Hero() {
+
+  const [xCoord, setXCoord] = useState([])
+  const [yCoord, setYCoord] = useState([])
+  useEffect(() => {
+    const ARRAY_LENGTH = 50
+    const randomArrayX = []
+    const randomArrayY = []
+
+    for (let i = 0; i < ARRAY_LENGTH; i++) {
+      randomArrayX.push(Math.random() * 1000)
+    }
+    for (let i = 0; i < ARRAY_LENGTH; i++) {
+      let y = Math.random() * 1000
+      if (y < 400) {
+        randomArrayY.push(y)
+      }
+    }
+    setXCoord(randomArrayX)
+    setYCoord(randomArrayY)
+  }, [])
+
   const lazyLoadVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -11,14 +33,32 @@ export default function Hero() {
       },
     },
   }
+
+  const animationVariants = {
+    animate: {
+      x: xCoord,
+      y: yCoord,
+      transition: {
+        duration: 500,
+        yoyo: Infinity,
+      },
+    },
+  }
   return (
     <motion.section
       id='home'
       variants={lazyLoadVariants}
       initial='hidden'
       animate='visible'
-      className='lg:h-[75vh] max-w-screen w-full my-auto '
+      className='lg:h-[75vh] max-w-screen w-full my-auto relative'
     >
+      <motion.div
+        variants={animationVariants}
+        animate='animate'
+        className='absolute top-0 -left-4 w-[700px] h-[700px] rounded-full bg-[#4235ec] filter blur-[300px] z-0 hidden lg:grid'
+      ></motion.div>
+      <div className='grid lg:hidden absolute top-0 -left-[600px] w-[700px] h-[700px] rounded-full bg-[#4235ec] filter blur-[300px] z-0 '></div>
+
       <div className='pt-[100px] lg:pt-0 flex flex-col items-start lg:items-center justify-center h-full px-6 lg:px-0 '>
         <motion.div
           variants={lazyLoadVariants}
