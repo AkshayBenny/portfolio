@@ -1,5 +1,5 @@
 import Image from 'next/image'
-
+import profilePic from '../public/profilePic.png'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
@@ -50,8 +50,8 @@ const About = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.3 }}
       variants={{
-        visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0 },
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
       }}
       id='about'
       className='relative text-white mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'
@@ -66,13 +66,13 @@ const About = () => {
       <h1 className='text-center font-semibold text-[32px] lg:text-[40px] pb-12 lg:pb-[72px] tracking-[-1px]'>
         About me
       </h1>
-      <div className='lg:grid grid-cols-2 gap-12 text-white '>
+      <div className='lg:grid grid-cols-2 gap-12 text-white'>
         <div className='grid lg:hidden'>
           <Image
             height={651}
             width={751}
             className='rounded-2xl w-full object-cover'
-            src='https://images.unsplash.com/photo-1522556189639-b150ed9c4330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
+            src={profilePic}
             alt='Picture of Akshay Benny'
           />
         </div>
@@ -81,7 +81,7 @@ const About = () => {
             height={651}
             width={551}
             className='rounded-2xl  w-full max-h-[363px] sm:max-h-[763px] lg:max-h-[963px]  object-cover'
-            src='https://images.unsplash.com/photo-1522556189639-b150ed9c4330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
+            src={profilePic}
             alt='Picture of Akshay Benny'
           />
         </div>

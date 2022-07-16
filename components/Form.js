@@ -47,8 +47,8 @@ const Form = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.3 }}
       variants={{
-        visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0 },
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
       }}
       id='contact'
       className='relative text-white pt-[100px] max-w-[882px] mx-auto px-6 pb-[100px] '
