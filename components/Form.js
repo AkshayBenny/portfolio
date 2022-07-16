@@ -12,11 +12,13 @@ const Form = () => {
   } = useForm()
   const [isLoading, setIsLoading] = useState(false)
   const [resError, setResError] = useState('')
+  const NEXT_URL =
+    process.env.NEXT_PUBLIC_FRONTEND_URL || 'http://localhost:3000'
 
   const onSubmitForm = async (values) => {
     let config = {
       method: 'post',
-      url: 'http://localhost:3000/api/contact',
+      url: `${NEXT_URL}/api/contact`,
       headers: {
         'Content-Type': 'application/json',
       },
