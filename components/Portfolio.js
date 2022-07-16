@@ -1,9 +1,49 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
 export default function Portfolio() {
+  const [xCoord, setXCoord] = useState([])
+  const [yCoord, setYCoord] = useState([])
+  useEffect(() => {
+    const ARRAY_LENGTH = 50
+    const randomArrayX = []
+    const randomArrayY = []
+
+    for (let i = 0; i < ARRAY_LENGTH; i++) {
+      randomArrayX.push(Math.random() * 1000)
+    }
+    for (let i = 0; i < ARRAY_LENGTH; i++) {
+      let y = Math.random() * 1000
+      randomArrayY.push(Math.random() * 1000)
+    }
+    setXCoord(randomArrayX)
+    setYCoord(randomArrayY)
+  }, [])
+
+  const animationVariants = {
+    animate: {
+      x: xCoord,
+      y: yCoord,
+      transition: {
+        duration: 500,
+        yoyo: Infinity,
+      },
+    },
+  }
   return (
-    <section id='project' className='pt-[173px] lg:pt-[100px] text-white px-6 lg:px-16 max-w-[1400px] mx-auto'>
+    <section
+      id='project'
+      className='relative pt-[173px] lg:pt-[100px] text-white px-6 lg:px-16 max-w-[1400px] mx-auto'
+    >
+      {/* Project blob animation */}
+      <motion.div
+        variants={animationVariants}
+        animate='animate'
+        className='absolute top-[400px] -left-4 w-[700px] h-[700px] rounded-full bg-[#6a60f5] filter blur-[300px] z-0 hidden lg:grid'
+      ></motion.div>
+      <div className='grid lg:hidden absolute top-[1000px] -right-[600px] w-[700px] h-[700px] rounded-full bg-[#6a60f5] filter blur-[300px] z-0 '></div>
       <h2 className='text-center text-[20px] pb-[10px] tracking-[-1px]'>
         Portfolio
       </h2>

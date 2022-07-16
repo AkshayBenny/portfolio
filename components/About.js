@@ -1,5 +1,7 @@
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
 const About = () => {
   const skills = [
@@ -11,8 +13,48 @@ const About = () => {
     'Recoil',
     'Firebase',
   ]
+  const [xCoord, setXCoord] = useState([])
+  const [yCoord, setYCoord] = useState([])
+  useEffect(() => {
+    const ARRAY_LENGTH = 50
+    const randomArrayX = []
+    const randomArrayY = []
+
+    for (let i = 0; i < ARRAY_LENGTH; i++) {
+      randomArrayX.push(Math.random() * 1000)
+    }
+    for (let i = 0; i < ARRAY_LENGTH; i++) {
+      let y = Math.random() * 1000
+      if (y < 200) {
+        randomArrayY.push(Math.random() * 1000)
+      }
+    }
+    setXCoord(randomArrayX)
+    setYCoord(randomArrayY)
+  }, [])
+
+  const animationVariants = {
+    animate: {
+      x: xCoord,
+      y: yCoord,
+      transition: {
+        duration: 500,
+        yoyo: Infinity,
+      },
+    },
+  }
   return (
-    <section id='about' className='text-white mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'>
+    <section
+      id='about'
+      className='relative text-white mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'
+    >
+      {/* Project blob animation */}
+      <motion.div
+        variants={animationVariants}
+        animate='animate'
+        className='absolute top-[0px] -left-4 w-[700px] h-[700px] rounded-full bg-[#877eff] filter blur-[300px] z-0 hidden lg:grid'
+      ></motion.div>
+      <div className='grid lg:hidden absolute top-[200px] -left-[600px] w-[700px] h-[700px] rounded-full bg-[#6a60f5] filter blur-[300px] z-0 '></div>
       <h1 className='text-center font-semibold text-[32px] lg:text-[40px] pb-12 lg:pb-[72px] tracking-[-1px]'>
         About me
       </h1>

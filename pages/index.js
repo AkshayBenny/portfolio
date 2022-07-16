@@ -12,6 +12,8 @@ import { useState, useEffect } from 'react'
 import Footer from '../components/Footer'
 
 export default function Home() {
+  const [xCoord, setXCoord] = useState([])
+  const [yCoord, setYCoord] = useState([])
   const goToTop = () => {
     document.documentElement.scrollTo({
       top: 0,
@@ -39,6 +41,37 @@ export default function Home() {
       },
     },
   }
+
+  useEffect(() => {
+    const ARRAY_LENGTH = 50
+    const randomArrayX = []
+    const randomArrayY = []
+
+    for (let i = 0; i < ARRAY_LENGTH; i++) {
+      randomArrayX.push(Math.random() * 1000)
+    }
+    for (let i = 0; i < ARRAY_LENGTH; i++) {
+      let y = Math.random() * 1000
+      if (y < 400) {
+        randomArrayY.push(y)
+      }
+    }
+    setXCoord(randomArrayX)
+    setYCoord(randomArrayY)
+  }, [])
+  console.log(xCoord, 'x>>>>>>>>>>>>>>>>>>>')
+  console.log(yCoord, 'y>>>>>>>>>>>>>>>>>>>')
+  const animationVariants = {
+    animate: {
+      x: xCoord,
+      y: yCoord,
+      transition: {
+        duration: 500,
+        yoyo: Infinity,
+      },
+    },
+  }
+
   return (
     <div>
       <Head>
@@ -52,9 +85,17 @@ export default function Home() {
       </Head>
 
       <main className='bg-black min-h-screen overflow-x-hidden font-Poppins relative'>
-        {/* <div className='absolute top-0 -left-4 w-[700px] h-[700px] rounded-full bg-[#1745A9] filter blur-3xl  animate-blob z-0'></div>
-        <div className='absolute top-[1500px] -right-4 w-[700px] h-[700px] rounded-full bg-[#6d51ec]  filter blur-3xl opacity-50 animate-blob z-0'></div>
-        <div className='absolute top-96  w-[700px] h-[700px] rounded-full bg-[#9951ec]  filter blur-3xl opacity-50 animate-blob z-0' ></div> */}
+        {/* Hero blob animation */}
+        <motion.div
+          variants={animationVariants}
+          animate='animate'
+          className='absolute top-0 -left-4 w-[700px] h-[700px] rounded-full bg-[#4235ec] filter blur-[300px] z-0 hidden lg:grid'
+        ></motion.div>
+        <div className='grid lg:hidden absolute top-0 -left-[600px] w-[700px] h-[700px] rounded-full bg-[#4235ec] filter blur-[300px] z-0 '></div>
+
+        
+
+        
 
         <Header />
         <AnimatePresence>
