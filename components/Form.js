@@ -44,7 +44,7 @@ const Form = () => {
       id='contact'
       className='relative text-white pt-[100px] max-w-[882px] mx-auto px-6 pb-[100px] '
     >
-      <div className='grid lg:hidden absolute top-[900px] -right-[600px] w-[700px] h-[700px] rounded-full bg-[#6a60f5] filter blur-[300px] z-0 '></div>
+      <div className='flex lg:hidden absolute top-[400px] -right-[600px] w-[700px] h-[700px] rounded-full bg-[#6a60f5] filter blur-[300px] z-0 '></div>
       <h1 className='text-center font-semibold text-[32px] lg:text-[40px]   tracking-[-1px]'>
         Get in touch
       </h1>

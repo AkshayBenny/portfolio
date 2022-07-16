@@ -53,7 +53,18 @@ export default function Hero() {
           className='text-white text-[14px] opacity-[48%] flex items-center gap-2'
         >
           <p>Scroll down</p>
-          <ChevronDownIcon className='h-4' />
+          <motion.div
+            animate={{
+              y: [2, -2],
+            }}
+            transition={{
+              duration: 2,
+
+              yoyo: Infinity,
+            }}
+          >
+            <ChevronDownIcon className='h-4' />
+          </motion.div>
         </motion.div>
       </div>
     </motion.section>

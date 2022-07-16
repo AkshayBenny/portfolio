@@ -59,8 +59,7 @@ export default function Home() {
     setXCoord(randomArrayX)
     setYCoord(randomArrayY)
   }, [])
-  console.log(xCoord, 'x>>>>>>>>>>>>>>>>>>>')
-  console.log(yCoord, 'y>>>>>>>>>>>>>>>>>>>')
+
   const animationVariants = {
     animate: {
       x: xCoord,
@@ -93,10 +92,6 @@ export default function Home() {
         ></motion.div>
         <div className='grid lg:hidden absolute top-0 -left-[600px] w-[700px] h-[700px] rounded-full bg-[#4235ec] filter blur-[300px] z-0 '></div>
 
-        
-
-        
-
         <Header />
         <AnimatePresence>
           <motion.div
@@ -105,21 +100,13 @@ export default function Home() {
             initial='hidden'
             className=' max-w-[2000px] 3xl:mx-auto h-fit relative'
           >
-            <motion.div variants={lazyLoadVariants}>
+            
               <Hero />
-            </motion.div>
-            <motion.div variants={lazyLoadVariants}>
               <Portfolio />
-            </motion.div>
-            <motion.div variants={lazyLoadVariants}>
               <Other />
-            </motion.div>
-            <motion.div variants={lazyLoadVariants}>
               <About />
-            </motion.div>
-            <motion.div variants={lazyLoadVariants}>
               <Form />
-            </motion.div>
+            
 
             {/* <SmoothScroll>
           </SmoothScroll> */}
