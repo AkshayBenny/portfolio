@@ -132,11 +132,12 @@ const Form = () => {
         <div className='w-full flex justify-end'>
           <button
             type='submit'
-            className={`cursor-pointer bg-gradient-to-r from-[#1745A9] to-[#A019DF] text-white px-8 py-[14px] rounded-lg mt-12  font-medium text-[16px] ${
+            className={`px-8 py-[14px] relative rounded-lg mt-12 group overflow-hidden font-medium text-[16px] bg-gradient-to-r from-[#1745A9] to-[#A019DF] text-white inline-block ${
               isLoading ? 'hidden' : 'flex'
             }`}
           >
-            Submit
+            <span className='absolute top-0 left-0 flex h-full w-0 mb-0 transition-all duration-200 ease-out transform translate-x-0 bg-[#1745A9] group-hover:w-full opacity-90'></span>
+            <span className='relative group-hover:text-white'>Submit</span>
           </button>
 
           {isLoading && (

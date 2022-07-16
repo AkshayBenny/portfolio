@@ -35,7 +35,6 @@ const OtherCard = ({ data }) => {
       visibility: 'hidden',
     },
     hover: {
-      opacity: 1,
       display: 'flex',
       flexDirection: 'column',
     },
@@ -44,11 +43,13 @@ const OtherCard = ({ data }) => {
   const buttonHoverVariants = {
     hidden: {
       opacity: 0,
-      x: '10vw',
+      y: '10vh',
+      visibility: 'hidden',
     },
     hover: {
-      opacity: 1,
-      x: 0,
+      opacity: [0, 0.1, 0.4, 0.6, 0.8, 1],
+      y: 0,
+      display: 'flex',
     },
   }
 
