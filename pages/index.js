@@ -98,15 +98,13 @@ export default function Home() {
             variants={lazyLoadVariants}
             animate='visible'
             initial='hidden'
-            className=' max-w-[2000px] 3xl:mx-auto h-fit relative'
+            className=' max-w-[2000px] 3xl:mx-auto h-fit relative scroll-touch'
           >
-            
-              <Hero />
-              <Portfolio />
-              <Other />
-              <About />
-              <Form />
-            
+            <Hero />
+            <Portfolio />
+            <Other />
+            <About />
+            <Form />
 
             {/* <SmoothScroll>
           </SmoothScroll> */}

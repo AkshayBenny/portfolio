@@ -18,7 +18,11 @@ const Header = () => {
       animate={{ opacity: 1 }}
       className='relative z-100'
     >
-      <div className='text-white w-full h-[72px]  items-center justify-between lg:px-16 px-6 flex '>
+      <div
+        className={`text-white w-full h-[72px]  items-center justify-between lg:px-16 px-6 flex ${
+          isOpen ? 'bg-black' : ''
+        }`}
+      >
         <div>.akshay</div>
         <div className='hidden lg:flex'>
           <div className='flex items-center justify-between gap-4 font-semibold'>
@@ -125,41 +129,40 @@ const Header = () => {
             <XIcon className='h-6 text-white' />
           </div>
         )}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.nav
-              variants={navbarVariants}
-              initial='hidden'
-              animate='visible'
-              className='backdrop-filter backdrop-blur-sm absolute  w-full bg-black top-16 left-0 z-10  px-6 space-y-[24px] '
+
+        {isOpen && (
+          <motion.nav
+            variants={navbarVariants}
+            initial='hidden'
+            animate='visible'
+            className='backdrop-filter backdrop-blur-sm absolute flex flex-col items-center justify-center  w-full bg-black top-16 left-0 z-10  px-6 space-y-[24px] '
+          >
+            <a
+              href='#project'
+              className='font-semibold text-base pt-10 cursor-pointer'
             >
-              <a
-                href='#project'
-                className='font-semibold text-base pt-10 cursor-pointer'
-              >
-                Projects
-              </a>
-              <a
-                href='#other'
-                className='font-semibold text-base  cursor-pointer'
-              >
-                Other
-              </a>
-              <a
-                href='#about'
-                className='font-semibold text-base  cursor-pointer'
-              >
-                About
-              </a>
-              <a
-                href='#contact'
-                className='font-semibold text-base  cursor-pointer'
-              >
-                Contact
-              </a>
-            </motion.nav>
-          )}
-        </AnimatePresence>
+              Projects
+            </a>
+            <a
+              href='#other'
+              className='font-semibold text-base  cursor-pointer'
+            >
+              Other
+            </a>
+            <a
+              href='#about'
+              className='font-semibold text-base  cursor-pointer'
+            >
+              About
+            </a>
+            <a
+              href='#contact'
+              className='font-semibold text-base  cursor-pointer'
+            >
+              Contact
+            </a>
+          </motion.nav>
+        )}
       </div>
     </motion.header>
   )

@@ -1,11 +1,11 @@
-import React, { useRef, useState, useCallback, useLayoutEffect } from "react"
-import ResizeObserver from "resize-observer-polyfill"
+import React, { useRef, useState, useCallback, useLayoutEffect } from 'react'
+import ResizeObserver from 'resize-observer-polyfill'
 import {
   useViewportScroll,
   useTransform,
   useSpring,
-  motion
-} from "framer-motion"
+  motion,
+} from 'framer-motion'
 
 const SmoothScroll = ({ children }) => {
   // scroll container
@@ -15,7 +15,7 @@ const SmoothScroll = ({ children }) => {
   const [pageHeight, setPageHeight] = useState(0)
 
   // update scrollable height when browser is resizing
-  const resizePageHeight = useCallback(entries => {
+  const resizePageHeight = useCallback((entries) => {
     for (let entry of entries) {
       setPageHeight(entry.contentRect.height)
     }
@@ -23,7 +23,7 @@ const SmoothScroll = ({ children }) => {
 
   // observe when browser is resizing
   useLayoutEffect(() => {
-    const resizeObserver = new ResizeObserver(entries =>
+    const resizeObserver = new ResizeObserver((entries) =>
       resizePageHeight(entries)
     )
     scrollRef && resizeObserver.observe(scrollRef.current)
@@ -42,14 +42,14 @@ const SmoothScroll = ({ children }) => {
       <motion.div
         ref={scrollRef}
         style={{ y: spring }} // translateY of scroll container using negative scroll value
-        className="scroll-container"
+        className='scroll-container'
       >
         {children}
       </motion.div>
       {/* blank div that has a dynamic height based on the content's inherent height */}
       {/* this is neccessary to allow the scroll container to scroll... */}
       {/* ... using the browser's native scroll bar */}
-      <div style={{ height: pageHeight }} />
+      <div style={{ height: pageHeight / 4 }} />
     </>
   )
 }

@@ -21,7 +21,8 @@
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "react-router-hash-link": "^2.4.3",
-    "resize-observer-polyfill": "^1.5.1"
+    "resize-observer-polyfill": "^1.5.1",
+    "smooth-scrollbar": "^8.7.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",

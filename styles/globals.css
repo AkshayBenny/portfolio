@@ -6,6 +6,9 @@
   html {
     scroll-behavior: smooth;
   }
+  .scroll-touch {
+    -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
+  }
   .gradient-text {
     text-transform: uppercase;
     background: linear-gradient(to right, #1745a9 0%, #a019df 100%);
