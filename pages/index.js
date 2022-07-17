@@ -1,13 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import About from '../components/About'
 import Form from '../components/Form'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Other from '../components/Other'
 import Portfolio from '../components/Portfolio'
-import SmoothScroll from '../components/SmoothScroll.component'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import Footer from '../components/Footer'
 import { ScrollerMotion } from 'scroller-motion'
@@ -95,7 +93,6 @@ export default function Home() {
             <Other />
             <About />
             <Form />
-
             <Footer />
           </motion.div>
         </div>
@@ -112,7 +109,6 @@ export default function Home() {
               <Other />
               <About />
               <Form />
-
               <Footer />
             </motion.div>
           </ScrollerMotion>

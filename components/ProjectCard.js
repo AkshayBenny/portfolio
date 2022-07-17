@@ -10,6 +10,7 @@ const ProjectCard = ({
   tag,
   gitLink,
   liveLink,
+  type,
 }) => {
   const tags = tag.split(',')
 
@@ -46,7 +47,7 @@ const ProjectCard = ({
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`lg:flex justify-around  gap-12 text-white  ${
+      className={`xl:flex justify-around  gap-12 text-white  ${
         number % 2 === 0 && 'flex-row-reverse'
       }`}
     >
@@ -54,13 +55,13 @@ const ProjectCard = ({
         <img
           src={image}
           alt={title}
-          className='rounded-2xl w-full object-cover h-full'
+          className='rounded-2xl  flex basis-full   object-cover xl:max-w-[586px] xl:h-[391px]'
         />
         <p className='font-bold text-base px-4 py-1 bg-black bg-opacity-[64%]  max-w-fit rounded-full absolute top-[10px] left-[10px] z-100'>
-          Project
+          {type ? type : 'Project'}
         </p>
       </div>
-      <div className='flex flex-col justify-between pt-12 lg:pt-0'>
+      <div className='flex flex-col justify-between basis-full pt-12 xl:pt-0 '>
         <div className='flex flex-col space-y-[16px] '>
           <div className='relative w-fit'>
             <h1 className='font-semibold text-[40px] xl:text-[32px] tracking-[-1px] xl:tracking-[-0.5px] '>
@@ -69,7 +70,7 @@ const ProjectCard = ({
             <motion.div
               variants={underLineVariants}
               animate={isHovered ? 'hover' : 'initial'}
-              className='absolute h-3 w-0 hover:w-3/4 transition  bg-violet-500 z-0 top-7 mix-blend-screen lg:flex hidden'
+              className='absolute h-3 w-0 hover:w-3/4 transition  bg-violet-500 z-0 top-7 mix-blend-screen xl:flex hidden'
             ></motion.div>
           </div>
           <p className='text-[20px] leading-[33px]'>{desc}</p>
@@ -86,14 +87,22 @@ const ProjectCard = ({
             })}
           </div>
         </div>
-        <div className='flex items-center gap-12 font-semibold text-base pt-20 '>
-          <div className='flex items-center gap-2 cursor-pointer group '>
-            <a href={liveLink}>Live Demo</a>
-            <div>
-              <ArrowRightIcon className='h-6 group-hover:rotate-[-45deg] group-hover:bg-opacity-[100%] rotate-[-45deg] lg:rotate-[0deg]  transition bg-[#6068DB] lg:bg-opacity-0  rounded-full m-[6px] p-1' />
+        <div className='flex items-center gap-12 font-semibold text-base pt-20 xl:pt-0 '>
+          {liveLink && (
+            <div className='flex items-center gap-2 cursor-pointer group '>
+              <a href={liveLink} target='_blank' rel='noreferrer'>
+                Live Demo
+              </a>
+              <div>
+                <ArrowRightIcon className='h-6 group-hover:rotate-[-45deg] group-hover:bg-opacity-[100%] rotate-[-45deg] xl:rotate-[0deg]  transition bg-[#6068DB] xl:bg-opacity-0  rounded-full m-[6px] p-1' />
+              </div>
             </div>
-          </div>
-          <a href={gitLink}>Git Demo</a>
+          )}
+          {gitLink && (
+            <a href={gitLink} target='_blank' rel='noreferrer'>
+              Git Demo
+            </a>
+          )}
         </div>
       </div>
     </motion.div>

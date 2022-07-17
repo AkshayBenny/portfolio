@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 export default function Hero() {
-
   const [xCoord, setXCoord] = useState([])
   const [yCoord, setYCoord] = useState([])
   useEffect(() => {
@@ -82,10 +81,10 @@ export default function Hero() {
         >
           <span className='text-white text-[20px] opacity-[64%]'>I am a </span>
           <span className='font-bold text-white text-[20px] opacity-100'>
-            Full Stack Developer
+            Full Stack Web Developer&nbsp;
           </span>
           <span className='text-white text-[20px] opacity-[64%]'>
-            . Amet minim mollit non deserunt ullamco est sit aliqua dolor
+             specializing in MERN stack based in India.
           </span>
         </motion.p>
         <motion.div
