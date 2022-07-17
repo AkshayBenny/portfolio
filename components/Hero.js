@@ -84,7 +84,7 @@ export default function Hero() {
             Full Stack Web Developer&nbsp;
           </span>
           <span className='text-white text-[20px] opacity-[64%]'>
-             specializing in MERN stack based in India.
+            specializing in MERN stack based in India.
           </span>
         </motion.p>
         <motion.div

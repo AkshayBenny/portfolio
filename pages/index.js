@@ -44,7 +44,7 @@ export default function Home() {
       <Head>
         <title>Akshay Benny</title>
         <meta name='description' content='Full Stack Developer Portfolio' />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/vercel.svg' />
         <link
           href='https://fonts.googleapis.com/css?family=Poppins'
           rel='stylesheet'

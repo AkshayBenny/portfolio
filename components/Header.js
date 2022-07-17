@@ -2,6 +2,8 @@ import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HashLink as Link } from 'react-router-hash-link'
+import Image from 'next/image'
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   const navbarVariants = {
@@ -23,7 +25,9 @@ const Header = () => {
           isOpen ? 'bg-black' : 'bg-none'
         }`}
       >
-        <div>.akshay</div>
+        <div>
+          <Image src='/vercel.svg' height={48} width={48} alt='logo' />
+        </div>
         <div className='hidden lg:flex'>
           <div className='flex items-center justify-between gap-4 font-semibold'>
             <div className='relative group'>
