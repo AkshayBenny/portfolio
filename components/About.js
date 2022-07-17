@@ -92,11 +92,13 @@ const About = () => {
               Nice to meet you !
             </h1>
             <p className='text-base opacity-[64%] leading-[26px] pt-6'>
-              Diam auctor orci, quis nunc eleifend in tempor, eros, vehicula.
-              Imperdiet tristique quam laoreet massa, volutpat purus tristique
-              id. Amet vulputate pretium. Donec arcu ornare adipiscing a purus,
-              id habitant. Aliquet morbi integer eget iaculis egestas mauris nec
-              tortor.
+              My name is Akshay Benny, a tireless seeker of knowledge, a
+              full-stack web developer who specializes in building responsive
+              web applications with cool animations and a Mechanical Engineering
+              graduate from Cochin University Of Science And Technology with
+              background in UI designing and ethical hacking. You can find me
+              playing badminton, swimming or reading comics when I am not building web
+              applications.
             </p>
 
             {/* <button className='w-fit cursor-pointer bg-gradient-to-r from-[#1745A9] to-[#A019DF] text-white px-8 py-[14px] rounded-lg mt-12 hover:bg-blue-700  transition duration-200 font-medium text-[16px]'>

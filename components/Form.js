@@ -58,8 +58,8 @@ const Form = () => {
         Get in touch
       </h1>
       <p className='text-base opacity-[64%] mx-auto leading-[32.4px] pt-6 text-center lg:max-w-[544px]'>
-        Already use Dlex? Sign in so we can tailor your support experience. If
-        that’s not possible, we’d still like to hear from you.
+        Enter your details below to get in touch with me. I will get back to you
+        as soon as possible.
       </p>
       <form
         onSubmit={handleSubmit(onSubmitForm)}

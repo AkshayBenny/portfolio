@@ -63,7 +63,7 @@ export default function Portfolio() {
         <ProjectCard
           title='Twitter Clone'
           desc='A clone of Twitter made using NextJs and Firebase. It supports features like sign in, sign out, posting, adding new tweets and more.'
-          tag='Tailwind Css,ReactJs,NextJs,Recoil'
+          tag='Tailwind Css,ReactJs,NextJs,Recoil,Firebase,News Api'
           gitLink='https://github.com/AkshayBenny/twitter-clone-nextjs'
           liveLink='https://twitter-clone-nextjs-bv5wn9iwn-akshaybenny.vercel.app/'
           image='/twitter.png'
@@ -73,7 +73,7 @@ export default function Portfolio() {
         <ProjectCard
           title='Google Clone'
           desc='A clone of Google search engine made using Google Search Api. It supports both text as well as image search.'
-          tag='Tailwind Css,ReactJs,NextJs,Redux'
+          tag='Tailwind Css,ReactJs,NextJs,Redux,Google Api'
           gitLink='https://github.com/AkshayBenny/google-clone-nextjs'
           liveLink='https://google-clone-nextjs-jade.vercel.app/'
           image='/google.png'
