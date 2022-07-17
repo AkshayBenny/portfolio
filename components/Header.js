@@ -26,7 +26,24 @@ const Header = () => {
         }`}
       >
         <div>
-          <Image src='/vercel.svg' height={48} width={48} alt='logo' />
+          <div className='lg:hidden grid'>
+            <Image
+              src='/vercel.svg'
+              height={32}
+              width={32}
+              alt='logo'
+              className='lg:hidden grid'
+            />
+          </div>
+          <div className='hidden lg:grid'>
+            <Image
+              src='/vercel.svg'
+              height={42}
+              width={42}
+              alt='logo'
+              className='hidden lg:grid'
+            />
+          </div>
         </div>
         <div className='hidden lg:flex'>
           <div className='flex items-center justify-between gap-4 font-semibold'>
