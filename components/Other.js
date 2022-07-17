@@ -5,7 +5,7 @@ const Other = () => {
   const otherData = [
     {
       name: 'Figma Co-pilot',
-      desc: 'Figma Co-pilot finds guideline erros within your designs on all your layers. Ensure your designs are ready for development or design collaboration by fixing inconsistencies.',
+      desc: 'Figma Co-pilot is a Figma plugin that finds guideline erros within your designs on all your layers.',
       image: '/figma.png',
       gitLink: 'https://github.com/AkshayBenny/figma-copilot',
     },
