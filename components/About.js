@@ -12,6 +12,7 @@ const About = () => {
     'Redux',
     'Recoil',
     'Firebase',
+    'Git',
   ]
   const [xCoord, setXCoord] = useState([])
   const [yCoord, setYCoord] = useState([])
@@ -97,8 +98,8 @@ const About = () => {
               web applications with cool animations and a Mechanical Engineering
               graduate from Cochin University Of Science And Technology with
               background in UI designing and ethical hacking. You can find me
-              playing badminton, swimming or reading comics when I am not building web
-              applications.
+              playing badminton, swimming or reading comics when I am not
+              building web applications.
             </p>
 
             {/* <button className='w-fit cursor-pointer bg-gradient-to-r from-[#1745A9] to-[#A019DF] text-white px-8 py-[14px] rounded-lg mt-12 hover:bg-blue-700  transition duration-200 font-medium text-[16px]'>
@@ -107,7 +108,9 @@ const About = () => {
             <button className='px-8 py-[14px] relative rounded-lg mt-12 group overflow-hidden font-medium text-[16px] bg-gradient-to-r from-[#1745A9] to-[#A019DF] text-white inline-block'>
               <span className='absolute top-0 left-0 flex h-full w-0 mb-0 transition-all duration-200 ease-out transform translate-x-0 bg-[#1745A9] group-hover:w-full opacity-90'></span>
               <span className='relative group-hover:text-white'>
-                Download CV
+                <a href='/Resume.pdf' target='_blank' rel='noreferrer'>
+                  Get resume
+                </a>
               </span>
             </button>
           </div>

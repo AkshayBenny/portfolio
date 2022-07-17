@@ -100,7 +100,7 @@ const ProjectCard = ({
           )}
           {gitLink && (
             <a href={gitLink} target='_blank' rel='noreferrer'>
-              Git Demo
+              View code
             </a>
           )}
         </div>
