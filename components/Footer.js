@@ -70,7 +70,7 @@ const Footer = () => {
       <div className='flex flex-col gap-4 lg:flex-row items-center justify-between'>
         <div>
           <p>
-            <span className='opacity-[64%] text-base'>Developed by</span>
+            <span className='opacity-[64%] text-base'>Developed by&nbsp;</span>
             <span className='font-semibold cursor-pointer link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1 transition'>
               <a
                 href='https://akshay-benny-portfolio.vercel.app/'
@@ -84,7 +84,7 @@ const Footer = () => {
         </div>
         <div>
           <p>
-            <span className='opacity-[64%] text-base'>Designed by</span>
+            <span className='opacity-[64%] text-base'>Designed by&nbsp;</span>
             <span className='font-semibold cursor-pointer link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1 transition'>
               <a
                 href='https://sreemikil.github.io/portfolio/'

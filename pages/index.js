@@ -51,7 +51,7 @@ export default function Home() {
         />
       </Head>
 
-      <main className='bg-black min-h-screen overflow-x-hidden font-Poppins relative'>
+      <main className='bg-black min-h-screen overflow-x-hidden font-Poppins relative dark'>
         {scrollPosition > 100 && (
           <motion.button
             initial={{ y: 100, opacity: 0 }}
