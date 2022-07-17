@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import profilePic from '../public/profilePic.jpg'
+import profilePic from '../public/profilePic.png'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 

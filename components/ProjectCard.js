@@ -55,7 +55,7 @@ const ProjectCard = ({
         <img
           src={image}
           alt={title}
-          className='rounded-2xl  flex basis-full   object-cover xl:max-w-[586px] xl:h-[391px]'
+          className='rounded-2xl  flex basis-full   object-cover xl:max-w-[586px] xl:h-[391px] min-h-[300px]'
         />
         <p className='font-bold text-base px-4 py-1 bg-black bg-opacity-[64%]  max-w-fit rounded-full absolute top-[10px] left-[10px] z-100'>
           {type ? type : 'Project'}
