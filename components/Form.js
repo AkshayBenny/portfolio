@@ -59,7 +59,7 @@ const Form = () => {
       </h1>
       <p className='text-base opacity-[64%] mx-auto leading-[32.4px] pt-6 text-center lg:max-w-[544px]'>
         Enter your details below to get in touch with me. I will get back to you
-        as soon as possible.
+        as soon as I can.
       </p>
       <form
         onSubmit={handleSubmit(onSubmitForm)}
