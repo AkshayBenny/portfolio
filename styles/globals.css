@@ -6,7 +6,11 @@
   html {
     scroll-behavior: smooth;
   }
- 
+
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+  }
+
   .gradient-text {
     text-transform: uppercase;
     background: linear-gradient(to right, #1745a9 0%, #a019df 100%);

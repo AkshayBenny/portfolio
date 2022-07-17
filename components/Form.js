@@ -51,7 +51,7 @@ const Form = () => {
         hidden: { opacity: 0 },
       }}
       id='contact'
-      className='relative text-white pt-[100px] max-w-[882px] mx-auto px-6 pb-[100px] '
+      className='relative  pt-[100px] max-w-[882px] mx-auto px-6 pb-[100px] '
     >
       <div className='flex lg:hidden absolute top-[200px] -right-[600px] w-[700px] h-[700px] rounded-full bg-[#6a60f5] filter blur-[300px] z-0 '></div>
       <h1 className='text-center font-semibold text-[32px] lg:text-[40px]   tracking-[-1px]'>
@@ -75,7 +75,7 @@ const Form = () => {
               })}
               name='name'
               type='text'
-              className={`placeholder:text-[16px] placeholder:opacity-[40%] w-full bg-transparent border-[2px] border-white border-opacity-[50%] py-[13px] px-[18px] rounded-lg ${
+              className={`placeholder:text-[16px] placeholder:opacity-[40%] w-full bg-transparent border-[2px] border-black dark:border-white border-opacity-[50%] py-[13px] px-[18px] rounded-lg ${
                 errors.name ? 'ring-2 ring-red-500' : null
               }`}
               placeholder='John Doe'
@@ -96,7 +96,7 @@ const Form = () => {
               })}
               name='email'
               type='text'
-              className={`placeholder:text-[16px] placeholder:opacity-[40%] w-full bg-transparent border-[2px] border-white border-opacity-[50%] py-[13px] px-[18px] rounded-lg ${
+              className={`placeholder:text-[16px] placeholder:opacity-[40%] w-full bg-transparent border-[2px] border-black dark:border-white border-opacity-[50%] py-[13px] px-[18px] rounded-lg ${
                 errors.email ? 'ring-2 ring-red-500' : null
               }`}
               placeholder='john@example.com'
@@ -124,7 +124,7 @@ const Form = () => {
               minLength: 10,
             })}
             name='message'
-            className={`placeholder:text-[16px] placeholder:opacity-[40%] w-full min-h-[153px] bg-transparent border-[2px] border-white border-opacity-[50%] py-[13px] px-[18px] rounded-lg ${
+            className={`placeholder:text-[16px] placeholder:opacity-[40%] w-full min-h-[153px] bg-transparent border-[2px] border-black dark:border-white border-opacity-[50%] py-[13px] px-[18px] rounded-lg ${
               errors.message ? 'ring-2 ring-red-500' : null
             }`}
             placeholder='Type your message here'

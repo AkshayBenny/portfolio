@@ -1,47 +1,47 @@
 import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { HashLink as Link } from 'react-router-hash-link'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+
 import Image from 'next/image'
+import ThemeToggleButton from './ThemeToggleButton'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+
   const navbarVariants = {
     hidden: {
       height: 0,
       opacity: 0,
     },
-    visible: { height: '244px', opacity: 1 },
+    visible: { height: '350px', opacity: 1 },
   }
 
   return (
     <motion.header
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className='relative z-100'
+      className={`relative z-10 ${
+        isOpen ? 'bg-white dark:bg-black' : 'bg-none'
+      }`}
     >
-      <div
-        className={`text-white w-full h-[72px]  items-center justify-between lg:px-16 px-6 flex ${
-          isOpen ? 'bg-black' : 'bg-none'
-        }`}
-      >
+      <div className='w-full h-[72px]  items-center justify-between  z-50 lg:px-16 px-6 flex '>
         <div>
-          <div className='lg:hidden grid'>
+          <div className='dark:hidden grid'>
             <Image
-              src='/vercel.svg'
-              height={32}
-              width={32}
+              src='/dark-vercel.svg'
+              height={42}
+              width={42}
               alt='logo'
-              className='lg:hidden grid'
+              className=''
             />
           </div>
-          <div className='hidden lg:grid'>
+          <div className='dark:grid hidden'>
             <Image
               src='/vercel.svg'
               height={42}
               width={42}
               alt='logo'
-              className='hidden lg:grid'
+              className=''
             />
           </div>
         </div>
@@ -52,7 +52,7 @@ const Header = () => {
                 href='#project'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
-                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1 transition'>
+                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white  pb-1 transition'>
                   Project
                 </span>
               </a>
@@ -62,7 +62,7 @@ const Header = () => {
                 href='#other'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
-                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1'>
+                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white  pb-1'>
                   Other
                 </span>
               </a>
@@ -72,7 +72,7 @@ const Header = () => {
                 href='#about'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
-                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1'>
+                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white  pb-1'>
                   About
                 </span>
               </a>
@@ -82,13 +82,14 @@ const Header = () => {
                 href='#contact'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
-                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1'>
+                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white  pb-1'>
                   Contact
                 </span>
               </a>
             </div>
           </div>
         </div>
+
         <div className='hidden lg:flex'>
           <ul className='flex items-center justify-between gap-4'>
             <motion.li whileHover='hover' initial='initial'>
@@ -151,6 +152,9 @@ const Header = () => {
                 </svg>
               </a>
             </li>
+            <li className='flex items-center justify-center'>
+              <ThemeToggleButton />
+            </li>
           </ul>
         </div>
         {!isOpen ? (
@@ -158,14 +162,14 @@ const Header = () => {
             className='flex lg:hidden items-center justify-center cursor-pointer'
             onClick={() => setIsOpen(!isOpen)}
           >
-            <MenuAlt1Icon className='h-6 text-white' />
+            <MenuAlt1Icon className='h-6 ' />
           </div>
         ) : (
           <div
             className='flex lg:hidden items-center justify-center cursor-pointer'
             onClick={() => setIsOpen(!isOpen)}
           >
-            <XIcon className='h-6 text-white' />
+            <XIcon className='h-6 ' />
           </div>
         )}
 
@@ -174,7 +178,7 @@ const Header = () => {
             variants={navbarVariants}
             initial='hidden'
             animate='visible'
-            className='backdrop-filter backdrop-blur-sm absolute flex flex-col items-center justify-center  w-full bg-black top-16 left-0 z-10  px-6 space-y-[24px] '
+            className='backdrop-filter backdrop-blur-sm absolute flex flex-col items-start justify-center  w-full bg-white dark:bg-black top-16 left-0 z-10  px-6 space-y-[24px] '
           >
             <a
               onClick={() => setIsOpen(false)}
@@ -204,6 +208,9 @@ const Header = () => {
             >
               Contact
             </a>
+            <div className='pt-3'>
+              <ThemeToggleButton />
+            </div>
           </motion.nav>
         )}
       </div>

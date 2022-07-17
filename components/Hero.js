@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from '@heroicons/react/outline'
+import { ChevronDownIcon, MinusIcon } from '@heroicons/react/outline'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
@@ -63,15 +63,17 @@ export default function Hero() {
           variants={lazyLoadVariants}
           className='flex items-center gap-4 pb-2'
         >
-          <div className='w-[21px] lg:w-[49px] h-[2px] bg-white'></div>
-          <h4 className='text-white font-medium text-lg lg:text-2xl tracking-[-0.25px]  '>
+          <MinusIcon className='h-8' />
+
+          <h4 className=' font-medium text-lg lg:text-2xl tracking-[-0.25px]  '>
             Hello world
           </h4>
-          <div className='w-[49px] h-[2px] bg-white lg:flex hidden'></div>
+          <MinusIcon className='h-8 lg:flex hidden' />
+          {/* <div className='w-[49px] h-[2px] dark:bg-white bg- lg:flex hidden'></div> */}
         </motion.div>
         <motion.h1
           variants={lazyLoadVariants}
-          className='text-white tracking-[-1px] lg:tracking-[-1.25px] font-semibold text-[56px] pb-4 max-w-[150px] sm:max-w-none'
+          className='tracking-[-1px] lg:tracking-[-1.25px] font-semibold text-[56px] pb-4 max-w-[150px] sm:max-w-none'
         >
           I&apos;m Akshay Benny
         </motion.h1>
@@ -79,17 +81,17 @@ export default function Hero() {
           variants={lazyLoadVariants}
           className='pb-12 max-w-[459px] lg:max-w-[659px] lg:text-center'
         >
-          <span className='text-white text-[20px] opacity-[64%]'>I am a </span>
-          <span className='font-bold text-white text-[20px] opacity-100'>
+          <span className='text-[20px] opacity-[64%]'>I am a </span>
+          <span className='font-bold text-[20px] opacity-100'>
             Full Stack Web Developer&nbsp;
           </span>
-          <span className='text-white text-[20px] opacity-[64%]'>
+          <span className='text-[20px] opacity-[64%]'>
             specializing in MERN stack based in India.
           </span>
         </motion.p>
         <motion.div
           variants={lazyLoadVariants}
-          className='text-white text-[14px] opacity-[48%] flex items-center gap-2'
+          className='text-[14px] opacity-[48%] flex items-center gap-2'
         >
           <p>Scroll down</p>
           <motion.div

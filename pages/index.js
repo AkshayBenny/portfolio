@@ -51,7 +51,7 @@ export default function Home() {
         />
       </Head>
 
-      <main className='bg-black min-h-screen overflow-x-hidden font-Poppins relative dark'>
+      <main className='duration-300 min-h-screen overflow-x-hidden font-Poppins relative  bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100'>
         {scrollPosition > 100 && (
           <motion.button
             initial={{ y: 100, opacity: 0 }}
@@ -63,7 +63,7 @@ export default function Home() {
             }}
             whileTap={{ scale: 1 }}
             onClick={goToTop}
-            className='scrollToTop-btn  text-white cursor-pointer  fixed bottom-8  right-10 z-50'
+            className='scrollToTop-btn bg-gradient-to-r from-[#1745A9] to-[#A019DF] rounded-full cursor-pointer  fixed bottom-8  right-10 z-50'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -81,7 +81,7 @@ export default function Home() {
         )}
 
         <Header />
-        <div className='grid lg:hidden'>
+        <div className='grid md:hidden'>
           <motion.div
             variants={lazyLoadVariants}
             animate='visible'
@@ -96,22 +96,20 @@ export default function Home() {
             <Footer />
           </motion.div>
         </div>
-        <div className='hidden lg:grid'>
-          <ScrollerMotion>
-            <motion.div
-              variants={lazyLoadVariants}
-              animate='visible'
-              initial='hidden'
-              className=' max-w-[2000px] 3xl:mx-auto h-fit relative '
-            >
-              <Hero />
-              <Portfolio />
-              <Other />
-              <About />
-              <Form />
-              <Footer />
-            </motion.div>
-          </ScrollerMotion>
+        <div className='hidden md:grid'>
+          <motion.div
+            variants={lazyLoadVariants}
+            animate='visible'
+            initial='hidden'
+            className=' max-w-[2000px] 3xl:mx-auto h-fit relative '
+          >
+            <Hero />
+            <Portfolio />
+            <Other />
+            <About />
+            <Form />
+            <Footer />
+          </motion.div>
         </div>
       </main>
     </div>

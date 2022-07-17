@@ -66,7 +66,7 @@ const OtherCard = ({ data }) => {
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className='w-full relative text-white group'
+      className='w-full relative text-white group '
     >
       <div className=' z-0'>
         <img

@@ -47,7 +47,7 @@ const ProjectCard = ({
       }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`xl:flex justify-around  gap-12 text-white  ${
+      className={`xl:flex justify-around  gap-12 ${
         number % 2 === 0 && 'flex-row-reverse'
       }`}
     >
@@ -57,7 +57,7 @@ const ProjectCard = ({
           alt={title}
           className='rounded-2xl  flex basis-full   object-cover xl:max-w-[586px] xl:h-[391px] min-h-[300px]'
         />
-        <p className='font-bold text-base px-4 py-1 bg-black bg-opacity-[64%]  max-w-fit rounded-full absolute top-[10px] left-[10px] z-100'>
+        <p className='font-bold text-base px-4 py-1 bg-gray-600 dark:bg-black  dark:text-white text-white bg-opacity-[64%] dark:bg-opacity-[64%]  max-w-fit rounded-full absolute top-[10px] left-[10px] z-100'>
           {type ? type : 'Project'}
         </p>
       </div>
@@ -70,7 +70,7 @@ const ProjectCard = ({
             <motion.div
               variants={underLineVariants}
               animate={isHovered ? 'hover' : 'initial'}
-              className='absolute h-3 w-0 hover:w-3/4 transition  bg-violet-500 z-0 top-7 mix-blend-screen xl:flex hidden'
+              className='absolute h-3 w-0 dark:flex hover:w-3/4 transition top-8  bg-violet-500 z-0 xl:top-7 mix-blend-screen  hidden'
             ></motion.div>
           </div>
           <p className='text-[20px] leading-[33px]'>{desc}</p>
@@ -79,7 +79,7 @@ const ProjectCard = ({
               return (
                 <p
                   key={index}
-                  className='px-6 py-[10px] bg-white bg-opacity-[8%] rounded-[10px] text-sm'
+                  className='px-6 py-[10px] bg-black bg-opacity-[8%]  dark:bg-white dark:bg-opacity-[8%]  rounded-[10px] text-sm'
                 >
                   {tag}
                 </p>
@@ -94,7 +94,7 @@ const ProjectCard = ({
                 Live Demo
               </a>
               <div>
-                <ArrowRightIcon className='h-6 group-hover:rotate-[-45deg] group-hover:bg-opacity-[100%] rotate-[-45deg] xl:rotate-[0deg]  transition bg-[#6068DB] xl:bg-opacity-0  rounded-full m-[6px] p-1' />
+                <ArrowRightIcon className='h-6 text-white xl:text-black group-hover:text-white  dark:text-white group-hover:rotate-[-45deg] group-hover:bg-opacity-[100%] rotate-[-45deg] xl:rotate-[0deg]  transition bg-[#6068DB] xl:bg-opacity-0  rounded-full m-[6px] p-1' />
               </div>
             </div>
           )}

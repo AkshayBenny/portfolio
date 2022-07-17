@@ -55,7 +55,7 @@ const About = () => {
         hidden: { opacity: 0 },
       }}
       id='about'
-      className='relative  text-white mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'
+      className='relative  mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'
     >
       {/* Project blob animation */}
       <motion.div
@@ -67,7 +67,7 @@ const About = () => {
       <h1 className='text-center font-semibold text-[32px] lg:text-[40px] pb-12 lg:pb-[72px] tracking-[-1px]'>
         About me
       </h1>
-      <div className='lg:grid grid-cols-2 gap-12 text-white'>
+      <div className='lg:grid grid-cols-2 gap-12 '>
         <div className='grid lg:hidden'>
           <Image
             height={651}
@@ -102,9 +102,6 @@ const About = () => {
               building web applications.
             </p>
 
-            {/* <button className='w-fit cursor-pointer bg-gradient-to-r from-[#1745A9] to-[#A019DF] text-white px-8 py-[14px] rounded-lg mt-12 hover:bg-blue-700  transition duration-200 font-medium text-[16px]'>
-              Download CV
-            </button> */}
             <button className='px-8 py-[14px] relative rounded-lg mt-12 group overflow-hidden font-medium text-[16px] bg-gradient-to-r from-[#1745A9] to-[#A019DF] text-white inline-block'>
               <span className='absolute top-0 left-0 flex h-full w-0 mb-0 transition-all duration-200 ease-out transform translate-x-0 bg-[#1745A9] group-hover:w-full opacity-90'></span>
               <span className='relative group-hover:text-white'>
@@ -121,7 +118,7 @@ const About = () => {
                 return (
                   <p
                     key={index}
-                    className='px-6 py-[10px] bg-white bg-opacity-[8%] rounded-[8px] text-sm'
+                    className='px-6 py-[10px] bg-black bg-opacity-[8%]  dark:bg-white dark:bg-opacity-[8%] rounded-[8px] text-sm'
                   >
                     {skill}
                   </p>

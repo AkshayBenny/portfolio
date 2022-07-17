@@ -35,7 +35,7 @@ export default function Portfolio() {
   return (
     <section
       id='project'
-      className='relative pt-[173px] lg:pt-[100px] text-white px-6 lg:px-16 max-w-[1400px] mx-auto'
+      className='relative pt-[173px] lg:pt-[100px]  px-6 lg:px-16 max-w-[1400px] mx-auto'
     >
       {/* Project blob animation */}
       <motion.div

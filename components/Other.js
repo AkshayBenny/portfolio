@@ -27,12 +27,12 @@ const Other = () => {
   return (
     <section
       id='other'
-      className='text-white mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'
+      className=' mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'
     >
       <h1 className='text-center font-semibold text-[32px] lg:text-[40px] pb-12 lg:pb-[72px] tracking-[-1px]'>
         Other works
       </h1>
-      <div className='lg:grid grid-cols-2 gap-12 w-full gap-y-12 flex flex-col '>
+      <div className='md:grid grid-cols-2 gap-12 w-full gap-y-12 flex flex-col '>
         {otherData.map((data, index) => {
           return <OtherCard key={index} data={data} />
         })}
