@@ -55,7 +55,7 @@ const About = () => {
         hidden: { opacity: 0 },
       }}
       id='about'
-      className='relative dark:text-black text-white mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'
+      className='relative  text-white mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'
     >
       {/* Project blob animation */}
       <motion.div

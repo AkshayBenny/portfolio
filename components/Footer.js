@@ -72,11 +72,7 @@ const Footer = () => {
           <p>
             <span className='opacity-[64%] text-base'>Developed by&nbsp;</span>
             <span className='font-semibold cursor-pointer link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white text-white pb-1 transition'>
-              <a
-                href='https://akshay-benny-portfolio.vercel.app/'
-                target='_blank'
-                rel='noreferrer'
-              >
+              <a href='#hero' target='_blank' rel='noreferrer'>
                 Myself
               </a>
             </span>
