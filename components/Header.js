@@ -12,33 +12,6 @@ const Header = () => {
     visible: { height: '244px', opacity: 1 },
   }
 
-  const svgHoverVariants = {
-    hover: {
-      y: [4, -4],
-      transition: {
-        duration: 1,
-        yoyo: Infinity,
-      },
-    },
-    initial: {
-      y: 0,
-    },
-  }
-
-  const pathVariants = {
-    initial: {
-      pathLength: 0,
-    },
-    hover: {
-      pathLength: [0, 1, 0, 1],
-      transiiton: {
-        yoyo: Infinity,
-        duration: 1,
-        ease: 'easeInOut',
-      },
-    },
-  }
-
   return (
     <motion.header
       initial={{ opacity: 0 }}
@@ -47,7 +20,7 @@ const Header = () => {
     >
       <div
         className={`text-white w-full h-[72px]  items-center justify-between lg:px-16 px-6 flex ${
-          isOpen ? 'bg-black' : ''
+          isOpen ? 'bg-black' : 'bg-none'
         }`}
       >
         <div>.akshay</div>
@@ -183,24 +156,28 @@ const Header = () => {
             className='backdrop-filter backdrop-blur-sm absolute flex flex-col items-center justify-center  w-full bg-black top-16 left-0 z-10  px-6 space-y-[24px] '
           >
             <a
+              onClick={() => setIsOpen(false)}
               href='#project'
               className='font-semibold text-base pt-10 cursor-pointer'
             >
               Projects
             </a>
             <a
+              onClick={() => setIsOpen(false)}
               href='#other'
               className='font-semibold text-base  cursor-pointer'
             >
               Other
             </a>
             <a
+              onClick={() => setIsOpen(false)}
               href='#about'
               className='font-semibold text-base  cursor-pointer'
             >
               About
             </a>
             <a
+              onClick={() => setIsOpen(false)}
               href='#contact'
               className='font-semibold text-base  cursor-pointer'
             >
