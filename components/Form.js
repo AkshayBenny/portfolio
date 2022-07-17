@@ -75,7 +75,7 @@ const Form = () => {
               })}
               name='name'
               type='text'
-              className={`placeholder:text-[16px] placeholder:opacity-[40%] w-full bg-transparent border-[2px] border-black dark:border-white border-opacity-[50%] py-[13px] px-[18px] rounded-lg ${
+              className={`placeholder:text-[16px] placeholder:opacity-[90%] w-full bg-transparent border-[2px] border-black dark:border-white border-opacity-[50%] py-[13px] px-[18px] rounded-lg ${
                 errors.name ? 'ring-2 ring-red-500' : null
               }`}
               placeholder='John Doe'
@@ -96,7 +96,7 @@ const Form = () => {
               })}
               name='email'
               type='text'
-              className={`placeholder:text-[16px] placeholder:opacity-[40%] w-full bg-transparent border-[2px] border-black dark:border-white border-opacity-[50%] py-[13px] px-[18px] rounded-lg ${
+              className={`placeholder:text-[16px] placeholder:opacity-[90%] w-full bg-transparent border-[2px] border-black dark:border-white border-opacity-[50%] py-[13px] px-[18px] rounded-lg ${
                 errors.email ? 'ring-2 ring-red-500' : null
               }`}
               placeholder='john@example.com'
@@ -124,7 +124,7 @@ const Form = () => {
               minLength: 10,
             })}
             name='message'
-            className={`placeholder:text-[16px] placeholder:opacity-[40%] w-full min-h-[153px] bg-transparent border-[2px] border-black dark:border-white border-opacity-[50%] py-[13px] px-[18px] rounded-lg ${
+            className={`placeholder:text-[16px] placeholder:opacity-[90%] w-full min-h-[153px] bg-transparent border-[2px] border-black dark:border-white border-opacity-[50%] py-[13px] px-[18px] rounded-lg ${
               errors.message ? 'ring-2 ring-red-500' : null
             }`}
             placeholder='Type your message here'
