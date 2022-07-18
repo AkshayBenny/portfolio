@@ -81,7 +81,24 @@ export default function Home() {
         )}
 
         <Header />
-        <div className='grid md:hidden'>
+        <div>
+          <motion.div
+            variants={lazyLoadVariants}
+            animate='visible'
+            initial='hidden'
+            className=' max-w-[2000px] 3xl:mx-auto h-fit relative '
+          >
+            <Hero />
+            <section id='project'>
+              <Portfolio />
+            </section>
+            <Other />
+            <About />
+            <Form />
+            <Footer />
+          </motion.div>
+        </div>
+        {/* <div className='hidden md:grid'>
           <motion.div
             variants={lazyLoadVariants}
             animate='visible'
@@ -95,22 +112,7 @@ export default function Home() {
             <Form />
             <Footer />
           </motion.div>
-        </div>
-        <div className='hidden md:grid'>
-          <motion.div
-            variants={lazyLoadVariants}
-            animate='visible'
-            initial='hidden'
-            className=' max-w-[2000px] 3xl:mx-auto h-fit relative '
-          >
-            <Hero />
-            <Portfolio />
-            <Other />
-            <About />
-            <Form />
-            <Footer />
-          </motion.div>
-        </div>
+        </div> */}
       </main>
     </div>
   )
