@@ -89,9 +89,7 @@ export default function Home() {
             className=' max-w-[2000px] 3xl:mx-auto h-fit relative '
           >
             <Hero />
-            <section id='project'>
-              <Portfolio />
-            </section>
+            <Portfolio />
             <Other />
             <About />
             <Form />
