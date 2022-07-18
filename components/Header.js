@@ -52,7 +52,7 @@ const Header = () => {
                 href='#project'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
-                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white  pb-1 transition'>
+                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline  dark:link-underline-white link-underline-black  pb-1 transition'>
                   Project
                 </span>
               </a>
@@ -62,7 +62,7 @@ const Header = () => {
                 href='#other'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
-                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white  pb-1'>
+                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline dark:link-underline-white link-underline-black  pb-1'>
                   Other
                 </span>
               </a>
@@ -72,7 +72,7 @@ const Header = () => {
                 href='#about'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
-                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white  pb-1'>
+                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline   dark:link-underline-white link-underline-black  pb-1'>
                   About
                 </span>
               </a>
@@ -82,7 +82,7 @@ const Header = () => {
                 href='#contact'
                 className='font-display max-w-sm text-base font-bold leading-tight'
               >
-                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white  pb-1'>
+                <span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline   dark:link-underline-white link-underline-black pb-1'>
                   Contact
                 </span>
               </a>

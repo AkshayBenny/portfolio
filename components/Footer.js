@@ -71,7 +71,7 @@ const Footer = () => {
         <div>
           <p>
             <span className='opacity-[64%] text-base'>Developed by&nbsp;</span>
-            <span className='font-semibold cursor-pointer link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white  pb-1 transition'>
+            <span className='font-semibold cursor-pointer link opacity-[64%] group-hover:opacity-100 lg:link-underline   dark:link-underline-white link-underline-black  pb-1 transition'>
               <a href='#hero' target='_blank' rel='noreferrer'>
                 Myself
               </a>
@@ -81,7 +81,7 @@ const Footer = () => {
         <div>
           <p>
             <span className='opacity-[64%] text-base'>Designed by&nbsp;</span>
-            <span className='font-semibold cursor-pointer link opacity-[64%] group-hover:opacity-100 lg:link-underline lg:link-underline-white  pb-1 transition'>
+            <span className='font-semibold cursor-pointer link opacity-[64%] group-hover:opacity-100 lg:link-underline   dark:link-underline-white link-underline-black  pb-1 transition'>
               <a
                 href='https://sreemikil.github.io/portfolio/'
                 target='_blank'
