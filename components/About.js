@@ -11,7 +11,7 @@ const About = () => {
     'Mongoose',
     'Redux',
     'Recoil',
-    'Firebase',
+    'Twilwind CSS',
     'Git',
   ]
   const [xCoord, setXCoord] = useState([])
