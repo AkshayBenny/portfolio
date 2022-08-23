@@ -11,7 +11,7 @@ const About = () => {
     'Mongoose',
     'Redux',
     'Recoil',
-    'Twilwind CSS',
+    'Tailwind CSS',
     'Jest',
     'React Testing Library',
     'Git',
