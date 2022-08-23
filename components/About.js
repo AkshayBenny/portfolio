@@ -12,6 +12,8 @@ const About = () => {
     'Redux',
     'Recoil',
     'Twilwind CSS',
+    'Jest',
+    'React Testing Library',
     'Git',
   ]
   const [xCoord, setXCoord] = useState([])
@@ -97,9 +99,9 @@ const About = () => {
               full-stack web developer who specializes in building responsive
               web applications with cool animations and a Mechanical Engineering
               graduate from Cochin University Of Science And Technology with
-              background in UI designing and ethical hacking. You can find me
-              playing badminton, swimming or reading comics when I am not
-              building web applications.
+              background in UI designing. You can find me playing badminton,
+              swimming or reading comics when I am not building web
+              applications.
             </p>
 
             <button className='px-8 py-[14px] relative rounded-lg mt-12 group overflow-hidden font-medium text-[16px] bg-gradient-to-r from-[#1745A9] to-[#A019DF] text-white inline-block'>
