@@ -92,7 +92,7 @@ const Header = () => {
 
         <div className='hidden lg:flex'>
           <ul className='flex items-center justify-between gap-4'>
-            <li className='hover:animate-bounce hidden dark:flex'>
+            <li className='hover:animate-pulse hidden dark:flex'>
               <a
                 href='https://github.com/AkshayBenny'
                 target='_blank'
@@ -112,7 +112,7 @@ const Header = () => {
                 </svg>
               </a>
             </li>
-            <li className='hover:animate-bounce hidden dark:flex'>
+            <li className='hover:animate-pulse hidden dark:flex'>
               <a
                 href='www.linkedin.com/in/akshay-benny-5346bb209'
                 target='_blank'
@@ -132,7 +132,7 @@ const Header = () => {
                 </svg>
               </a>
             </li>
-            <li className='hover:animate-bounce hidden dark:flex'>
+            <li className='hover:animate-pulse hidden dark:flex'>
               <a
                 href='https://www.instagram.com/akshay_benny_976/?hl=en'
                 target='_blank'
@@ -153,7 +153,7 @@ const Header = () => {
               </a>
             </li>
             {/*  */}
-            <li className='hover:animate-bounce dark:hidden flex'>
+            <li className='hover:animate-pulse dark:hidden flex'>
               <a
                 href='https://github.com/AkshayBenny'
                 target='_blank'
@@ -170,7 +170,7 @@ const Header = () => {
                 </svg>
               </a>
             </li>
-            <li className='hover:animate-bounce dark:hidden flex'>
+            <li className='hover:animate-pulse dark:hidden flex'>
               <a
                 href='www.linkedin.com/in/akshay-benny-5346bb209'
                 target='_blank'
@@ -187,7 +187,7 @@ const Header = () => {
                 </svg>
               </a>
             </li>
-            <li className='hover:animate-bounce dark:hidden flex'>
+            <li className='hover:animate-pulse dark:hidden flex'>
               <a
                 href='https://www.instagram.com/akshay_benny_976/?hl=en'
                 target='_blank'
