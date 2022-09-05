@@ -72,6 +72,7 @@ const About = () => {
       <div className='lg:grid grid-cols-2 gap-12 '>
         <div className='grid lg:hidden'>
           <Image
+            priority
             height={651}
             width={751}
             className='rounded-2xl w-full object-cover'
@@ -81,6 +82,7 @@ const About = () => {
         </div>
         <div className='hidden lg:grid '>
           <Image
+            priority
             height={651}
             width={551}
             className='rounded-2xl  w-full max-h-[363px] sm:max-h-[763px] lg:max-h-[963px]  object-cover'
