@@ -90,7 +90,7 @@ export default function Home() {
           >
             <Hero />
             <Portfolio />
-            <Other />
+            {/* <Other /> */}
             <About />
             <Form />
             <Footer />

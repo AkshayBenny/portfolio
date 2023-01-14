@@ -73,20 +73,18 @@ const About = () => {
 				About me
 			</h1>
 			<div className='flex flex-col items-center justify-center'>
-				<div className='flex flex-col justify-between mt-[48px] lg:mt-0'>
+				<div className='flex flex-col justify-between'>
 					<div className='flex flex-col items-center justify-center'>
-						<h1 className='font-semibold text-[24px] text-center lg:text-[32px] tracking-[-0.5px]'>
-							Nice to meet you !
-						</h1>
-						<p className='text-base text-center opacity-[64%] leading-[26px] pt-6'>
-							My name is Akshay Benny, a tireless seeker of
-							knowledge, a full-stack web developer who
-							specializes in building responsive web applications
-							with cool animations and a Mechanical Engineering
-							graduate from Cochin University Of Science And
-							Technology with background in UI designing. You can
-							find me playing badminton, swimming or reading
-							comics when I am not building web applications.
+						<p className='text-base text-center opacity-[84%] leading-[36px] tracking-wide '>
+							Hey there! My name is Akshay and I am a full stack
+							web developer with a passion for crafting
+							responsive, secure, and scalable web applications. I
+							specialize in using technologies like React, Next,
+							Node, and Express to build user-friendly designs and
+							improve the overall user experience. I am always on
+							the lookout for new challenges and opportunities to
+							learn and grow as a developer. Let&apos;s work
+							together to bring your project to the next level!
 						</p>
 
 						<button
