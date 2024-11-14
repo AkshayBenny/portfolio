@@ -49,12 +49,12 @@ export default function Hero() {
 			variants={lazyLoadVariants}
 			initial='hidden'
 			animate='visible'
-			className='lg:h-[75vh] max-w-screen w-full my-auto relative'>
-			<motion.div
+			className=' lg:h-[100vh] max-w-screen w-full my-auto relative'>
+			{/* <motion.div
 				variants={animationVariants}
 				animate='animate'
-				className='absolute top-0 -left-4 w-[700px] h-[700px] rounded-full bg-[#4235ec] filter blur-[300px] z-0 hidden lg:grid'></motion.div>
-			<div className='grid lg:hidden absolute top-0 -left-[600px] w-[700px] h-[700px] rounded-full bg-[#4235ec] filter blur-[300px] z-0 '></div>
+				className='overflow-none absolute top-0 -left-4 w-[700px] h-[700px] rounded-full bg-[#4235ec] filter blur-[300px] z-0 hidden lg:grid'></motion.div>
+			<div className='overflow-none grid lg:hidden absolute top-0 -left-[600px] w-[700px] h-[700px] rounded-full bg-[#4235ec] filter blur-[300px] z-0 '></div> */}
 
 			<div className='pt-[100px] lg:pt-0 flex flex-col items-start lg:items-center justify-center h-full px-6 lg:px-0 '>
 				<motion.div
@@ -75,12 +75,20 @@ export default function Hero() {
 				</motion.h1>
 				<motion.p
 					variants={lazyLoadVariants}
-					className='pb-12 max-w-[459px] lg:max-w-[659px] lg:text-center'>
-					<span className='text-[20px] opacity-[64%]'>I am a </span>
+					className='pb-12 max-w-[459px] lg:max-w-[959px] lg:text-center'>
+					{/* <span className='text-[20px] opacity-[64%]'>I am a </span>
 					<span className='font-bold text-[20px] opacity-100'>
-						Full Stack Web Developer&nbsp;
+						Software Developer&nbsp;
+					</span> */}
+					<span className='text-[20px] '>
+						With 2+ years of experience in full-stack and mobile
+						development, I build scalable, optimized solutions using
+						frameworks like Next.js, React Native, and Spring Boot.
+						Passionate about creating impactful, user-centric
+						applications.
 					</span>
 				</motion.p>
+
 				<motion.div
 					variants={lazyLoadVariants}
 					className='text-[14px] opacity-[48%] flex items-center gap-2'>

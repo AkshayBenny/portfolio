@@ -62,13 +62,13 @@ const About = () => {
 				hidden: { opacity: 0 },
 			}}
 			id='about'
-			className='relative  mt-[150px] px-6 lg:px-16 max-w-[1400px] mx-auto'>
+			className='relative h-[100vh] my-[150px]  px-6 lg:px-16 max-w-[1400px] mx-auto'>
 			{/* Project blob animation */}
-			<motion.div
+			{/* <motion.div
 				variants={animationVariants}
 				animate='animate'
 				className='absolute top-[0px] -left-4 w-[700px] h-[700px] rounded-full bg-[#877eff] filter blur-[300px] z-0 hidden lg:grid'></motion.div>
-			<div className='grid lg:hidden absolute top-[200px] -left-[600px] w-[700px] h-[700px] rounded-full bg-[#6a60f5] filter blur-[300px] z-0 '></div>
+			<div className='grid lg:hidden absolute top-[200px] -left-[600px] w-[700px] h-[700px] rounded-full bg-[#6a60f5] filter blur-[300px] z-0 '></div> */}
 			<h1 className='text-center font-semibold text-[32px] lg:text-[40px] pb-12 lg:pb-[72px] tracking-[-1px]'>
 				About me
 			</h1>
