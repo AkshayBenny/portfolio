@@ -55,9 +55,23 @@ export default function Home() {
 					href='https://fonts.googleapis.com/css?family=Poppins'
 					rel='stylesheet'
 				/>
+
+				<link
+					rel='preconnect'
+					href='https://fonts.googleapis.com'
+				/>
+				<link
+					rel='preconnect'
+					href='https://fonts.gstatic.com'
+					crossOrigin
+				/>
+				<link
+					href='https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Manrope:wght@200..800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'
+					rel='stylesheet'
+				/>
 			</Head>
 
-			<main className='duration-300 min-h-screen overflow-x-hidden font-Poppins relative  bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100'>
+			<main className='duration-300 min-h-screen overflow-x-hidden  relative  bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100'>
 				{scrollPosition > 100 && (
 					<motion.button
 						initial={{ y: 100, opacity: 0 }}

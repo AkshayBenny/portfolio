@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
 	return (
-		<div className='pb-9 lg:pb-6 lg:px-16'>
+		<div className='mt-12 pb-9 lg:pb-6 lg:px-16'>
 			<div className='lg:hidden w-fit mx-auto pb-12'>
 				<ul className='flex items-center justify-between gap-4'>
 					<li>
@@ -47,7 +47,7 @@ const Footer = () => {
 							</svg>
 						</a>
 					</li>
-					<li>
+					{/* <li>
 						<a
 							href='https://www.instagram.com/akshay_benny_976/?hl=en'
 							target='_blank'
@@ -67,10 +67,10 @@ const Footer = () => {
 								/>
 							</svg>
 						</a>
-					</li>
+					</li> */}
 				</ul>
 			</div>
-			<div className='flex flex-col gap-4 lg:flex-row items-center justify-between'>
+			{/* <div className='flex flex-col gap-4 lg:flex-row items-center justify-between'>
 				<div>
 					<p>
 						<span className='opacity-[64%] text-base'>
@@ -101,7 +101,7 @@ const Footer = () => {
 						</span>
 					</p>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	)
 }

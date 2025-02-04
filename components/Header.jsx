@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 
 import Image from 'next/image'
 import ThemeToggleButton from './ThemeToggleButton'
+import Link from 'next/link'
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false)
@@ -46,32 +47,23 @@ const Header = () => {
 				</div>
 				<div className='hidden lg:flex'>
 					<div className='flex items-center justify-between gap-4 font-semibold'>
-						<div className='relative group'>
-							<a
-								href='#project'
-								className='font-display max-w-sm text-base font-bold leading-tight'>
+						<div className='relative group cursor-pointer'>
+							<Link
+								href='/'
+								className='font-display max-w-sm text-base font-bold leading-tight group-hover:cursor-pointer'>
 								<span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline  dark:link-underline-white link-underline-black  pb-1 transition'>
-									Project
+									Home
 								</span>
-							</a>
+							</Link>
 						</div>
-						<div className='relative group'>
-							<a
+						<div className='relative group cursor-pointer'>
+							<Link
 								href='/about'
-								className='font-display max-w-sm text-base font-bold leading-tight'>
+								className='font-display max-w-sm text-base font-bold leading-tight group-hover:cursor-pointer'>
 								<span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline   dark:link-underline-white link-underline-black  pb-1'>
 									About
 								</span>
-							</a>
-						</div>
-						<div className='relative group'>
-							<a
-								href='#contact'
-								className='font-display max-w-sm text-base font-bold leading-tight'>
-								<span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline   dark:link-underline-white link-underline-black pb-1'>
-									Contact
-								</span>
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -155,12 +147,7 @@ const Header = () => {
 							className='font-semibold text-base  cursor-pointer'>
 							About
 						</a>
-						<a
-							onClick={() => setIsOpen(false)}
-							href='#contact'
-							className='font-semibold text-base  cursor-pointer'>
-							Contact
-						</a>
+
 						<div className='pt-3'>
 							<ThemeToggleButton />
 						</div>
