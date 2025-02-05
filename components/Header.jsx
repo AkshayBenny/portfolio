@@ -134,23 +134,19 @@ const Header = () => {
 						initial='hidden'
 						animate='visible'
 						className='backdrop-filter backdrop-blur-sm absolute flex flex-col items-start justify-center  w-full bg-white dark:bg-black top-16 left-0 z-10  px-6 space-y-[24px] '>
-						<a
+						<Link
 							onClick={() => setIsOpen(false)}
-							href='#project'
+							href='/'
 							className='font-semibold text-base pt-10 cursor-pointer'>
-							Projects
-						</a>
+							Home
+						</Link>
 
 						<a
 							onClick={() => setIsOpen(false)}
-							href='#about'
+							href='/about'
 							className='font-semibold text-base  cursor-pointer'>
 							About
 						</a>
-
-						<div className='pt-3'>
-							<ThemeToggleButton />
-						</div>
 					</motion.nav>
 				)}
 			</div>

@@ -1,14 +1,11 @@
 import Head from 'next/head'
-import About from '../components/About'
-import Form from '../components/Form'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
-import Other from '../components/Other'
 import Portfolio from '../components/Portfolio'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import Footer from '../components/Footer'
-import { ScrollerMotion } from 'scroller-motion'
+import ArrowUpSLineIcon from 'remixicon-react/ArrowUpSLineIcon'
 
 export default function Home() {
 	const goToTop = () => {
@@ -91,21 +88,8 @@ export default function Home() {
 						}}
 						whileTap={{ scale: 1 }}
 						onClick={goToTop}
-						className='scrollToTop-btn bg-gradient-to-r from-[#1745A9] to-[#A019DF] rounded-full cursor-pointer  fixed bottom-8  right-10 z-50'>
-						<svg
-							xmlns='http://www.w3.org/2000/svg'
-							viewBox='0 0 24 24'
-							width='44'
-							height='44'>
-							<path
-								fill='none'
-								d='M0 0h24v24H0z'
-							/>
-							<path
-								d='M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 18c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8zm1-8v4h-2v-4H8l4-4 4 4h-3z'
-								fill='rgba(255,255,255,1)'
-							/>
-						</svg>
+						className='scrollToTop-btn border border-white border-opacity-60 rounded-full cursor-pointer  fixed bottom-8  right-10 z-50'>
+						<ArrowUpSLineIcon className='h-[24px] lg:h-[32px] w-[24px] lg:w-[32px]' />
 					</motion.button>
 				)}
 
