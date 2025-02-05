@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 import Image from 'next/image'
-import ThemeToggleButton from './ThemeToggleButton'
 import Link from 'next/link'
 
 const Header = () => {
@@ -141,12 +140,12 @@ const Header = () => {
 							Home
 						</Link>
 
-						<a
+						<Link
 							onClick={() => setIsOpen(false)}
 							href='/about'
 							className='font-semibold text-base  cursor-pointer'>
 							About
-						</a>
+						</Link>
 					</motion.nav>
 				)}
 			</div>
