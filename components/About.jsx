@@ -107,7 +107,7 @@ const About = () => {
 								<h2 className='text-2xl font-medium pt-12 pb-6'>
 									Skills
 								</h2>
-								<div className='flex flex-wrap gap-4 max-w-[750px] items-start justify-start'>
+								<div className='flex flex-wrap gap-3 lg:gap-4 lg:max-w-[750px] items-start justify-start'>
 									{skills.map((skill, index) => {
 										return (
 											<p
@@ -130,7 +130,7 @@ const About = () => {
 							<span className='absolute top-0 left-0 flex h-full w-0 mb-0 transition-all duration-200 ease-out transform translate-x-0 bg-[#1745A9] group-hover:w-full opacity-90'></span>
 							<span className='relative group-hover:text-white'>
 								<a
-									href='/Resume.pdf'
+									href='/Akshay Benny.pdf'
 									target='_blank'
 									rel='noreferrer'>
 									Get resume

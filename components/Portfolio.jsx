@@ -1,6 +1,5 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
-import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
 export default function Portfolio() {
@@ -51,32 +50,33 @@ export default function Portfolio() {
 			</h1>
 			<div className='space-y-[172px] lg:space-y-[160px] lg:flex lg:flex-col basis-full'>
 				<ProjectCard
-					title='E-commerce Webapp'
-					desc='An e-commerce webapp made using ReactJs, NodeJs, Express and MongoDb with PayPal as payment gateway. Users can sign in, sign out, add to cart and make payment. It possess additional featueres like pagination, filtering, search, set quantity and more.'
-					tag='Tailwind Css,ReactJs,Redux,Redux Toolkit,MongoDb,Express,NodeJs'
-					gitLink='https://github.com/AkshayBenny/ecommerce-react-nodejs-mongodb'
+					title='LocalShopper'
+					desc='An e-commerce platform that enables local businesses to sell their products online, making it easier for customers to discover and purchase from nearby stores. Designed for seamless transactions and an intuitive shopping experience.'
+					tag='Spring Boot, Next.js, PostgreSQL, Stripe, TailwindCSS, Recoil'
+					gitLink='https://github.com/AkshayBenny/local-ecommerce'
+					// gitLink='https://github.com/AkshayBenny/ecommerce-react-nodejs-mongodb'
 					image='/ecommerce.png'
 					type='Full Stack'
 					number={1}
 				/>
 				<ProjectCard
-					title='Google Clone'
-					desc='A clone of Google search engine made using Google Search Api. It supports both text as well as image search.'
-					tag='Tailwind Css,ReactJs,NextJs,Redux,Google Api'
-					gitLink='https://github.com/AkshayBenny/google-clone-nextjs'
-					liveLink='https://google-clone-nextjs-jade.vercel.app/'
+					title='Doubtss'
+					desc='An AI-powered chatbot for UPSC exam preparation, utilizing NLP for intelligent query responses. Features secure authentication and scalable backend deployment.'
+					tag='Next.js, Next-Auth, Firebase, Langchain, Pinecone, Prisma, Flask, TailwindCSS'
+					// gitLink='https://github.com/AkshayBenny/google-clone-nextjs'
+					liveLink='https://www.doubtss.com/'
 					image='/google.png'
 					type='Frontend'
 					number={2}
 				/>
 				<ProjectCard
-					title='Twitter Clone'
-					desc='A clone of Twitter made using NextJs and Firebase. It supports features like sign in, sign out, posting, adding new tweets and more.'
-					tag='Tailwind Css,ReactJs,NextJs,Recoil,Firebase,News Api'
-					gitLink='https://github.com/AkshayBenny/twitter-clone-nextjs'
-					liveLink='https://twitter-clone-nextjs-bv5wn9iwn-akshaybenny.vercel.app/'
+					title='Figma Copilot'
+					desc='A Figma plugin that automates design layer validation, ensuring UI/UX consistency. Enhances design workflows by detecting and resolving errors efficiently.'
+					tag='React, Node.js, TypeScript, Webpack, Figma'
+					gitLink='https://github.com/AkshayBenny/figma-copilot'
+					// liveLink='https://twitter-clone-nextjs-bv5wn9iwn-akshaybenny.vercel.app/'
 					image='/twitter.png'
-					type='Full Stack'
+					type='Plugin'
 					number={3}
 				/>
 

@@ -70,7 +70,7 @@ export default function Hero() {
 				</motion.div>
 				<motion.h1
 					variants={lazyLoadVariants}
-					className='tracking-[-1px] lg:tracking-[-1.25px] font-semibold text-[56px] pb-4 max-w-[150px] sm:max-w-none'>
+					className='leading-tight lg:leading-normal tracking-[-1px] lg:tracking-[-1.25px] font-semibold text-[56px] pb-4 max-w-[150px] sm:max-w-none'>
 					I&apos;m Akshay Benny
 				</motion.h1>
 				<motion.p
