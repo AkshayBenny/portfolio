@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next'
 import '../styles/globals.css'
 import { ThemeProvider } from 'next-themes'
 import { posthog } from 'posthog-js'
@@ -17,6 +18,7 @@ function MyApp({ Component, pageProps }) {
 		<ThemeProvider
 			enableSystem={true}
 			attribute='class'>
+			<Analytics />
 			<Component {...pageProps} />
 		</ThemeProvider>
 	)
