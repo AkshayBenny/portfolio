@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { posthog } from 'posthog-js'
 import { useState, useEffect } from 'react'
 import Header from './Header'
-import Image from 'next/image'
+import Image from "next/legacy/image"
 
 const About = () => {
 	const skills = [
