@@ -81,11 +81,11 @@ export default function Hero() {
 						Software Developer&nbsp;
 					</span> */}
 					<span className='text-[20px] '>
-						With 2+ years of experience in full-stack and mobile
-						development, I build scalable, optimized solutions using
-						frameworks like Next.js, React Native, and Spring Boot.
-						Passionate about creating impactful, user-centric
-						applications.
+						A full-stack and mobile developer with over 2 years of
+						experience in building scalable and optimized solutions.
+						I specialize in frameworks like Next.js, React Native,
+						and Spring Boot, crafting impactful, user-centric
+						applications that bring ideas to life.
 					</span>
 				</motion.p>
 

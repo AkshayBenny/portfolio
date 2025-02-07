@@ -8,16 +8,15 @@ const About = () => {
 	const skills = [
 		'React',
 		'Next.js',
+		'Spring Boot',
 		'Tailwind CSS',
 		'Node.js',
 		'Express',
 		'Prisma',
 		'Mongoose',
 		'Flask',
-		'Spring Boot',
-		'GraphQL',
 		'Docker',
-		'Kubernetes',
+		'CI/CD',
 	]
 	const [xCoord, setXCoord] = useState([])
 	const [yCoord, setYCoord] = useState([])
@@ -90,17 +89,16 @@ const About = () => {
 									Hello world!
 								</h2>
 								<p className='text-base text-start opacity-[84%] leading-[36px] tracking-wide '>
-									Hey there! My name is Akshay and I am a full
-									stack web developer with a passion for
-									crafting responsive, secure, and scalable
-									web applications. I specialize in using
-									technologies like React, Next, Node, and
-									Express to build user-friendly designs and
-									improve the overall user experience. I am
-									always on the lookout for new challenges and
-									opportunities to learn and grow as a
-									developer. Let&apos;s work together to bring
-									your project to the next level!
+									I am a results-oriented full-stack developer
+									that is passionate about creating products
+									that are user-centric, scalable, and
+									efficient. I have a solid foundation in
+									software development and specialise in using
+									streamlined architecture and peak
+									performance to create flawless digital
+									experiences. I work best in group settings
+									where I can constantly learn new things and
+									adjust to new difficulties.
 								</p>
 							</div>
 							<div className='flex flex-col items-start justify-center'>

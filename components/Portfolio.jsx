@@ -55,8 +55,8 @@ export default function Portfolio() {
 					tag='Spring Boot, Next.js, PostgreSQL, Stripe, TailwindCSS, Recoil'
 					gitLink='https://github.com/AkshayBenny/local-ecommerce'
 					// gitLink='https://github.com/AkshayBenny/ecommerce-react-nodejs-mongodb'
-					image='/ecommerce.png'
-					type='Full Stack'
+					image='/localshopper.png'
+					type='Full-stack'
 					number={1}
 				/>
 				<ProjectCard
@@ -64,9 +64,10 @@ export default function Portfolio() {
 					desc='An AI-powered chatbot for UPSC exam preparation, utilizing NLP for intelligent query responses. Features secure authentication and scalable backend deployment.'
 					tag='Next.js, Next-Auth, Firebase, Langchain, Pinecone, Prisma, Flask, TailwindCSS'
 					// gitLink='https://github.com/AkshayBenny/google-clone-nextjs'
+					gitLink='https://github.com/AkshayBenny/doubtss-chatbot'
 					liveLink='https://www.doubtss.com/'
-					image='/google.png'
-					type='Frontend'
+					image='/doubtss.png'
+					type='Full-stack'
 					number={2}
 				/>
 				<ProjectCard
@@ -75,7 +76,8 @@ export default function Portfolio() {
 					tag='React, Node.js, TypeScript, Webpack, Figma'
 					gitLink='https://github.com/AkshayBenny/figma-copilot'
 					// liveLink='https://twitter-clone-nextjs-bv5wn9iwn-akshaybenny.vercel.app/'
-					image='/twitter.png'
+					image='/figma-copilot.png'
+					gif='/figma-copilot.gif'
 					type='Plugin'
 					number={3}
 				/>
