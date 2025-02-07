@@ -24,26 +24,15 @@ const Header = () => {
 				isOpen ? 'bg-white dark:bg-black' : 'bg-none'
 			}`}>
 			<div className='w-full h-[72px]  items-center justify-between  z-50 lg:px-16 px-6 flex '>
-				<div>
-					<div className='dark:hidden grid'>
-						<Image
-							src='/dark-vercel.svg'
-							height={42}
-							width={42}
-							alt='logo'
-							className=''
-						/>
-					</div>
-					<div className='dark:grid hidden'>
-						<Image
-							src='/vercel.svg'
-							height={42}
-							width={42}
-							alt='logo'
-							className=''
-						/>
-					</div>
-				</div>
+				<Link href='/'>
+					<Image
+						src='/vercel.svg'
+						height={42}
+						width={42}
+						alt='logo'
+						className='hover:cursor-pointer'
+					/>
+				</Link>
 				<div className='hidden lg:flex'>
 					<div className='flex items-center justify-between gap-4 font-semibold'>
 						<div className='relative group cursor-pointer'>
