@@ -56,7 +56,7 @@ export default function Hero() {
 				className='overflow-none absolute top-0 -left-4 w-[700px] h-[700px] rounded-full bg-[#4235ec] filter blur-[300px] z-0 hidden lg:grid'></motion.div>
 			<div className='overflow-none grid lg:hidden absolute top-0 -left-[600px] w-[700px] h-[700px] rounded-full bg-[#4235ec] filter blur-[300px] z-0 '></div> */}
 
-			<div className='pt-[100px] lg:pt-0 flex flex-col items-start lg:items-center justify-center h-full px-6 lg:px-0 '>
+			<div className='pt-[100px] lg:pt-0 flex flex-col items-start lg:items-center justify-center h-full px-6 lg:px-0'>
 				<motion.div
 					variants={lazyLoadVariants}
 					className='flex items-center gap-4 pb-2'>
@@ -70,7 +70,7 @@ export default function Hero() {
 				</motion.div>
 				<motion.h1
 					variants={lazyLoadVariants}
-					className='leading-tight lg:leading-normal tracking-[-1px] lg:tracking-[-1.25px] font-semibold text-[56px] pb-4 max-w-[150px] sm:max-w-none'>
+					className='leading-tight lg:leading-normal tracking-[-1px] lg:tracking-[-1.25px] font-semibold text-3xl lg:text-[56px] pb-4 '>
 					I&apos;m Akshay Benny
 				</motion.h1>
 				<motion.p
@@ -80,7 +80,7 @@ export default function Hero() {
 					<span className='font-bold text-[20px] opacity-100'>
 						Software Developer&nbsp;
 					</span> */}
-					<span className='text-[20px] '>
+					<span className='lg:text-[20px] text-base '>
 						A full-stack and mobile developer with over 2 years of
 						experience in building scalable and optimized solutions.
 						I specialize in frameworks like Next.js, React Native,

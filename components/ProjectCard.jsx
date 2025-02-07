@@ -1,6 +1,6 @@
 import { ArrowRightIcon } from '@heroicons/react/outline'
 import { motion } from 'framer-motion'
-import Image from "next/legacy/image"
+import Image from 'next/legacy/image'
 import { useState } from 'react'
 
 const ProjectCard = ({
@@ -67,7 +67,7 @@ const ProjectCard = ({
 			<div className='flex flex-col justify-between basis-full pt-12 xl:pt-0 '>
 				<div className='flex flex-col space-y-[16px] '>
 					<div className='relative w-fit'>
-						<h1 className='font-semibold text-[40px] xl:text-[32px] tracking-[-1px] xl:tracking-[-0.5px] '>
+						<h1 className='font-semibold text-3xl lg:text-5xl tracking-[-1px] xl:tracking-[-0.5px] '>
 							{title}
 						</h1>
 						<motion.div
@@ -75,7 +75,9 @@ const ProjectCard = ({
 							animate={isHovered ? 'hover' : 'initial'}
 							className='absolute h-3 w-0 dark:flex hover:w-3/4 transition top-8  bg-violet-500 z-0 xl:top-7 mix-blend-screen  hidden'></motion.div>
 					</div>
-					<p className='text-[20px] leading-[33px]'>{desc}</p>
+					<p className='text-base lg:text-[20px] leading-[33px]'>
+						{desc}
+					</p>
 					<div className='flex  xl:flex flex-wrap gap-4'>
 						{tags.map((tag, index) => {
 							return (
