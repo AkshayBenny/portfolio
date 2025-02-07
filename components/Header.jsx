@@ -2,7 +2,7 @@ import { MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
-import Image from "next/legacy/image"
+import Image from 'next/legacy/image'
 import Link from 'next/link'
 
 const Header = () => {
@@ -17,14 +17,16 @@ const Header = () => {
 	}
 
 	return (
-        (<motion.header
+		<motion.header
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			className={`relative z-10 ${
 				isOpen ? 'bg-white dark:bg-black' : 'bg-none'
 			}`}>
-            <div className='w-full h-[72px]  items-center justify-between  z-50 lg:px-16 px-6 flex '>
-				<Link href='/' legacyBehavior>
+			<div className='w-full h-[72px]  items-center justify-between  z-50 lg:px-16 px-6 flex '>
+				<Link
+					href='/'
+					legacyBehavior>
 					<Image
 						src='/vercel.svg'
 						height={42}
@@ -37,9 +39,9 @@ const Header = () => {
 					<div className='flex items-center justify-between gap-4 font-semibold'>
 						<div className='relative group cursor-pointer'>
 							<Link
-                                href='/'
-                                className='font-display max-w-sm text-base font-bold leading-tight group-hover:cursor-pointer'
-                                legacyBehavior>
+								href='/'
+								className='font-display max-w-sm text-base font-bold leading-tight group-hover:cursor-pointer'
+								legacyBehavior>
 								<span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline  dark:link-underline-white link-underline-black  pb-1 transition'>
 									Home
 								</span>
@@ -47,9 +49,9 @@ const Header = () => {
 						</div>
 						<div className='relative group cursor-pointer'>
 							<Link
-                                href='/about'
-                                className='font-display max-w-sm text-base font-bold leading-tight group-hover:cursor-pointer'
-                                legacyBehavior>
+								href='/about'
+								className='font-display max-w-sm text-base font-bold leading-tight group-hover:cursor-pointer'
+								legacyBehavior>
 								<span className='link opacity-[64%] group-hover:opacity-100 lg:link-underline   dark:link-underline-white link-underline-black  pb-1'>
 									About
 								</span>
@@ -140,8 +142,8 @@ const Header = () => {
 					</motion.nav>
 				)}
 			</div>
-        </motion.header>)
-    );
+		</motion.header>
+	)
 }
 
 export default Header

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { posthog } from 'posthog-js'
 import { useState, useEffect } from 'react'
 import Header from './Header'
-import Image from "next/legacy/image"
+import Image from 'next/legacy/image'
 
 const About = () => {
 	const skills = [
@@ -50,7 +50,9 @@ const About = () => {
 	}
 	return (
 		<div>
-			<Header />
+			<div className='fixed top-0 left-0 z-50 w-full bg-black bg-black/50 backdrop-blur-md'>
+				<Header />
+			</div>
 
 			<motion.section
 				initial='hidden'
@@ -62,7 +64,7 @@ const About = () => {
 					hidden: { opacity: 0 },
 				}}
 				id='about'
-				className='relative min-h-[100vh]      px-6 lg:px-16 max-w-[1400px] mx-auto '>
+				className='relative min-h-[100vh] pt-24 px-6 lg:px-16 max-w-[1400px] mx-auto '>
 				{/* Project blob animation */}
 				{/* <motion.div
 		variants={animationVariants}

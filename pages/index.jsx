@@ -93,7 +93,9 @@ export default function Home() {
 					</motion.button>
 				)}
 
-				<Header />
+				<div className='fixed top-0 left-0 z-50 w-full bg-black bg-black/50 backdrop-blur-md'>
+					<Header />
+				</div>
 				<div>
 					<motion.div
 						variants={lazyLoadVariants}
