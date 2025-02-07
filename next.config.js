@@ -1,9 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  images: {
-    domains: ['images.unsplash.com'],
-  },
-}
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+	enabled: process.env.ANALYZE === 'true',
+})
 
-module.exports = nextConfig
+module.exports = withBundleAnalyzer({
+	reactStrictMode: true,
+	swcMinify: true,
+	images: {
+		domains: ['images.unsplash.com'],
+	},
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+})
