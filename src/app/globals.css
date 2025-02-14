@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+  .font-robotmono-regular {
+    font-family: var(--font-roboto-mono);
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .font-robotmono-medium {
+    font-family: var(--font-roboto-mono);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .font-robotmono-bold {
+    font-family: var(--font-roboto-mono);
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  /* For Roboto */
+  .font-roboto-extrabold {
+    font-family: var(--font-roboto);
+    font-size: 64px;
+    font-weight: 800;
+  }
+}
