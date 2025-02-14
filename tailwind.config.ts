@@ -11,6 +11,8 @@ export default {
 			colors: {
 				background: 'var(--background)',
 				foreground: 'var(--foreground)',
+				lightText: '#F5F5F5',
+				darkText: '#0A0A0A',
 			},
 			fontFamily: {
 				roboto: ['var(--font-roboto)', 'sans-serif'],

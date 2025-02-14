@@ -29,3 +29,9 @@
     font-weight: 800;
   }
 }
+
+@layer base {
+  body {
+    @apply font-robotoMono;
+  }
+}

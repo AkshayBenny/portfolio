@@ -1,8 +1,8 @@
-// src/app/layout.tsx
 import type { Metadata } from 'next'
 import { Roboto, Roboto_Mono } from 'next/font/google'
 import './globals.css'
-import SeoProvider from './SeoProvider'
+
+import ClientProviders from '@/components/ClientProvider'
 
 const roboto = Roboto({
 	variable: '--font-roboto',
@@ -27,9 +27,8 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body
-				className={`${roboto.variable} ${robotoMono.variable} antialiased`}>
-				<SeoProvider />
-				{children}
+				className={`${roboto.variable} ${robotoMono.variable} antialiased text-lightText`}>
+				<ClientProviders>{children}</ClientProviders>
 			</body>
 		</html>
 	)
