@@ -1,5 +1,5 @@
 'use client'
-import { useBgColor } from './BgColorProvider'
+import { useBgColor } from '../providers/BgColorProvider'
 
 export default function BgColorWrapper({
 	children,

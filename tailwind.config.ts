@@ -23,6 +23,9 @@ export default {
 				'20': '20px',
 				'64': '64px',
 			},
+			boxShadow: {
+				'inset-border': 'inset 0 0 0 1px #F5F5F5',
+			},
 		},
 	},
 	plugins: [],

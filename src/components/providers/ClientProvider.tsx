@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-import BgColorProvider from '@/components/BgColorProvider'
-import BgColorWrapper from '@/components/BgColorWrapper'
+import BgColorProvider from '@/components/providers/BgColorProvider'
 import SeoProvider from '@/components/SeoProvider'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import BgColorWrapper from '../wrappers/BgColorWrapper'
 
 export default function ClientProviders({
 	children,

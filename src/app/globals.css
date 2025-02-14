@@ -4,19 +4,19 @@
 
 @layer utilities {
 
-  .font-robotmono-regular {
+  .font-robotoMono-regular {
     font-family: var(--font-roboto-mono);
     font-size: 16px;
     font-weight: 400;
   }
 
-  .font-robotmono-medium {
+  .font-robotoMono-medium {
     font-family: var(--font-roboto-mono);
     font-size: 16px;
     font-weight: 500;
   }
 
-  .font-robotmono-bold {
+  .font-robotoMono-bold {
     font-family: var(--font-roboto-mono);
     font-size: 20px;
     font-weight: 700;
