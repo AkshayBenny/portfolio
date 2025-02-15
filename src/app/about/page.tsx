@@ -1,11 +1,11 @@
 import AboutHero from '@/components/AboutHero'
-import Experience from '@/components/Experience'
+import Experiences from '@/components/Experiences'
 
 export default function AboutPage() {
 	return (
 		<main>
 			<AboutHero />
-			<Experience />
+			<Experiences />
 		</main>
 	)
 }

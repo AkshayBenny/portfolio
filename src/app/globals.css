@@ -56,3 +56,16 @@
   scrollbar-width: thin;
   scrollbar-color: #F5F5F5 #0A0A0A;
 }
+
+
+/* page transition animation */
+body {
+  transition-property: filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.page-transition {
+  filter: blur(12px);
+  -webkit-filter: blur(12px);
+}

@@ -1,47 +1,43 @@
+import { ProjectData } from '@/types/project'
 import Button from './Button'
 import EmblaCarousel from './EmblaCarousel'
 
-export default function Project() {
-	const slideImages: string[] = [
-		'/project/one.png',
-		'/project/two.png',
-		'/project/three.png',
-	]
+export default function Project({ data }: { data: ProjectData }) {
+	const { slideImages, title, description, stack, viewCodeUrl, viewLiveUrl } =
+		data
+
 	return (
 		<div>
 			<EmblaCarousel slides={slideImages} />
 			<div className='max-w-5xl mx-auto pt-[60px]'>
-				<h2 className='font-roboto-extrabold'>Local Shopper</h2>
+				<h2 className='font-roboto-extrabold'>{title}</h2>
 				<div className='flex mt-5 pt-10 border-t border-[#F5F5F5] border-opacity-10'>
 					<div>
-						<h4 className='font-robotoMono-bold  pb-4'>
+						<h4 className='font-robotoMono-bold pb-4'>
 							Project Description
 						</h4>
-						<p className=''>
-							An e-commerce platform that enables local businesses
-							to sell their products online, making it easier for
-							customers to discover and purchase from nearby
-							stores. Designed for seamless transactions and an
-							intuitive shopping experience.
-						</p>
+						<p>{description}</p>
 						<div className='font-robotoMono-medium flex gap-6 pt-8'>
-							<Button
-								text='View Code'
-								type='light'
-							/>
-							<Button
-								text='View Live'
-								type='dark'
-							/>
+							{viewCodeUrl && (
+								<Button
+									text='View Code'
+									type='light'
+								/>
+							)}
+							{viewLiveUrl && (
+								<Button
+									text='View Live'
+									type='dark'
+								/>
+							)}
 						</div>
 					</div>
 					<div>
 						<h4 className='font-robotoMono-bold'>Stack</h4>
 						<div className='pt-4'>
-							<p>Spring Boot</p>
-							<p>React Native</p>
-							<p>Tailwind</p>
-							<p>Next</p>
+							{stack.map((tech: string) => (
+								<p key={tech}>{tech}</p>
+							))}
 						</div>
 					</div>
 				</div>
