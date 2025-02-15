@@ -36,3 +36,23 @@
     @apply font-robotoMono;
   }
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0A0A0A;
+  border: 1px solid #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #F5F5F5;
+  border-radius: 6px;
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #F5F5F5 #0A0A0A;
+}

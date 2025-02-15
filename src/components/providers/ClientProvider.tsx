@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import BgColorProvider from '@/components/providers/BgColorProvider'
 import SeoProvider from '@/components/SeoProvider'
