@@ -1,3 +1,4 @@
+import Button from './Button'
 import EmblaCarousel from './EmblaCarousel'
 
 export default function Project() {
@@ -24,12 +25,14 @@ export default function Project() {
 							intuitive shopping experience.
 						</p>
 						<div className='font-robotoMono-medium flex gap-6 pt-8'>
-							<button className='shadow-inset-border px-5 py-[10px]'>
-								View Code
-							</button>
-							<button className='text-[#0A0A0A] bg-[#F5F5F5] px-5 py-[10px]'>
-								View Live
-							</button>
+							<Button
+								text='View Code'
+								type='light'
+							/>
+							<Button
+								text='View Live'
+								type='dark'
+							/>
 						</div>
 					</div>
 					<div>
