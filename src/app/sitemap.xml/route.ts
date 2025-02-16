@@ -20,7 +20,7 @@ function generateSiteMap(pages: string[]): string {
 
 export async function GET(_request: Request): Promise<Response> {
 	// -------------------- MAKE THIS DYNAMIC LATER --------------------
-	const pages = ['about', 'projects', 'contact']
+	const pages = ['about']
 	const sitemap = generateSiteMap(pages)
 
 	return new Response(sitemap, {
