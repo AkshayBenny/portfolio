@@ -9,7 +9,6 @@ export default function Button({
 		<button
 			className={`group relative overflow-hidden px-5 py-2 transition 
 		  ${type === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}>
-			{/* Always visible border */}
 			<div className='pointer-events-none absolute inset-0 z-20 border-2 border-white' />
 
 			<span
@@ -18,7 +17,6 @@ export default function Button({
 				{text}
 			</span>
 
-			{/* Animated overlay that slides in/out */}
 			<div
 				className='absolute inset-0 h-full w-full z-10 transition-transform duration-300 transform -translate-x-full group-hover:translate-x-0'
 				style={{

@@ -43,10 +43,9 @@ export default function InvertCursor() {
 				  )
 				: false
 
-			// Animate scale: enlarge if hovering over a clickable element
 			gsap.to(circleRef.current, {
 				scale: isClickable ? 1.5 : 1,
-				duration: 0.3,
+				duration: 0.56,
 				ease: 'power2.out',
 			})
 		}

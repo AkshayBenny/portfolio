@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname, useRouter } from 'next/navigation'
-import { animatePageOut } from './animations'
+import { animatePageOut } from '../../utils/animations'
 
 interface Props {
 	href: string

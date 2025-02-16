@@ -1,4 +1,4 @@
-import { TransitionLink } from '@/utils/TransitionLink'
+import { TransitionLink } from '@/app/animations/TransitionLink'
 
 export default function Navbar() {
 	return (

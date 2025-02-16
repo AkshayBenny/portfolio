@@ -1,6 +1,7 @@
 import { ExperienceData } from '@/types/experience'
 import { baseUrl } from '@/utils/baseUrl'
 import React from 'react'
+import Button from './Button'
 
 export default async function Experiences() {
 	const res = await fetch(`${baseUrl}/api/experiences`, {
@@ -23,16 +24,17 @@ export default async function Experiences() {
 									{exp.position}, {exp.company}
 								</td>
 								<td className='w-2/3 p-3 align-top'>
-									<ul className='list-disc list-inside space-y-2 text-lightText'>
+									<ul className='list-disc list-inside space-y-2 text-lightText mb-10'>
 										{exp.responsibilities.map(
 											(item, index) => (
 												<li key={index}>{item}</li>
 											)
 										)}
 									</ul>
-									<button className='shadow-inset-border px-5 py-[10px] mt-10'>
-										View Works
-									</button>
+									<Button
+										text='View Live'
+										type='dark'
+									/>
 								</td>
 							</tr>
 						))}
