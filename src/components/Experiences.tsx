@@ -1,13 +1,23 @@
+'use client'
 import { ExperienceData } from '@/types/experience'
 import { baseUrl } from '@/utils/baseUrl'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from './Button'
 
-export default async function Experiences() {
-	const res = await fetch(`${baseUrl}/api/experiences`, {
-		next: { revalidate: 60 },
-	})
-	const experiences: ExperienceData[] = await res.json()
+export default function Experiences() {
+	const [experiences, setExperiences] = useState<ExperienceData[]>([])
+
+	useEffect(() => {
+		const fetchExperiences = async () => {
+			const res = await fetch(`${baseUrl}/api/experiences`, {
+				next: { revalidate: 60 },
+			})
+			const experiences: ExperienceData[] = await res.json()
+			setExperiences(experiences)
+		}
+
+		fetchExperiences()
+	}, [])
 
 	return (
 		<div className='w-full mt-80'>
