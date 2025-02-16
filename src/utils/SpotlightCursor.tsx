@@ -6,8 +6,14 @@ import gsap from 'gsap'
 export default function InvertCursor() {
 	const circleRef = useRef<HTMLDivElement>(null)
 
+	const isMobile =
+		typeof window !== 'undefined' &&
+		window.matchMedia &&
+		window.matchMedia('(pointer: coarse)').matches
+
 	useEffect(() => {
-		// Center the element relative to its own dimensions
+		if (isMobile) return
+
 		if (circleRef.current) {
 			gsap.set(circleRef.current, { xPercent: -50, yPercent: -50 })
 		}
@@ -16,14 +22,16 @@ export default function InvertCursor() {
 			gsap.to(circleRef.current, {
 				x: e.clientX,
 				y: e.clientY,
-				duration: 0.6,
+				duration: 0.3,
 				ease: 'power2.out',
 			})
 		}
 
 		window.addEventListener('mousemove', handleMouseMove)
 		return () => window.removeEventListener('mousemove', handleMouseMove)
-	}, [])
+	}, [isMobile])
+
+	if (isMobile) return null
 
 	return (
 		<div
