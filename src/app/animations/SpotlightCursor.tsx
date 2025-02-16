@@ -38,7 +38,7 @@ export default function InvertCursor() {
 			const isClickable = targetEl
 				? Boolean(
 						targetEl.closest(
-							'a, button, input, [role="button"], .clickable'
+							'a, button, input, img, [role="button"], .clickable'
 						)
 				  )
 				: false
