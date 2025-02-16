@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+
+  .font-robotoMono-regular {
+    font-family: var(--font-roboto-mono);
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .font-robotoMono-medium {
+    font-family: var(--font-roboto-mono);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .font-robotoMono-bold {
+    font-family: var(--font-roboto-mono);
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  /* For Roboto */
+  .font-roboto-extrabold {
+    font-family: var(--font-roboto);
+    font-size: 64px;
+    font-weight: 800;
+  }
+}
+
+@layer base {
+  body {
+    @apply font-robotoMono;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #0A0A0A;
+  border: 1px solid #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #F5F5F5;
+  border-radius: 6px;
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #292929 #0A0A0A;
+}
+
+
+/* page transition animation */
+body {
+  transition-property: filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.page-transition {
+  filter: blur(12px);
+  -webkit-filter: blur(12px);
+}
