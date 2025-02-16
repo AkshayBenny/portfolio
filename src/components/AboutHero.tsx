@@ -4,7 +4,7 @@ export default function AboutHero() {
 	return (
 		<div className='flex flex-col items-center justify-center h-dvh  mx-auto relative'>
 			<Image
-				src='/akshay.jpg'
+				src='/akshay-2.jpg'
 				height={272}
 				width={272}
 				alt='A picture of Akshay'
