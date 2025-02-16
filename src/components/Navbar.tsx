@@ -2,7 +2,7 @@ import { TransitionLink } from '@/utils/TransitionLink'
 
 export default function Navbar() {
 	return (
-		<nav className='font-robotoMono-regular flex items-center justify-between'>
+		<nav className=' w-full font-robotoMono-regular flex items-center justify-between'>
 			<div>
 				<TransitionLink
 					href='/'

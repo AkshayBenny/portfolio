@@ -11,24 +11,32 @@ export default function Project({ data }: { data: ProjectData }) {
 			<EmblaCarousel slides={slideImages} />
 			<div className='max-w-5xl mx-auto pt-[60px]'>
 				<h2 className='font-roboto-extrabold'>{title}</h2>
-				<div className='flex mt-5 pt-10 border-t border-[#F5F5F5] border-opacity-10'>
-					<div>
+				<div className='flex justify-between mt-5 pt-10 border-t border-[#F5F5F5] border-opacity-10'>
+					<div className='max-w-3xl'>
 						<h4 className='font-robotoMono-bold pb-4'>
 							Project Description
 						</h4>
 						<p>{description}</p>
 						<div className='font-robotoMono-medium flex gap-6 pt-8'>
 							{viewCodeUrl && (
-								<Button
-									text='View Code'
-									type='light'
-								/>
+								<a
+									href={viewCodeUrl}
+									target='_blank'>
+									<Button
+										text='View Code'
+										type='light'
+									/>
+								</a>
 							)}
 							{viewLiveUrl && (
-								<Button
-									text='View Live'
-									type='dark'
-								/>
+								<a
+									href={viewLiveUrl}
+									target='_blank'>
+									<Button
+										text='View Live'
+										type='dark'
+									/>
+								</a>
 							)}
 						</div>
 					</div>

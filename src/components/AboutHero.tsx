@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function AboutHero() {
 	return (
-		<div className='flex flex-col items-center justify-center h-dvh  mx-auto'>
+		<div className='flex flex-col items-center justify-center h-dvh  mx-auto relative'>
 			<Image
 				src='/akshay.jpg'
 				height={272}
@@ -15,14 +15,28 @@ export default function AboutHero() {
 				I&apos;m Akshay Benny
 			</h1>
 			<p className='font-robotoMono-regular text-center leading-6 pt-4 max-w-3xl'>
-				I am a results-oriented full-stack developer that is passionate
-				about creating products that are user-centric, scalable, and
-				efficient. I have a solid foundation in software development and
-				specialise in using streamlined architecture and peak
-				performance to create flawless digital experiences. I work best
-				in group settings where I can constantly learn new things and
-				adjust to new difficulties.
+				Passionate software developer with hands-on experience in mobile
+				and web application development. Adept at building scalable
+				solutions that enhance user engagement while leveraging agile
+				methodologies. Skilled in SEO, accessibility improvements, and
+				performance optimization to drive measurable results. Always
+				eager to collaborate and solve complex challenges with
+				innovative solutions.
 			</p>
+			<Image
+				src='/gridLeft.svg'
+				alt='SVG of a grid'
+				width={274}
+				height={264}
+				className='absolute left-0 bottom-52'
+			/>
+			<Image
+				src='/gridRight.svg'
+				alt='SVG of a grid'
+				width={438}
+				height={465}
+				className='absolute right-0 top-64'
+			/>
 		</div>
 	)
 }

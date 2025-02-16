@@ -12,7 +12,7 @@ export const animatePageIn = () => {
 			yPercent: 0,
 		}).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
 			yPercent: 100,
-			stagger: 0.2,
+			stagger: 0.1,
 		})
 	}
 }
@@ -29,7 +29,7 @@ export const animatePageOut = (href: string, router: AppRouterInstance) => {
 			yPercent: -100,
 		}).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
 			yPercent: 0,
-			stagger: 0.2,
+			stagger: 0.1,
 			onComplete: () => {
 				router.push(href)
 			},
