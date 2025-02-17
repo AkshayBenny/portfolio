@@ -33,7 +33,7 @@ export default function Project({ data }: { data: ProjectData }) {
 									href={viewLiveUrl}
 									target='_blank'>
 									<Button
-										text='View Works'
+										text='View Live'
 										type='dark'
 									/>
 								</a>

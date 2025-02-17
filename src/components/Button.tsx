@@ -12,7 +12,7 @@ export default function Button({
 			<div className='pointer-events-none absolute inset-0 z-20 border-2 border-white' />
 
 			<span
-				className={`relative z-30 transition-colors duration-300 
+				className={`relative z-20 transition-colors duration-300 
 			${type === 'dark' ? 'group-hover:text-black' : 'group-hover:text-white'}`}>
 				{text}
 			</span>

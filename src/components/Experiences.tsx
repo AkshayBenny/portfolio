@@ -48,7 +48,7 @@ export default function Experiences() {
 										)}
 									</ul>
 									<Button
-										text='View Live'
+										text='View Works'
 										type='dark'
 									/>
 								</td>
@@ -60,3 +60,5 @@ export default function Experiences() {
 		</div>
 	)
 }
+
+

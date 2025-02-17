@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
 	return (
 		<nav
 			ref={navRef}
-			className='bg-black-[#0A0A0A] backdrop-blur-md fixed top-0 w-full z-10 font-robotoMono-regular px-6 md:px-0'>
+			className='bg-black-[#0A0A0A] backdrop-blur-md fixed top-0 w-full z-40 font-robotoMono-regular px-6 md:px-0'>
 			<div className='max-w-screen-xl flex justify-between flex-wrap mx-auto py-6 md:py-10'>
 				<div className='flex items-center justify-between w-full md:w-fit'>
 					<TransitionLink

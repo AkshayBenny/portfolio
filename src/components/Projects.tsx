@@ -51,6 +51,29 @@ export default function Projects() {
 				'https://github.com/AkshayBenny/jobseeker-ch-extension',
 			viewLiveUrl: 'https://localshopper.example.com',
 		},
+		{
+			id: 4,
+			title: 'Doubtss',
+			description:
+				'Doubts is an intelligent, AI-driven chatbot designed to assist UPSC aspirants with their exam preparation. It provides in-depth explanations, answers complex queries, and offers personalized study support, making learning more interactive and efficient.',
+			slideImages: [
+				'/project/doubtss/cover.png',
+				'/project/doubtss/1.png',
+				'/project/doubtss/2.png',
+				'/project/doubtss/3.png',
+				'/project/doubtss/4.png',
+			],
+			stack: [
+				'Next.js',
+				'Prisma',
+				'Firebase',
+				'Prisma',
+				'LangChain',
+				'OpenAI API',
+			],
+			viewCodeUrl: 'https://github.com/AkshayBenny/doubtss-chatbot',
+			viewLiveUrl: 'https://doubtss.com',
+		},
 	]
 
 	return (
