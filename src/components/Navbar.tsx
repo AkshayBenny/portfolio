@@ -1,25 +1,137 @@
+'use client'
+
+import { useState, useRef, useEffect } from 'react'
+import { gsap } from 'gsap'
 import { TransitionLink } from '@/app/animations/TransitionLink'
 
-export default function Navbar() {
+const Navbar: React.FC = () => {
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const navRef = useRef<HTMLElement>(null)
+	const mobileMenuRef = useRef<HTMLDivElement>(null)
+
+	const toggleMenu = () => setIsMenuOpen((prev) => !prev)
+
+	useEffect(() => {
+		const handleOutsideClick = (event: MouseEvent) => {
+			if (
+				isMenuOpen &&
+				navRef.current &&
+				!navRef.current.contains(event.target as Node)
+			) {
+				setIsMenuOpen(false)
+			}
+		}
+
+		document.addEventListener('mousedown', handleOutsideClick)
+		return () => {
+			document.removeEventListener('mousedown', handleOutsideClick)
+		}
+	}, [isMenuOpen])
+
+	useEffect(() => {
+		const updateMenuState = () => {
+			if (mobileMenuRef.current) {
+				if (window.innerWidth >= 768) {
+					gsap.set(mobileMenuRef.current, {
+						height: 'auto',
+						opacity: 1,
+					})
+				} else {
+					if (isMenuOpen) {
+						gsap.to(mobileMenuRef.current, {
+							height: 'auto',
+							opacity: 1,
+							duration: 0.5,
+							ease: 'power2.out',
+						})
+					} else {
+						gsap.to(mobileMenuRef.current, {
+							height: 0,
+							opacity: 0,
+							duration: 0.5,
+							ease: 'power2.in',
+						})
+					}
+				}
+			}
+		}
+
+		updateMenuState()
+		window.addEventListener('resize', updateMenuState)
+		return () => window.removeEventListener('resize', updateMenuState)
+	}, [isMenuOpen])
+
 	return (
-		<nav className=' w-full font-robotoMono-regular flex items-center justify-between'>
-			<div>
-				<TransitionLink
-					href='/'
-					label='Akshay/ Pro Dev'
-				/>
-			</div>
-			<ul className='flex items-center justify-end lg:gap-12'>
-				<li>Work</li>
-				<li>
+		<nav
+			ref={navRef}
+			className='bg-black-[#0A0A0A] backdrop-blur-md fixed top-0 w-full z-10 font-robotoMono-regular px-6 md:px-0'>
+			<div className='max-w-screen-xl flex justify-between flex-wrap mx-auto py-6 md:py-10'>
+				<div className='flex items-center justify-between w-full md:w-fit'>
 					<TransitionLink
-						href='/about'
-						label='About'
+						href='/'
+						label='Akshay Benny'
 					/>
-				</li>
-				<li>Contact</li>
-				<li>Resume</li>
-			</ul>
+					<button
+						onClick={toggleMenu}
+						type='button'
+						className='inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200'
+						aria-controls='mobile-menu'
+						aria-expanded={isMenuOpen}>
+						<span className='sr-only'>Open main menu</span>
+						<svg
+							className='w-5 h-5'
+							aria-hidden='true'
+							xmlns='http://www.w3.org/2000/svg'
+							fill='none'
+							viewBox='0 0 17 14'>
+							<path
+								stroke='currentColor'
+								strokeLinecap='round'
+								strokeLinejoin='round'
+								strokeWidth='2'
+								d='M1 1h15M1 7h15M1 13h15'
+							/>
+						</svg>
+					</button>
+				</div>
+				<div
+					ref={mobileMenuRef}
+					className='w-full md:block md:w-auto overflow-hidden'
+					id='mobile-menu'>
+					<ul className='flex flex-col gap-12 mt-12 rounded-lg text-lightText md:p-0 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent'>
+						<li>
+							<TransitionLink
+								href='/playground'
+								label='Playground'
+								className='w-full md:w-fit'
+							/>
+						</li>
+						<li>
+							<TransitionLink
+								href='/about'
+								label='About'
+								className='w-full md:w-fit'
+							/>
+						</li>
+						<li>
+							<TransitionLink
+								href='/contact'
+								label='Contact'
+								className='w-full md:w-fit'
+							/>
+						</li>
+						<li>
+							<TransitionLink
+								href='/resume'
+								label='Resume'
+								className='w-full md:w-fit'
+							/>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 	)
 }
+
+export default Navbar

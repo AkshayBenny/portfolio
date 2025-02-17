@@ -6,9 +6,10 @@ import { animatePageOut } from '../../utils/animations'
 interface Props {
 	href: string
 	label: string
+	className?: string
 }
 
-export const TransitionLink = ({ href, label }: Props) => {
+export const TransitionLink = ({ href, label, className = '' }: Props) => {
 	const router = useRouter()
 	const pathname = usePathname()
 
@@ -18,5 +19,11 @@ export const TransitionLink = ({ href, label }: Props) => {
 		}
 	}
 
-	return <button onClick={handleTransition}>{label}</button>
+	return (
+		<button
+			onClick={handleTransition}
+			className={`${className}`}>
+			{label}
+		</button>
+	)
 }
