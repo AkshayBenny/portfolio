@@ -15,8 +15,8 @@ export default function ClientProviders({
 			<BgColorWrapper>
 				{/* <SeoProvider /> */}
 
-				<div className='max-w-7xl mx-auto py-10'>
-					<Navbar />
+				<Navbar />
+				<div className='max-w-screen-xl mx-auto py-10'>
 					{children}
 					<Footer />
 				</div>

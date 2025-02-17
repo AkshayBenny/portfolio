@@ -47,7 +47,7 @@ const BackToTopButton: React.FC = () => {
 		<button
 			ref={btnRef}
 			onClick={scrollToTop}
-			className='fixed bottom-12 right-12 p-3 bg-[#1a1a1a]  rounded-full hover:bg-gray-900 focus:outline-none'
+			className='fixed bottom-12 z-40 right-6 md:right-12 p-3 bg-[#1a1a1a]  rounded-full hover:bg-gray-900 focus:outline-none'
 			aria-label='Back to Top'>
 			<Image
 				src='/arrow_up.svg'

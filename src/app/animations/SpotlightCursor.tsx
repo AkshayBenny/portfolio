@@ -6,7 +6,6 @@ import gsap from 'gsap'
 export default function InvertCursor() {
 	const circleRef = useRef<HTMLDivElement>(null)
 
-	// Detect mobile devices (disable custom cursor on mobile)
 	const isMobile =
 		typeof window !== 'undefined' &&
 		window.matchMedia &&
@@ -15,7 +14,6 @@ export default function InvertCursor() {
 	useEffect(() => {
 		if (isMobile) return
 
-		// Let GSAP handle centering and initial scale
 		if (circleRef.current) {
 			gsap.set(circleRef.current, {
 				xPercent: -50,
@@ -25,7 +23,6 @@ export default function InvertCursor() {
 		}
 
 		function handleMouseMove(e: MouseEvent) {
-			// Move the cursor with a premium, smooth easing effect
 			gsap.to(circleRef.current, {
 				x: e.clientX,
 				y: e.clientY,
@@ -33,7 +30,6 @@ export default function InvertCursor() {
 				ease: 'power2.out',
 			})
 
-			// Determine if the element under the cursor is clickable
 			const targetEl = document.elementFromPoint(e.clientX, e.clientY)
 			const isClickable = targetEl
 				? Boolean(
