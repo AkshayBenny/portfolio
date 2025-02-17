@@ -61,10 +61,24 @@ const Navbar: React.FC = () => {
 		return () => window.removeEventListener('resize', updateMenuState)
 	}, [isMenuOpen])
 
+	useEffect(() => {
+		if (!isMenuOpen) return
+
+		const handleScroll = () => {
+			// You can adjust the breakpoint as needed
+			if (window.innerWidth < 768) {
+				setIsMenuOpen(false)
+			}
+		}
+
+		window.addEventListener('scroll', handleScroll)
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [isMenuOpen])
+
 	return (
 		<nav
 			ref={navRef}
-			className='bg-black-[#0A0A0A] backdrop-blur-md fixed top-0 w-full z-40 font-robotoMono-regular px-6 md:px-0'>
+			className='bg-[#0A0A0A] backdrop-blur-md fixed top-0 w-full z-40 font-robotoMono-regular px-6 md:px-0'>
 			<div className='max-w-screen-xl flex justify-between flex-wrap mx-auto py-6 md:py-10'>
 				<div className='flex items-center justify-between w-full md:w-fit'>
 					<TransitionLink
@@ -104,6 +118,7 @@ const Navbar: React.FC = () => {
 								href='/playground'
 								label='Playground'
 								className='w-full md:w-fit'
+								onClick={() => setIsMenuOpen(false)}
 							/>
 						</li>
 						<li>
@@ -111,6 +126,7 @@ const Navbar: React.FC = () => {
 								href='/about'
 								label='About'
 								className='w-full md:w-fit'
+								onClick={() => setIsMenuOpen(false)}
 							/>
 						</li>
 						<li>
@@ -118,6 +134,7 @@ const Navbar: React.FC = () => {
 								href='/contact'
 								label='Contact'
 								className='w-full md:w-fit'
+								onClick={() => setIsMenuOpen(false)}
 							/>
 						</li>
 						<li>
@@ -125,6 +142,7 @@ const Navbar: React.FC = () => {
 								href='/resume'
 								label='Resume'
 								className='w-full md:w-fit'
+								onClick={() => setIsMenuOpen(false)}
 							/>
 						</li>
 					</ul>

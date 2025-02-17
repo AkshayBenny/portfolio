@@ -7,9 +7,15 @@ interface Props {
 	href: string
 	label: string
 	className?: string
+	onClick?: () => void
 }
 
-export const TransitionLink = ({ href, label, className = '' }: Props) => {
+export const TransitionLink = ({
+	href,
+	label,
+	className = '',
+	onClick,
+}: Props) => {
 	const router = useRouter()
 	const pathname = usePathname()
 
@@ -17,6 +23,7 @@ export const TransitionLink = ({ href, label, className = '' }: Props) => {
 		if (pathname !== href) {
 			animatePageOut(href, router)
 		}
+		if (onClick) onClick()
 	}
 
 	return (
