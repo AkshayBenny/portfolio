@@ -16,7 +16,8 @@ const BgColorProvider = ({ children }: { children: ReactNode }) => {
 		if (storedColor) {
 			setBgColor(storedColor)
 		} else {
-			const colors = ['#0A0A0A']
+			const colors = ['#0A0A0A',]
+			//  '#020122', '#14281D'
 			const randomColor =
 				colors[Math.floor(Math.random() * colors.length)]
 			setBgColor(randomColor)

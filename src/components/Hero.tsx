@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Hero() {
 	return (
-		<div className='flex flex-col items-center justify-center h-[91vh] max-w-3xl mx-auto relative'>
+		<div className='flex flex-col items-center justify-center h-[94vh] max-w-3xl mx-auto relative'>
 			<p className='font-robotoMono-regular'>Hello World</p>
 			<h1 className='font-roboto-extrabold'>I&apos;m Akshay Benny</h1>
 			<p className='font-robotoMono-regular text-center leading-6'>
