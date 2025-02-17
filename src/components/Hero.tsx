@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import FlutteringSVG from '@/app/animations/FlutteringSvg'
 
 export default function Hero() {
 	return (
@@ -12,20 +12,25 @@ export default function Hero() {
 				optimization. Always excited to take on new challenges and
 				create awesome digital experiences!
 			</p>
-			<Image
+			<div className='absolute left-0 bottom-52'>
+				<FlutteringSVG type='left' />
+			</div>
+			<div className='absolute right-0 top-64'>
+				<FlutteringSVG type='left' />
+			</div>
+			{/* <Image
 				src='/gridLeft.svg'
 				alt='SVG of a grid'
 				width={274}
 				height={264}
-				className='absolute left-0 bottom-52'
-			/>
-			<Image
+			/> */}
+			{/* <Image
 				src='/gridRight.svg'
 				alt='SVG of a grid'
 				width={438}
 				height={465}
 				className='absolute right-0 top-64'
-			/>
+			/> */}
 		</div>
 	)
 }

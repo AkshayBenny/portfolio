@@ -1,4 +1,5 @@
 // import FlutteringSvg from '@/app/animations/FlutteringSvg'
+import FlutteringSVG from '@/app/animations/FlutteringSvg'
 import Image from 'next/image'
 
 export default function AboutHero() {
@@ -11,7 +12,7 @@ export default function AboutHero() {
 				alt='A picture of Akshay'
 				className='aspect-square z-10 object-cover grayscale'
 			/>
-			<p className='font-robotoMono-regular pt-[60px]'>Hello World</p>
+			<p className='font-robotoMono-regular pt-[60px]'>Hello Again!</p>
 			<h1 className='font-roboto-extrabold pt-4'>
 				I&apos;m Akshay Benny
 			</h1>
@@ -24,21 +25,26 @@ export default function AboutHero() {
 				eager to collaborate and solve complex challenges with
 				innovative solutions.
 			</p>
-			{/* <FlutteringSvg /> */}
-			<Image
+			<div className='absolute z-0 left-0 bottom-52'>
+				<FlutteringSVG />
+			</div>
+			<div className='absolute z-0 right-0 top-64'>
+				<FlutteringSVG type='right' />
+			</div>
+			{/* <Image
 				src='/gridLeft.svg'
 				alt='SVG of a grid'
 				width={274}
 				height={264}
 				className='absolute z-0 left-0 bottom-52'
-			/>
-			<Image
+			/> */}
+			{/* <Image
 				src='/gridRight.svg'
 				alt='SVG of a grid'
 				width={438}
 				height={465}
 				className='absolute z-0 right-0 top-64'
-			/>
+			/> */}
 		</div>
 	)
 }
