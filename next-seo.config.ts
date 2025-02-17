@@ -1,29 +1,24 @@
 // next-seo.config.ts
-const SEO = {
-	title: 'My Portfolio',
-	description:
-		'A portfolio website built with Next.js and optimized for SEO.',
-	canonical: 'https://akshaybenny.com',
+import type { DefaultSeoProps } from 'next-seo'
+
+const defaultSEOConfig: DefaultSeoProps = {
+	title: 'Your Site Title',
+	description: 'A brief description of your site for SEO purposes.',
+	canonical: 'https://www.yoursite.com',
 	openGraph: {
-		url: 'https://akshaybenny.com',
-		title: 'My Portfolio',
-		description:
-			'A portfolio website built with Next.js and optimized for SEO.',
+		type: 'website',
+		locale: 'en_US',
+		url: 'https://www.yoursite.com',
+		site_name: 'Your Site Name',
 		images: [
 			{
-				url: 'https://akshaybenny.com/images/og-image.jpg',
-				width: 800,
-				height: 600,
+				url: 'https://www.yoursite.com/og-image.jpg',
+				width: 1200,
+				height: 630,
 				alt: 'Og Image Alt',
 			},
 		],
-		site_name: 'My Portfolio',
-	},
-	twitter: {
-		handle: '@yourhandle',
-		site: '@yourhandle',
-		cardType: 'summary_large_image',
 	},
 }
 
-export default SEO
+export default defaultSEOConfig

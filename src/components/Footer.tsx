@@ -9,8 +9,8 @@ export default function Footer() {
 					I&apos;m open to work full time!
 				</h4>
 			</div>
-			<footer className='flex items-center justify-between'>
-				<ul className='flex items-center justify-start gap-12'>
+			<footer className='flex items-center  justify-center flex-col md:flex-row md:justify-between'>
+				<ul className='flex justify-center items-center md:justify-start gap-12'>
 					<li>
 						<a
 							href='www.linkedin.com/in/akshaybenny'
@@ -27,7 +27,7 @@ export default function Footer() {
 					</li>
 					<li>Resume</li>
 				</ul>
-				<p>Designed with 0 caffeine by Akhil T J</p>
+				<p className="my-12 md:my-0">Designed with 0 caffeine by Akhil T J</p>
 			</footer>
 		</>
 	)
