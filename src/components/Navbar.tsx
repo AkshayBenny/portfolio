@@ -41,14 +41,14 @@ const Navbar: React.FC = () => {
 						gsap.to(mobileMenuRef.current, {
 							height: 'auto',
 							opacity: 1,
-							duration: 0.5,
+							duration: 0.2,
 							ease: 'power2.out',
 						})
 					} else {
 						gsap.to(mobileMenuRef.current, {
 							height: 0,
 							opacity: 0,
-							duration: 0.5,
+							duration: 0.3,
 							ease: 'power2.in',
 						})
 					}

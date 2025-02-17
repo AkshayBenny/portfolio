@@ -29,7 +29,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
 				className='min-h-screen bg-[#ffffff] z-10 fixed top-0 left-3/4 w-1/4 border-black border-x-2'
 			/>
 			<SpotlightCursor />
-			<BackToTopButton/>
+			<BackToTopButton />
 			{children}
 		</ReactLenis>
 	)
