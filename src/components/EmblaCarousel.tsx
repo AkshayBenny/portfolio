@@ -16,11 +16,12 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides }) => {
 			<div
 				className='overflow-clip'
 				ref={emblaRef}>
-				<div className='flex gap-x-12 md:gap-x-[60px]'>
+				{/* Container for the slides */}
+				<div className='flex gap-x-[60px]'>
 					{slides.map((src, index) => (
 						<div
 							key={index}
-							className='flex-shrink-0 w-10/12 md:w-11/12'>
+							className='flex-shrink-0 w-11/12'>
 							<Image
 								height={520}
 								width={974}

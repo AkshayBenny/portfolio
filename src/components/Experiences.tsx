@@ -1,5 +1,5 @@
-import { ExperienceData } from '@/types/experience'
-import Button from './Button'
+import { ExperienceData, Work } from '@/types/experience'
+import Image from 'next/image'
 
 export default function Experiences() {
 	const experiences: ExperienceData[] = [
@@ -7,10 +7,21 @@ export default function Experiences() {
 			id: 1,
 			position: 'Software Developer',
 			company: 'Lascade',
+			homepage: 'https://www.lascade.com',
 			responsibilities: [
 				'Engineered robust web applications, focusing on performance optimization and user accessibility.',
 				'Collaborated with designers and backend teams to create seamless user experiences.',
 				'Applied SEO best practices to increase web traffic and engagement.',
+			],
+			work: [
+				{
+					src: '/experience/lascade/2.png',
+					href: 'https://www.rent80.com',
+				},
+				{
+					src: '/experience/lascade/1.png',
+					href: 'https://www.flights70.com',
+				},
 			],
 		},
 		{
@@ -29,11 +40,11 @@ export default function Experiences() {
 		<div className='w-full mt-80'>
 			<h4 className='font-roboto-extrabold pb-4'>My Experience</h4>
 			<div className='border-t border-[#F5F5F5] border-opacity-10 mt-5 pt-10'>
-				<table className='w-full table-auto border-collapse'>
+				<table className='w-full table-auto border-separate border-spacing-x-0 border-spacing-y-10'>
 					<thead>
 						<tr></tr>
 					</thead>
-					<tbody className='align-top'>
+					<tbody className='align-top space-y-[40px]'>
 						{experiences.map((exp) => (
 							<tr key={exp.id}>
 								<td className='w-1/3 font-robotoMono-bold text-lg p-3 text-lightText align-top'>
@@ -47,10 +58,22 @@ export default function Experiences() {
 											)
 										)}
 									</ul>
-									<Button
-										text='View Works'
-										type='dark'
-									/>
+									<div className='flex flex-wrap gap-6'>
+										{exp.work &&
+											exp.work.map((w: Work) => (
+												<a
+													href={w.href}
+													target='_blank'
+													key={w.href}>
+													<Image
+														src={w.src}
+														width={100}
+														height={100}
+														alt={`Thumbnail of ${w.href}`}
+													/>
+												</a>
+											))}
+									</div>
 								</td>
 							</tr>
 						))}
@@ -60,5 +83,3 @@ export default function Experiences() {
 		</div>
 	)
 }
-
-
