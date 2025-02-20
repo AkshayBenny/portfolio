@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import BgColorProvider from './BgColorProvider'
 import BgColorWrapper from './BgColorWrapper'
+import ScrollProgressBar from '@/app/animations/ScrollProgressBar'
 
 export default function ClientProviders({
 	children,
@@ -12,6 +13,7 @@ export default function ClientProviders({
 	return (
 		<BgColorProvider>
 			<BgColorWrapper>
+				<ScrollProgressBar />
 				<Navbar />
 				<div className='max-w-screen-xl mx-auto px-6 md:px-0 md:py-10'>
 					{children}

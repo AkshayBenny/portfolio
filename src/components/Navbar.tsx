@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { TransitionLink } from '@/app/animations/TransitionLink'
+import ContactButton from './providers/ContactButtonWrapper'
 
 const Navbar: React.FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -79,7 +80,7 @@ const Navbar: React.FC = () => {
 		<nav
 			ref={navRef}
 			className='bg-[#0A0A0A] backdrop-blur-md fixed top-0 w-full z-40 font-robotoMono-regular px-6 md:px-0'>
-			<div className='max-w-screen-xl flex justify-between flex-wrap mx-auto py-6 md:py-10'>
+			<div className='max-w-screen-xl flex justify-between flex-wrap mx-auto py-6 md:py-8'>
 				<div className='flex items-center justify-between w-full md:w-fit'>
 					<TransitionLink
 						href='/'
@@ -113,14 +114,14 @@ const Navbar: React.FC = () => {
 					className='w-full md:block md:w-auto overflow-hidden'
 					id='mobile-menu'>
 					<ul className='flex flex-col gap-12 mt-12 rounded-lg text-lightText md:p-0 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent'>
-						<li>
+						{/* <li>
 							<TransitionLink
 								href='/playground'
 								label='Playground'
 								className='w-full md:w-fit'
 								onClick={() => setIsMenuOpen(false)}
 							/>
-						</li>
+						</li> */}
 						<li>
 							<TransitionLink
 								href='/about'
@@ -130,20 +131,24 @@ const Navbar: React.FC = () => {
 							/>
 						</li>
 						<li>
-							<TransitionLink
-								href='/contact'
-								label='Contact'
-								className='w-full md:w-fit'
-								onClick={() => setIsMenuOpen(false)}
-							/>
+							<ContactButton>
+								<TransitionLink
+									label='Contact'
+									className='w-full md:w-fit'
+									onClick={() => setIsMenuOpen(false)}
+								/>
+							</ContactButton>
 						</li>
 						<li>
-							<TransitionLink
-								href='/resume'
-								label='Resume'
-								className='w-full md:w-fit'
-								onClick={() => setIsMenuOpen(false)}
-							/>
+							<a
+								href='/resume.pdf'
+								download='AkshayBenny_Resume.pdf'>
+								<TransitionLink
+									label='Resume'
+									className='w-full md:w-fit'
+									onClick={() => setIsMenuOpen(false)}
+								/>
+							</a>
 						</li>
 					</ul>
 				</div>

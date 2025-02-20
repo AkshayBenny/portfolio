@@ -16,7 +16,7 @@ export default function Hero() {
 				<FlutteringSVG type='left' />
 			</div>
 			<div className='absolute right-0 top-64'>
-				<FlutteringSVG type='left' />
+				<FlutteringSVG type='right' />
 			</div>
 			{/* <Image
 				src='/gridLeft.svg'

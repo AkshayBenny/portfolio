@@ -13,7 +13,7 @@ export default function Footer() {
 				<ul className='flex justify-center items-center md:justify-start gap-12'>
 					<li>
 						<a
-							href='www.linkedin.com/in/akshaybenny'
+							href='https://www.linkedin.com/in/akshaybenny'
 							target='_blank'>
 							Linkedin
 						</a>
@@ -25,9 +25,17 @@ export default function Footer() {
 							Github
 						</a>
 					</li>
-					<li>Resume</li>
+					<li>
+						<a
+							href='/resume.pdf'
+							download='AkshayBenny_Resume.pdf'>
+							Resume
+						</a>
+					</li>
 				</ul>
-				<p className="my-12 md:my-0">Designed with 0 caffeine by Akhil T J</p>
+				<p className='my-12 md:my-0'>
+					Designed with 0 caffeine by Akhil T J
+				</p>
 			</footer>
 		</>
 	)
