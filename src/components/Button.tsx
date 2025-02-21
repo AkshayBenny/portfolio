@@ -7,7 +7,7 @@ export default function Button({
 }) {
 	return (
 		<button
-			className={`group relative overflow-hidden px-5 py-2 transition 
+			className={`group relative overflow-hidden px-5 py-2 transition w-full md:w-fit
 		  ${type === 'dark' ? 'bg-black text-white' : 'bg-white text-black'}`}>
 			<div className='pointer-events-none absolute inset-0 z-20 border-2 border-white' />
 
