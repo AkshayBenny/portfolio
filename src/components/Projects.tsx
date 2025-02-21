@@ -18,21 +18,21 @@ export default function Projects() {
 			stack: ['Next.js', 'Tailwind'],
 			viewLiveUrl: 'https://www.rent80.com',
 		},
-		{
-			id: 2,
-			title: 'Local Shopper',
-			description:
-				'LocalShopper helps local shop owners reach more customers by allowing them to list and sell their products in one place. Instead of browsing multiple stores, users can easily search for what they need, view store details, and even book items directly. The platform connects businesses with their community, making shopping more convenient while giving small retailers a better way to grow.',
-			slideImages: [
-				'/project/one.png',
-				'/project/two.png',
-				'/project/three.png',
-			],
-			stack: ['Next.js', 'Tailwind', 'Spring Boot', 'PostgreSQL', 'AWS'],
-			viewCodeUrl:
-				'https://github.com/AkshayBenny/local-ecommerce-server',
-			// viewLiveUrl: 'https://localshopper.example.com',
-		},
+		// {
+		// 	id: 2,
+		// 	title: 'Local Shopper',
+		// 	description:
+		// 		'LocalShopper helps local shop owners reach more customers by allowing them to list and sell their products in one place. Instead of browsing multiple stores, users can easily search for what they need, view store details, and even book items directly. The platform connects businesses with their community, making shopping more convenient while giving small retailers a better way to grow.',
+		// 	slideImages: [
+		// 		'/project/one.png',
+		// 		'/project/two.png',
+		// 		'/project/three.png',
+		// 	],
+		// 	stack: ['Next.js', 'Tailwind', 'Spring Boot', 'PostgreSQL', 'AWS'],
+		// 	viewCodeUrl:
+		// 		'https://github.com/AkshayBenny/local-ecommerce-server',
+		// 	// viewLiveUrl: 'https://localshopper.example.com',
+		// },
 		{
 			id: 3,
 			title: 'Job Seeker',

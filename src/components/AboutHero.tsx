@@ -1,10 +1,9 @@
-// import FlutteringSvg from '@/app/animations/FlutteringSvg'
 import FlutteringSVG from '@/app/animations/FlutteringSvg'
 import Image from 'next/image'
 
 export default function AboutHero() {
 	return (
-		<div className='flex flex-col items-center justify-center h-dvh  mx-auto relative'>
+		<div className='flex flex-col items-center justify-center h-[94vh] mx-auto relative'>
 			<Image
 				src='/akshay-2.jpg'
 				height={272}
@@ -12,11 +11,11 @@ export default function AboutHero() {
 				alt='A picture of Akshay'
 				className='aspect-square z-10 object-cover grayscale'
 			/>
-			<p className='font-robotoMono-regular pt-[60px]'>Hello Again!</p>
-			<h1 className='font-roboto-extrabold pt-4'>
+			<p className='font-robotoMono-regular text-start w-full md:text-center pt-[60px]'>Hello Again!</p>
+			<h1 className='font-roboto-extrabold pt-4 text-start w-full md:text-center'>
 				I&apos;m Akshay Benny
 			</h1>
-			<p className='font-robotoMono-regular text-center leading-6 pt-4 max-w-3xl'>
+			<p className='font-robotoMono-regular text-start w-full md:text-center leading-6 pt-4 max-w-3xl'>
 				Passionate software developer with hands-on experience in mobile
 				and web application development. Adept at building scalable
 				solutions that enhance user engagement while leveraging agile
@@ -31,7 +30,6 @@ export default function AboutHero() {
 			<div className='absolute z-0 right-0 top-64'>
 				<FlutteringSVG type='right' />
 			</div>
-		
 		</div>
 	)
 }
