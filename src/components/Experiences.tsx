@@ -37,13 +37,13 @@ export default function Experiences() {
 	]
 
 	return (
-		<div className='w-full mt-80'>
-			<h4 className='font-roboto-extrabold pb-4'>My Experience</h4>
-			<div className='border-t border-[#F5F5F5] border-opacity-10 mt-5 pt-10'>
+		<div className='w-full md:mt-80'>
+			<h4 className='font-roboto-extrabold '>My Experience</h4>
+			<div className='border-t border-[#F5F5F5] border-opacity-10 mt-5 pt-4 md:pt-10'>
 				<table className='w-full table-auto border-separate border-spacing-x-0 border-spacing-y-10'>
-					<thead>
+					{/* <thead>
 						<tr></tr>
-					</thead>
+					</thead> */}
 					<tbody className='align-top space-y-[40px]'>
 						{experiences.map((exp) => (
 							<tr key={exp.id}>

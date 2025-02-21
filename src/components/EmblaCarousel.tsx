@@ -17,7 +17,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides }) => {
 				className='overflow-clip'
 				ref={emblaRef}>
 				{/* Container for the slides */}
-				<div className='flex gap-x-[60px]'>
+				<div className='flex gap-x-3 md:gap-x-[60px]'>
 					{slides.map((src, index) => (
 						<div
 							key={index}
@@ -28,6 +28,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides }) => {
 								src={src}
 								alt={`Slide ${index + 1}`}
 								className='w-full object-cover'
+								sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'
 							/>
 						</div>
 					))}

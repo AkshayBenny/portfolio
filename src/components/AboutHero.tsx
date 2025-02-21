@@ -25,26 +25,13 @@ export default function AboutHero() {
 				eager to collaborate and solve complex challenges with
 				innovative solutions.
 			</p>
-			<div className='absolute z-0 left-0 bottom-52'>
+			<div className='hidden md:absolute left-0 bottom-52'>
 				<FlutteringSVG />
 			</div>
 			<div className='absolute z-0 right-0 top-64'>
 				<FlutteringSVG type='right' />
 			</div>
-			{/* <Image
-				src='/gridLeft.svg'
-				alt='SVG of a grid'
-				width={274}
-				height={264}
-				className='absolute z-0 left-0 bottom-52'
-			/> */}
-			{/* <Image
-				src='/gridRight.svg'
-				alt='SVG of a grid'
-				width={438}
-				height={465}
-				className='absolute z-0 right-0 top-64'
-			/> */}
+		
 		</div>
 	)
 }
