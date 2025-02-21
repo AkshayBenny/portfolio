@@ -25,7 +25,7 @@ export default function AboutHero() {
 				eager to collaborate and solve complex challenges with
 				innovative solutions.
 			</p>
-			<div className='hidden md:absolute left-0 bottom-52'>
+			<div className='hidden md:flex absolute left-0 bottom-52'>
 				<FlutteringSVG />
 			</div>
 			<div className='absolute z-0 right-0 top-64'>

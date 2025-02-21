@@ -1,3 +1,4 @@
+'use client'
 import FlutteringSVG from '@/app/animations/FlutteringSvg'
 
 export default function Hero() {
@@ -16,10 +17,10 @@ export default function Hero() {
 				optimization. Always excited to take on new challenges and
 				create awesome digital experiences!
 			</p>
-			<div className='hidden md:absolute left-0 bottom-52'>
+			<div className='hidden md:flex absolute left-0 md:left-[-120px] bottom-52'>
 				<FlutteringSVG type='left' />
 			</div>
-			<div className='absolute right-0 top-64'>
+			<div className='absolute right-0 md:right-[-120px] top-64'>
 				<FlutteringSVG type='right' />
 			</div>
 		</div>
