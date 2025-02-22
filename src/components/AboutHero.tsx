@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function AboutHero() {
 	return (
-		<div className='flex flex-col items-center justify-center min-h-screen md:min-h-[94vh] mx-auto relative'>
+		<div className='flex flex-col items-center justify-center min-h-screen md:min-h-[94vh] mx-auto relative pb-14 md:pb-0'>
 			<Image
 				src='/akshay-2.jpg'
 				height={272}
