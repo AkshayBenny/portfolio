@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 		url: 'https://www.akshaybenny.com',
 		images: [
 			{
-				url: 'https://www.akshaybenny.com/akshay-2.jpg',
+				url: 'https://www.akshaybenny.com/opengraph.png',
 				width: 800,
 				height: 600,
 			},
