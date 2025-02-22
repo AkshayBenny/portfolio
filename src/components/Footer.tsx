@@ -33,8 +33,8 @@ export default function Footer() {
 						</a>
 					</li>
 				</ul>
-				<p className='my-12 md:my-0'>
-					Designed with 0 caffeine by Akhil T J
+				<p className='my-12 md:my-0 text-center md:text-right'>
+					Design credits @akhil_tj
 				</p>
 			</footer>
 		</>
