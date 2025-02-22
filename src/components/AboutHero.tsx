@@ -9,7 +9,7 @@ export default function AboutHero() {
 				height={272}
 				width={272}
 				alt='A picture of Akshay'
-				className='aspect-square z-10 object-cover grayscale'
+				className='aspect-square z-10 object-cover grayscale pt-6 md:pt-0'
 			/>
 			<p className='font-robotoMono-regular text-start w-full md:text-center pt-[60px]'>
 				Hello Again!
