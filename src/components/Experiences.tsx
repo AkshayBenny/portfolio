@@ -24,6 +24,10 @@ export default function Experiences() {
 					src: '/experience/lascade/1.png',
 					href: 'https://www.flights70.com',
 				},
+				{
+					src: '/experience/lascade/3.png',
+					href: 'https://www.hotels70.com',
+				},
 			],
 		},
 		{
