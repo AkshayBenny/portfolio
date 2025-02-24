@@ -49,7 +49,7 @@ export default function Projects() {
 			stack: ['React', 'CSS', 'Google Auth API', 'Google Drive File API'],
 			viewCodeUrl:
 				'https://github.com/AkshayBenny/jobseeker-ch-extension',
-			viewLiveUrl: 'https://localshopper.example.com',
+			// viewLiveUrl: 'https://localshopper.example.com',
 		},
 		{
 			id: 4,
