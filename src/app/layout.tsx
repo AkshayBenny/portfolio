@@ -17,6 +17,7 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
 	title: 'Akshay Benny | Software Developer',
+	icons: 'favicon.svg',
 	description:
 		"I'm Akshay Benny, a passionate software developer who loves building fast, user-friendly, and scalable mobile and web apps. I specialize in Next.js, React, ExpressJs, SEO, and performance optimization.",
 	openGraph: {
