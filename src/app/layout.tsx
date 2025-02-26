@@ -19,11 +19,11 @@ export const metadata: Metadata = {
 	title: 'Akshay Benny | Software Developer',
 	icons: 'favicon.svg',
 	description:
-		"I'm Akshay Benny, a passionate software developer who loves building fast, user-friendly, and scalable mobile and web apps. I specialize in Next.js, React, ExpressJs, SEO, and performance optimization.",
+		"I'm Akshay Benny, a software developer who loves building fast, user-friendly, and scalable mobile and web apps. I specialize in Next.js, React, ExpressJs, SEO, and performance optimization.",
 	openGraph: {
 		title: 'Akshay Benny | Software Developer',
 		description:
-			"I'm Akshay Benny, a passionate software developer who creates digital experiences that are both functional and engaging.",
+			"I'm Akshay Benny, a software developer who creates digital experiences that are both functional and engaging.",
 		url: 'https://www.akshaybenny.com',
 		images: [
 			{

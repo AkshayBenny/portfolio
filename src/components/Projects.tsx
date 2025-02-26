@@ -47,9 +47,10 @@ export default function Projects() {
 				'/project/job-seeker/5.png',
 			],
 			stack: ['React', 'CSS', 'Google Auth API', 'Google Drive File API'],
-			viewCodeUrl:
-				'https://github.com/AkshayBenny/jobseeker-ch-extension',
-			// viewLiveUrl: 'https://localshopper.example.com',
+			// viewCodeUrl:
+			// 	'https://github.com/AkshayBenny/jobseeker-ch-extension',
+			viewLiveUrl:
+				'https://chromewebstore.google.com/detail/mkmlabhmaeaknoichmpkoonbdkmkpbld?utm_source=item-share-cp',
 		},
 		{
 			id: 4,
