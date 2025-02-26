@@ -18,7 +18,7 @@ export default function AboutHero() {
 				I&apos;m Akshay Benny
 			</h1>
 			<p className='font-robotoMono-regular text-start w-full md:text-center leading-6 pt-4 max-w-3xl'>
-				Passionate software developer with hands-on experience in mobile
+				A software developer with +2 years and hands-on experience in mobile
 				and web application development. Adept at building scalable
 				solutions that enhance user engagement while leveraging agile
 				methodologies. Skilled in SEO, accessibility improvements, and
