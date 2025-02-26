@@ -3,7 +3,7 @@ export default function Footer() {
 		<>
 			<div className='w-full py-80'>
 				<p className='font-robotoMono-regular text-center'>
-					Made this far? Lets build something together.
+					Made it this far? Lets build something together.
 				</p>
 				<h4 className='font-roboto-extrabold text-center'>
 					I&apos;m open to work full time!
