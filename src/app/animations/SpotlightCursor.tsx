@@ -54,6 +54,7 @@ export default function InvertCursor() {
 
 	return (
 		<div
+			className='hidden md:flex'
 			ref={circleRef}
 			style={{
 				position: 'fixed',
