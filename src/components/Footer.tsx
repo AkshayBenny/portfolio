@@ -1,14 +1,18 @@
+import FadeInSection from '@/app/animations/FadeInSection'
+
 export default function Footer() {
 	return (
 		<>
-			<div className='w-full py-80'>
-				<p className='font-robotoMono-regular text-center'>
-					Made it this far? Lets build something together.
-				</p>
-				<h4 className='font-roboto-extrabold text-center'>
-					I&apos;m open to work full time!
-				</h4>
-			</div>
+			<FadeInSection>
+				<div className='w-full py-80'>
+					<p className='font-robotoMono-regular text-center'>
+						Made it this far? Lets build something together.
+					</p>
+					<h4 className='font-roboto-extrabold text-center'>
+						I&apos;m open to work full time!
+					</h4>
+				</div>
+			</FadeInSection>
 			<footer className='flex items-center  justify-center flex-col md:flex-row md:justify-between'>
 				<ul className='flex justify-center items-center md:justify-start gap-12'>
 					<li>
