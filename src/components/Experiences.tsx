@@ -17,15 +17,15 @@ export default function Experiences() {
 			],
 			work: [
 				{
-					src: '/experience/lascade/2.png',
+					src: '/experience/lascade/2.webp',
 					href: 'https://www.rent80.com',
 				},
 				{
-					src: '/experience/lascade/1.png',
+					src: '/experience/lascade/1.webp',
 					href: 'https://www.flights70.com',
 				},
 				{
-					src: '/experience/lascade/3.png',
+					src: '/experience/lascade/3.webp',
 					href: 'https://www.hotels70.com',
 				},
 			],
@@ -91,6 +91,13 @@ export default function Experiences() {
 																disabled
 																className='cursor-not-allowed'>
 																<Image
+																	unoptimized={
+																		true
+																	}
+																	priority
+																	quality={
+																		100
+																	}
 																	src={w.src}
 																	width={100}
 																	height={100}
@@ -106,6 +113,13 @@ export default function Experiences() {
 																target='_blank'
 																rel='noopener noreferrer'>
 																<Image
+																	unoptimized={
+																		true
+																	}
+																	priority
+																	quality={
+																		100
+																	}
 																	src={w.src}
 																	width={100}
 																	height={100}

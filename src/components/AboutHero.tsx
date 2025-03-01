@@ -5,6 +5,9 @@ export default function AboutHero() {
 	return (
 		<div className='flex flex-col items-center justify-center min-h-screen md:min-h-[94vh] mx-auto relative pb-14 md:pb-0'>
 			<Image
+				priority
+				unoptimized={true}
+				quality={100}
 				src='/akshay-2.jpg'
 				height={272}
 				width={272}
@@ -18,11 +21,11 @@ export default function AboutHero() {
 				I&apos;m Akshay Benny
 			</h1>
 			<p className='font-robotoMono-regular text-start w-full md:text-center leading-6 pt-4 max-w-3xl'>
-				A software developer with +2 years and hands-on experience in mobile
-				and web application development. Adept at building scalable
-				solutions that enhance user engagement while leveraging agile
-				methodologies. Skilled in SEO, accessibility improvements, and
-				performance optimization to drive measurable results. Always
+				A software developer with +2 years and hands-on experience in
+				mobile and web application development. Adept at building
+				scalable solutions that enhance user engagement while leveraging
+				agile methodologies. Skilled in SEO, accessibility improvements,
+				and performance optimization to drive measurable results. Always
 				eager to collaborate and solve complex challenges with
 				innovative solutions.
 			</p>
