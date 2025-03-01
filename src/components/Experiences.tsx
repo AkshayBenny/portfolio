@@ -1,3 +1,4 @@
+import FadeInSection from '@/app/animations/FadeInSection'
 import { ExperienceData, Work } from '@/types/experience'
 import Image from 'next/image'
 
@@ -69,69 +70,91 @@ export default function Experiences() {
 					<table className='w-full table-auto border-separate border-spacing-x-0 border-spacing-y-10'>
 						<tbody className='align-top space-y-[40px]'>
 							{experiences.map((exp) => (
-								<tr key={exp.id}>
-									<td className='w-1/3 font-robotoMono-bold text-lg p-3 text-lightText align-top'>
-										{exp.position}, {exp.company}
-									</td>
-									<td className='w-2/3 p-3 align-top'>
-										<ul className='list-disc list-inside space-y-2 text-lightText mb-10'>
-											{exp.responsibilities.map(
-												(item, index) => (
-													<li key={index}>{item}</li>
-												)
-											)}
-										</ul>
-										<div className='flex flex-wrap gap-6'>
-											{exp.work &&
-												exp.work.map((w: Work, idx) => {
-													if (w.href === '') {
-														return (
-															<button
-																key={`disabled-${idx}`}
-																disabled
-																className='cursor-not-allowed'>
-																<Image
-																	unoptimized={
-																		true
-																	}
-																	priority
-																	quality={
-																		100
-																	}
-																	src={w.src}
-																	width={100}
-																	height={100}
-																	alt='Thumbnail of disabled link'
-																/>
-															</button>
-														)
-													} else {
-														return (
-															<a
-																key={w.href}
-																href={w.href}
-																target='_blank'
-																rel='noopener noreferrer'>
-																<Image
-																	unoptimized={
-																		true
-																	}
-																	priority
-																	quality={
-																		100
-																	}
-																	src={w.src}
-																	width={100}
-																	height={100}
-																	alt={`Thumbnail of ${w.href}`}
-																/>
-															</a>
-														)
-													}
-												})}
-										</div>
-									</td>
-								</tr>
+								<FadeInSection key={exp.id}>
+									<tr>
+										<td className='w-1/3 font-robotoMono-bold text-lg p-3 text-lightText align-top'>
+											{exp.position}, {exp.company}
+										</td>
+										<td className='w-2/3 p-3 align-top'>
+											<ul className='list-disc list-inside space-y-2 text-lightText mb-10'>
+												{exp.responsibilities.map(
+													(item, index) => (
+														<li key={index}>
+															{item}
+														</li>
+													)
+												)}
+											</ul>
+											<div className='flex flex-wrap gap-6'>
+												{exp.work &&
+													exp.work.map(
+														(w: Work, idx) => {
+															if (w.href === '') {
+																return (
+																	<button
+																		key={`disabled-${idx}`}
+																		disabled
+																		className='cursor-not-allowed'>
+																		<Image
+																			unoptimized={
+																				true
+																			}
+																			priority
+																			quality={
+																				100
+																			}
+																			src={
+																				w.src
+																			}
+																			width={
+																				100
+																			}
+																			height={
+																				100
+																			}
+																			alt='Thumbnail of disabled link'
+																		/>
+																	</button>
+																)
+															} else {
+																return (
+																	<a
+																		key={
+																			w.href
+																		}
+																		href={
+																			w.href
+																		}
+																		target='_blank'
+																		rel='noopener noreferrer'>
+																		<Image
+																			unoptimized={
+																				true
+																			}
+																			priority
+																			quality={
+																				100
+																			}
+																			src={
+																				w.src
+																			}
+																			width={
+																				100
+																			}
+																			height={
+																				100
+																			}
+																			alt={`Thumbnail of ${w.href}`}
+																		/>
+																	</a>
+																)
+															}
+														}
+													)}
+											</div>
+										</td>
+									</tr>
+								</FadeInSection>
 							))}
 						</tbody>
 					</table>
