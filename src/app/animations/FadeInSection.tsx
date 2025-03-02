@@ -9,15 +9,15 @@ interface FadeInSectionProps {
 
 export default function FadeInSection({
 	children,
-	delay = 0.5,
-	duration = 0.5,
+	delay = 0.3,
+	duration = 1.5,
 }: FadeInSectionProps) {
 	return (
 		<motion.div
 			variants={{
 				hidden: {
 					opacity: 0,
-					y: 15,
+					y: 150,
 				},
 				visible: {
 					opacity: 1,
