@@ -20,6 +20,18 @@ export const metadata: Metadata = {
 	icons: 'favicon.svg',
 	description:
 		"I'm Akshay Benny, a software developer who loves building fast, user-friendly, and scalable mobile and web apps. I specialize in Next.js, React, ExpressJs, SEO, and performance optimization.",
+	keywords: [
+		'software developer',
+		'full stack developer',
+		'developer portfolio',
+		'Next.js',
+		'React',
+		'ExpressJs',
+		'Spring Boot',
+		'SEO',
+		'Tailwind',
+	],
+	robots: 'index, follow',
 	openGraph: {
 		title: 'Akshay Benny | Software Developer',
 		description:
@@ -32,6 +44,9 @@ export const metadata: Metadata = {
 				height: 600,
 			},
 		],
+	},
+	alternates: {
+		canonical: 'https://www.akshaybenny.com',
 	},
 }
 
