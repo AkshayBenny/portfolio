@@ -1,3 +1,4 @@
+import { AnimatedText } from '@/app/animations/AnimateText'
 import { ExperienceData, Work } from '@/types/experience'
 import Image from 'next/image'
 
@@ -6,6 +7,7 @@ export default function Experiences() {
 		{
 			id: 1,
 			position: 'Software Developer',
+			link: 'https://www.lascade.com',
 			company: 'Lascade',
 			homepage: 'https://www.lascade.com',
 			responsibilities: [
@@ -71,7 +73,17 @@ export default function Experiences() {
 							{experiences.map((exp) => (
 								<tr key={exp.id}>
 									<td className='w-1/3 font-robotoMono-bold text-lg p-3 text-lightText align-top'>
-										{exp.position}, {exp.company}
+										{exp.link ? (
+											<AnimatedText
+												href={exp.link}
+												text={`${exp.position}, ${exp.company}`}
+												type='dark' // adjust as needed
+											/>
+										) : (
+											<span>
+												{exp.position}, {exp.company}
+											</span>
+										)}
 									</td>
 									<td className='w-2/3 p-3 align-top'>
 										<ul className='list-disc list-inside space-y-2 text-lightText mb-10'>
