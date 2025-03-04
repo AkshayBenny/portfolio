@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 interface AnimatedTextProps {
 	href?: string
 	text: string
