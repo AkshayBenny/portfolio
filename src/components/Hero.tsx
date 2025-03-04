@@ -24,7 +24,7 @@ export default function Hero() {
 					<FlutteringSVG />
 				</ParallaxWrapper>
 			</div>
-			<div className='absolute z-0 right-0 top-64'>
+			<div className='absolute z-0 right-[-60px] md:right-0 top-64'>
 				<ParallaxWrapper>
 					<FlutteringSVG type='right' />
 				</ParallaxWrapper>
