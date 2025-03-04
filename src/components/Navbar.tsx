@@ -162,7 +162,7 @@ const Navbar: React.FC = () => {
 						</li>
 						<li>
 							<a
-								href='/resume.pdf'
+								href='/Akshay Benny.pdf'
 								download='AkshayBenny_Resume.pdf'>
 								<TransitionLink
 									label='Resume'
