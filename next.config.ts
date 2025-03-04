@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
 						key: 'Content-Security-Policy',
 						value:
 							"default-src 'self'; " +
-							"script-src 'self'; " +
+							"script-src 'self' 'sha256-OBTN3RiyCV4Bq7dFqZ5a2pAXjnCcCYeTJMO2I/LYKeo='; " +
 							"style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
 							"img-src 'self' data:; " +
 							"font-src 'self' https://fonts.gstatic.com; " +

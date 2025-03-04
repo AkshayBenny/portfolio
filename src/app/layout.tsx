@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Roboto, Roboto_Mono } from 'next/font/google'
 import './globals.css'
 import ClientProviders from '@/components/providers/ClientProvider'
+import Script from 'next/script'
 
 const roboto = Roboto({
 	variable: '--font-roboto',
@@ -14,6 +15,19 @@ const robotoMono = Roboto_Mono({
 	subsets: ['latin'],
 	weight: ['400', '500', '700'],
 })
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Akshay Benny',
+	url: 'https://www.akshaybenny.com',
+	jobTitle: 'Software Developer',
+	image: 'https://www.akshaybenny.com/profile.jpg',
+	sameAs: [
+		'https://www.linkedin.com/in/akshaybenny',
+		'https://github.com/akshaybenny',
+	],
+}
 
 export const metadata: Metadata = {
 	title: 'Akshay Benny | Software Developer',
@@ -55,6 +69,14 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang='en'>
+			<head>
+				<Script
+					id='json-ld'
+					type='application/ld+json'
+					strategy='beforeInteractive'
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+				/>
+			</head>
 			<body
 				className={`${roboto.variable} ${robotoMono.variable} antialiased text-lightText selection:bg-lightText selection:text-[#0A0A0A]`}>
 				<ClientProviders>{children}</ClientProviders>
@@ -62,3 +84,13 @@ export default function RootLayout({
 		</html>
 	)
 }
+
+
+// WebSite & SearchAction: Enhance your site's usability by providing a WebSite schema with a SearchAction, helping users to search within your site. (How do I do this?)
+
+
+// Accuracy & Consistency: Ensure the data in your JSON‑LD matches the visible content on your pages. (I will give you all the visible content on the page as text)
+
+// Use Google's Tools: Validate your structured data with the Rich Results Test and Schema Markup Validator.(how do I do this?)
+
+// THis is my website text
