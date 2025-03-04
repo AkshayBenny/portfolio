@@ -23,6 +23,12 @@ const jsonLd = {
 	url: 'https://www.akshaybenny.com',
 	jobTitle: 'Software Developer',
 	image: 'https://www.akshaybenny.com/profile.jpg',
+	address: {
+		'@type': 'PostalAddress',
+		addressLocality: 'Glasgow',
+		addressRegion: 'Scotland',
+		addressCountry: 'UK',
+	},
 	sameAs: [
 		'https://www.linkedin.com/in/akshaybenny',
 		'https://github.com/akshaybenny',
@@ -84,13 +90,3 @@ export default function RootLayout({
 		</html>
 	)
 }
-
-
-// WebSite & SearchAction: Enhance your site's usability by providing a WebSite schema with a SearchAction, helping users to search within your site. (How do I do this?)
-
-
-// Accuracy & Consistency: Ensure the data in your JSON‑LD matches the visible content on your pages. (I will give you all the visible content on the page as text)
-
-// Use Google's Tools: Validate your structured data with the Rich Results Test and Schema Markup Validator.(how do I do this?)
-
-// THis is my website text
