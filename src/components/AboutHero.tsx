@@ -7,7 +7,6 @@ export default function AboutHero() {
 		<div className='flex flex-col items-center justify-center min-h-screen md:min-h-[94vh] mx-auto relative pb-14 md:pb-0'>
 			<ParallaxWrapper>
 				<Image
-					priority
 					unoptimized={true}
 					quality={100}
 					src='/akshay-2.jpg'

@@ -111,7 +111,6 @@ export default function Experiences() {
 																	unoptimized={
 																		true
 																	}
-																	priority
 																	quality={
 																		100
 																	}
