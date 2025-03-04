@@ -5,6 +5,7 @@ export interface ExperienceData {
 	company: string
 	responsibilities: string[]
 	work?: Work[]
+	link?: string
 }
 
 export interface Work {

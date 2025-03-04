@@ -1,5 +1,6 @@
 'use client'
 import FlutteringSVG from '@/app/animations/FlutteringSvg'
+import { ParallaxWrapper } from '@/app/animations/ParallaxWrapper'
 
 export default function Hero() {
 	return (
@@ -17,11 +18,16 @@ export default function Hero() {
 				optimization. Always excited to take on new challenges and
 				create awesome digital experiences!
 			</p>
+
 			<div className='hidden md:flex absolute left-0 bottom-52'>
-				<FlutteringSVG />
+				<ParallaxWrapper>
+					<FlutteringSVG />
+				</ParallaxWrapper>
 			</div>
 			<div className='absolute z-0 right-0 top-64'>
-				<FlutteringSVG type='right' />
+				<ParallaxWrapper>
+					<FlutteringSVG type='right' />
+				</ParallaxWrapper>
 			</div>
 		</div>
 	)
