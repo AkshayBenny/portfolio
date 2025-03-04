@@ -9,7 +9,7 @@ export default function AboutHero() {
 				<Image
 					unoptimized={true}
 					quality={100}
-					src='/akshay-2.jpg'
+					src='/profile.jpg'
 					height={272}
 					width={272}
 					alt='A picture of Akshay'
