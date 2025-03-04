@@ -2,8 +2,11 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { TransitionLink } from '@/app/animations/TransitionLink'
 import ContactButton from './providers/ContactButtonWrapper'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Navbar: React.FC = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,6 +15,7 @@ const Navbar: React.FC = () => {
 
 	const toggleMenu = () => setIsMenuOpen((prev) => !prev)
 
+	// Close menu when clicking outside
 	useEffect(() => {
 		const handleOutsideClick = (event: MouseEvent) => {
 			if (
@@ -22,13 +26,13 @@ const Navbar: React.FC = () => {
 				setIsMenuOpen(false)
 			}
 		}
-
 		document.addEventListener('mousedown', handleOutsideClick)
 		return () => {
 			document.removeEventListener('mousedown', handleOutsideClick)
 		}
 	}, [isMenuOpen])
 
+	// Handle mobile menu state changes
 	useEffect(() => {
 		const updateMenuState = () => {
 			if (mobileMenuRef.current) {
@@ -56,24 +60,49 @@ const Navbar: React.FC = () => {
 				}
 			}
 		}
-
 		updateMenuState()
 		window.addEventListener('resize', updateMenuState)
 		return () => window.removeEventListener('resize', updateMenuState)
 	}, [isMenuOpen])
 
 	useEffect(() => {
-		if (!isMenuOpen) return
+		let lastScroll = window.scrollY
 
 		const handleScroll = () => {
-			// You can adjust the breakpoint as needed
+			const currentScroll = window.scrollY
+			if (!navRef.current) return
+
+			if (currentScroll > lastScroll && currentScroll > 50) {
+				// Scrolling down: slide navbar up (no opacity change)
+				gsap.to(navRef.current, {
+					y: -150,
+					duration: 0.3,
+					overwrite: 'auto',
+				})
+			} else {
+				// Scrolling up: slide navbar back down
+				gsap.to(navRef.current, {
+					y: 0,
+					duration: 0.3,
+					overwrite: 'auto',
+				})
+			}
+			lastScroll = currentScroll
+		}
+		window.addEventListener('scroll', handleScroll)
+		return () => window.removeEventListener('scroll', handleScroll)
+	}, [])
+
+	// Optionally, if you want to also close the mobile menu on scroll
+	useEffect(() => {
+		if (!isMenuOpen) return
+		const onScrollClose = () => {
 			if (window.innerWidth < 768) {
 				setIsMenuOpen(false)
 			}
 		}
-
-		window.addEventListener('scroll', handleScroll)
-		return () => window.removeEventListener('scroll', handleScroll)
+		window.addEventListener('scroll', onScrollClose)
+		return () => window.removeEventListener('scroll', onScrollClose)
 	}, [isMenuOpen])
 
 	return (
@@ -114,14 +143,6 @@ const Navbar: React.FC = () => {
 					className='w-full md:block md:w-auto overflow-hidden'
 					id='mobile-menu'>
 					<ul className='flex flex-col gap-12 mt-12 rounded-lg text-lightText md:p-0 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-transparent'>
-						{/* <li>
-							<TransitionLink
-								href='/playground'
-								label='Playground'
-								className='w-full md:w-fit'
-								onClick={() => setIsMenuOpen(false)}
-							/>
-						</li> */}
 						<li>
 							<TransitionLink
 								href='/about'

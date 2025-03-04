@@ -1,14 +1,13 @@
 import { ProjectData } from '@/types/project'
 import Button from './Button'
 import EmblaCarousel from './EmblaCarousel'
-import FadeInSection from '@/app/animations/FadeInSection'
 
 export default function Project({ data }: { data: ProjectData }) {
 	const { slideImages, title, description, stack, viewCodeUrl, viewLiveUrl } =
 		data
 
 	return (
-		<FadeInSection>
+		<div>
 			<EmblaCarousel slides={slideImages} />
 			<div className='max-w-5xl mx-auto pt-8 md:pt-[60px]'>
 				<h2 className='font-roboto-extrabold'>{title}</h2>
@@ -61,6 +60,6 @@ export default function Project({ data }: { data: ProjectData }) {
 					</div>
 				</div>
 			</div>
-		</FadeInSection>
+		</div>
 	)
 }
