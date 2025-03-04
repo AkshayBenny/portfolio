@@ -24,7 +24,7 @@ const EmblaCarousel: React.FC<EmblaCarouselProps> = ({ slides }) => {
 							className='flex-shrink-0 w-11/12'>
 							<Image
 								unoptimized={true}
-								priority
+								// priority
 								quality={100}
 								height={520}
 								width={974}
