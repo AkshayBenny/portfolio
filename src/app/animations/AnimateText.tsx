@@ -34,9 +34,9 @@ export function AnimatedText({
 			<p
 				className={`group relative inline-block overflow-hidden ${className}`}>
 				{content}
-				<div
+				<span
 					className={`${overlayClasses} px-2`}
-					style={overlayStyle}></div>
+					style={overlayStyle}></span>
 			</p>
 		</a>
 	) : (

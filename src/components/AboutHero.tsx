@@ -7,7 +7,6 @@ export default function AboutHero() {
 		<div className='flex flex-col items-center justify-center min-h-screen md:min-h-[94vh] mx-auto relative pb-14 md:pb-0'>
 			<ParallaxWrapper>
 				<Image
-					priority
 					unoptimized={true}
 					quality={100}
 					src='/akshay-2.jpg'
@@ -37,7 +36,7 @@ export default function AboutHero() {
 					<FlutteringSVG />
 				</ParallaxWrapper>
 			</div>
-			<div className='absolute z-0 right-0 top-64'>
+			<div className='absolute z-0 right-[-60px] md:right-0 top-96 md:top-64'>
 				<ParallaxWrapper>
 					<FlutteringSVG type='right' />
 				</ParallaxWrapper>
