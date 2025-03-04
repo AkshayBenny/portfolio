@@ -82,6 +82,12 @@ export default function RootLayout({
 					strategy='beforeInteractive'
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
 				/>
+				<Script
+					src='https://analytics.ahrefs.com/analytics.js'
+					data-key='ywpmmGGG+txckGNBmiJ7xA'
+					strategy='beforeInteractive'
+					async
+				/>
 			</head>
 			<body
 				className={`${roboto.variable} ${robotoMono.variable} antialiased text-lightText selection:bg-lightText selection:text-[#0A0A0A]`}>
