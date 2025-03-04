@@ -40,7 +40,7 @@ const FadeInWrapper = ({
 		)
 	}, [])
 
-	return <Component ref={wrapperRef as any}>{children}</Component>
+	return <Component ref={wrapperRef}>{children}</Component>
 }
 
 export default FadeInWrapper
