@@ -53,7 +53,7 @@ export default function Experiences() {
 			position: 'Android Developer',
 			company: 'GrapeVine Ventures',
 			responsibilities: [
-				'Developed a React Native social media app featuring real-time messaging, authentication, and social feeds for both iOS and Android.',
+				'Developed a React Native social media android app having real-time messaging, authentication, and social feeds.',
 				'Enhanced project structure, improving team collaboration and workflow efficiency.',
 				'Worked closely with cross-functional teams to align features with business objectives.',
 			],
