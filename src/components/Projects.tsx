@@ -6,7 +6,7 @@ export default function Projects() {
 			id: 1,
 			title: 'Rent80',
 			description:
-				'Rent80 is a car rental platform designed to be user-friendly and easy to navigate. With thousands of pre-rendered URLs optimized for SEO, the platform improves search engine visibility and provides a better browsing experience. It’s fully responsive and optimized for fast load times, making booking quick and hassle-free for users.',
+				'This is a car rental platform developed during my time at Lascade. Rent80 has thousands of pre-rendered URLs that improves search engine visibility and provide a better browsing experience. It is fully responsive and optimized for performance, making bookings quick and hassle-free.',
 			slideImages: [
 				'/project/rent80/cover.webp',
 				'/project/rent80/1.webp',
@@ -37,7 +37,7 @@ export default function Projects() {
 			id: 3,
 			title: 'Job Seeker',
 			description:
-				'This Chrome extension simplifies the job search by allowing users to save job details—such as company name, job title, and job URL—with a single click. Users can create and name spreadsheets within the interface to organize their applications. By integrating Google login for authentication, the extension provides secure and convenient access, enhancing the overall job application process.',
+				'Job Seeker is a Chrome extension that simplifies job search by allowing users to save job details—such as company name, job title, and job URL—with a single click. Users can create and name spreadsheets within the interface to organize their applications. This extension also has Google authentication, making signing in much more convenient.',
 			slideImages: [
 				'/project/job-seeker/cover.webp',
 				'/project/job-seeker/1.webp',
@@ -56,7 +56,7 @@ export default function Projects() {
 			id: 4,
 			title: 'Doubtss',
 			description:
-				'Doubts is an intelligent, AI-driven chatbot designed to assist UPSC aspirants with their exam preparation. It provides in-depth explanations, answers complex queries, and offers personalized study support, making learning more interactive and efficient.',
+				"Doubts is an AI-driven chatbot designed to assist aspirants preparing for the Union Public Service Commission (UPSC) examination, one of India's most prestigious and competitive tests. It provides in-depth explanations, answers complex queries, and offers personalized study support, making the learning process more interactive and efficient.",
 			slideImages: [
 				'/project/doubtss/cover.webp',
 				'/project/doubtss/1.webp',

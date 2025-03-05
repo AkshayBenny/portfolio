@@ -12,11 +12,11 @@ export default function Experiences() {
 			company: 'Lascade',
 			homepage: 'https://www.lascade.com',
 			responsibilities: [
-				'Developed and optimized multiple web applications, ensuring high performance and accessibility.',
-				'Worked with a small developer team and an SEO expert to maximize search engine visibility and engagement.',
-				'Managed server-side logic using Express.js, handling large-scale data flow efficiently.',
-				'Collaborated with designers and backend teams to create seamless user experiences.',
-				'Applied agile Scrum methodology to streamline development cycles and enhance productivity.',
+				'Optimized site performance for their major web-application by reducing page load times by 19%.',
+				'Improved SEO that expanded user reach by 14% while enhancing keyword rankings and organic traffic.',
+				'Created and maintained scalable front-end applications using Next.js.',
+				'Developed and maintained an Express.js backend that managed large-scale data flow.',
+				'Collaborated in an agile team.',
 			],
 			work: [
 				{
@@ -39,10 +39,10 @@ export default function Experiences() {
 			company: 'Rotafox',
 			responsibilities: [
 				'Leading the development of a SaaS web application and native iOS & Android applications to manage shift rotas for healthcare employees.',
-				'Building and maintaining a scalable backend using Spring Boot to handle real-time scheduling and workforce management.',
-				'Implementing secure authentication and user management features to ensure data integrity and privacy.',
-				'Collaborating with a diverse team of developers, designers, and stakeholders to meet business and industry requirements.',
-				'Optimizing application performance and usability for a seamless user experience across multiple platforms.',
+				'Building and maintaining a server using Spring Boot to handle real-time scheduling and employee management.',
+				'Implementing role based authentication and user management features to ensure data integrity and privacy.',
+				'Collaborating with stakeholders to meet business and industry requirements.',
+				'Optimising application performance and usability for an improved user experience across multiple platforms.',
 			],
 			work: [
 				{
@@ -56,9 +56,18 @@ export default function Experiences() {
 			position: 'Android Developer',
 			company: 'GrapeVine Ventures',
 			responsibilities: [
-				'Developed a React Native social media android app having real-time messaging, authentication, and social feeds.',
+				'Contributed to a React Native social media app with real-time messaging, user authentication, and social feeds for both iOS and Android.',
 				'Enhanced project structure, improving team collaboration and workflow efficiency.',
-				'Worked closely with cross-functional teams to align features with business objectives.',
+			],
+		},
+		{
+			id: 4,
+			position: 'Full-stack Developer',
+			company: 'Edureka',
+			link: 'https://www.edureka.co/',
+			responsibilities: [
+				'Built a scalable e-commerce web application using the MERN stack.',
+				'Developed an admin panel that simplified monitoring and administrative workflows.',
 			],
 		},
 	]

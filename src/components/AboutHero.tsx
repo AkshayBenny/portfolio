@@ -23,13 +23,18 @@ export default function AboutHero() {
 				I&apos;m Akshay Benny
 			</h1>
 			<p className='font-robotoMono-regular text-start w-full md:text-center leading-6 pt-4 max-w-3xl'>
-				A software developer with +2 years and hands-on experience in
-				mobile and web application development. Adept at building
-				scalable solutions that enhance user engagement while leveraging
-				agile methodologies. Skilled in SEO, accessibility improvements,
-				and performance optimization to drive measurable results. Always
-				eager to collaborate and solve complex challenges with
-				innovative solutions.
+				I love turning ideas into interactive experiences that feel
+				smooth and intuitive. Whether it&apos;s crafting sleek web
+				interfaces, designing efficient backends, or fine-tuning
+				performance to make things lightning-fast, I enjoy creating
+				products that people love to use. I earned a master's in
+				Software Development from the University of Strathclyde and have
+				worked on everything from social platforms, e-commerce web
+				applications to AI-driven tools, along with Chrome extensions
+				and Figma plugins. I&apos;m always looking for ways to make
+				things more efficient, accessible, and engaging. You&apos;ll
+				find me exploring new tech or brainstorming my next project when
+				I&apos;m not coding.
 			</p>
 			<div className='hidden md:flex absolute left-0 bottom-52'>
 				<ParallaxWrapper>

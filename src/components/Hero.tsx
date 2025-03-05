@@ -4,7 +4,7 @@ import { ParallaxWrapper } from '@/app/animations/ParallaxWrapper'
 
 export default function Hero() {
 	return (
-		<div className='flex flex-col items-start md:items-center justify-center h-[94vh]  mx-auto relative'>
+		<div className='md:relative -top-10 flex flex-col items-start md:items-center justify-center h-[94vh]  mx-auto relative'>
 			<p className='font-robotoMono-regular text-start md:text-center'>
 				Hello World
 			</p>
@@ -12,11 +12,8 @@ export default function Hero() {
 				I&apos;m Akshay Benny
 			</h1>
 			<p className='font-robotoMono-regular leading-6 text-start md:text-center max-w-3xl'>
-				A software developer who loves building mobile and web apps that
-				are fast, user-friendly, and actually useful. I have experience
-				with Next.js, React, ExpressJs, SEO, and performance
-				optimization. Always excited to take on new challenges and
-				create awesome digital experiences!
+				A Software developer with +2 years of experience in Next.js,
+				React Native, Express and Spring Boot
 			</p>
 
 			<div className='hidden md:flex absolute left-0 bottom-52'>
