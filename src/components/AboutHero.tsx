@@ -27,7 +27,7 @@ export default function AboutHero() {
 				smooth and intuitive. Whether it&apos;s crafting sleek web
 				interfaces, designing efficient backends, or fine-tuning
 				performance to make things lightning-fast, I enjoy creating
-				products that people love to use. I earned a master's in
+				products that people love to use. I earned a master&apos;s in
 				Software Development from the University of Strathclyde and have
 				worked on everything from social platforms, e-commerce web
 				applications to AI-driven tools, along with Chrome extensions
