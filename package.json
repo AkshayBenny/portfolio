@@ -14,17 +14,14 @@
 		"embla-carousel-react": "^8.5.2",
 		"gsap": "^3.12.7",
 		"lenis": "^1.1.20",
-		"locomotive-scroll": "^4.1.4",
 		"next": "15.1.7",
-		"next-view-transitions": "^0.3.4",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"scrolltrigger": "^1.0.1",
-		"split-type": "^0.3.4"
+		"scrolltrigger": "^1.0.1"
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "^3",
-		"@types/locomotive-scroll": "^4.1.4",
+		"@types/gsap": "^3.0.0",
 		"@types/node": "^20",
 		"@types/react": "^18.0.0",
 		"@types/react-dom": "^18.0.0",
