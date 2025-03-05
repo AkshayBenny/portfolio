@@ -20,10 +20,12 @@
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
 		"scrolltrigger": "^1.0.1",
-		"split-type": "^0.3.4"
+		"split-type": "^0.3.4",
+		"vanilla-infinite-marquee": "^1.0.12"
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "^3",
+		"@types/gsap": "^3.0.0",
 		"@types/locomotive-scroll": "^4.1.4",
 		"@types/node": "^20",
 		"@types/react": "^18.0.0",
