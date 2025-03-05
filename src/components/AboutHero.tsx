@@ -41,7 +41,7 @@ export default function AboutHero() {
 					<FlutteringSVG />
 				</ParallaxWrapper>
 			</div>
-			<div className='absolute z-0 right-[-60px] md:right-0 top-96 md:top-64'>
+			<div className='absolute z-0 right-[-60px] md:right-0 top-64 scale-75 md:scale-100'>
 				<ParallaxWrapper>
 					<FlutteringSVG type='right' />
 				</ParallaxWrapper>

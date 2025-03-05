@@ -160,6 +160,15 @@ const Navbar: React.FC = () => {
 								/>
 							</ContactButton>
 						</li>
+						<li className='w-full flex items-center'>
+							<a
+								onClick={() => setIsMenuOpen(false)}
+								className='w-full md:w-fit text-center'
+								href='https://github.com/AkshayBenny'
+								target='_blank'>
+								GitHub
+							</a>
+						</li>
 						<li>
 							<a
 								href='/Akshay Benny.pdf'

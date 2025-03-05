@@ -22,7 +22,7 @@ export default function Footer() {
 						<a
 							href='https://github.com/AkshayBenny'
 							target='_blank'>
-							Github
+							GitHub
 						</a>
 					</li>
 					<li>
