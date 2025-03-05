@@ -30,7 +30,7 @@
   /* For Roboto */
   .font-roboto-extrabold {
     font-family: var(--font-roboto);
-    font-size: 48px;
+    font-size: 30px;
     font-weight: 800;
 
     @screen md {
