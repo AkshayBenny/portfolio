@@ -93,17 +93,17 @@ const Navbar: React.FC = () => {
 		return () => window.removeEventListener('scroll', handleScroll)
 	}, [])
 
-	// Optionally, if you want to also close the mobile menu on scroll
-	useEffect(() => {
-		if (!isMenuOpen) return
-		const onScrollClose = () => {
-			if (window.innerWidth < 768) {
-				setIsMenuOpen(false)
-			}
-		}
-		window.addEventListener('scroll', onScrollClose)
-		return () => window.removeEventListener('scroll', onScrollClose)
-	}, [isMenuOpen])
+	// // Optionally, if you want to also close the mobile menu on scroll
+	// useEffect(() => {
+	// 	if (!isMenuOpen) return
+	// 	const onScrollClose = () => {
+	// 		if (window.innerWidth < 768) {
+	// 			setIsMenuOpen(false)
+	// 		}
+	// 	}
+	// 	window.addEventListener('scroll', onScrollClose)
+	// 	return () => window.removeEventListener('scroll', onScrollClose)
+	// }, [isMenuOpen])
 
 	return (
 		<nav

@@ -90,7 +90,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body
-				className={`${roboto.variable} ${robotoMono.variable} antialiased text-lightText selection:bg-lightText selection:text-[#0A0A0A]`}>
+				className={`${roboto.variable} ${robotoMono.variable}  antialiased text-lightText selection:bg-lightText selection:text-[#0A0A0A]`}>
 				<ClientProviders>{children}</ClientProviders>
 			</body>
 		</html>
