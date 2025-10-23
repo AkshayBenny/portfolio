@@ -6,6 +6,27 @@ import Image from 'next/image'
 export default function Experiences() {
 	const experiences: ExperienceData[] = [
 		{
+			id: 0,
+			position: 'Software Developer',
+			link: 'https://www.kewordal.com',
+			company: 'Kewordal',
+			homepage: 'https://www.kewordal.com',
+			// period: 'Mar 2025 – Present',
+			responsibilities: [
+				'Developed and maintained responsive front-end pages using React and SCSS.',
+				'Maintained and optimized a Spring Boot backend, ensuring reliable data flow and performance.',
+				'Implemented a CI/CD pipeline for the Spring Boot service and deployed applications to AWS.',
+				'Integrated analytics to monitor user engagement and site performance.',
+				'Led the development and improvement of the site’s admin panel, managing a small team of developers and designers.',
+			],
+			work: [
+				{
+					src: '/experience/kewordal/1.png',
+					href: 'https://www.kewordal.com',
+				},
+			],
+		},
+		{
 			id: 1,
 			position: 'Software Developer',
 			link: 'https://www.lascade.com',
@@ -33,24 +54,7 @@ export default function Experiences() {
 				},
 			],
 		},
-		{
-			id: 3,
-			position: 'Software Developer',
-			company: 'Rotafox',
-			responsibilities: [
-				'Leading the development of a SaaS web application and native iOS & Android applications to manage shift rotas for healthcare employees.',
-				'Building and maintaining a server using Spring Boot to handle real-time scheduling and employee management.',
-				'Implementing role based authentication and user management features to ensure data integrity and privacy.',
-				'Collaborating with stakeholders to meet business and industry requirements.',
-				'Optimising application performance and usability for an improved user experience across multiple platforms.',
-			],
-			work: [
-				{
-					src: '/experience/rotafox/1.png',
-					href: '',
-				},
-			],
-		},
+
 		{
 			id: 2,
 			position: 'Android Developer',

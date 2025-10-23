@@ -4,10 +4,34 @@ import Project from './Project'
 export default function Projects() {
 	const projects: ProjectData[] = [
 		{
+			id: 0,
+			title: 'Beeroam',
+			description:
+				'An AI travel planner that helps users create and customize trips with smart suggestions and collaborative planning. The Pro version adds automated itineraries, route optimization, and other advanced travel tools to make planning effortless.',
+			slideImages: [
+				'/project/beeroam/cover.png',
+				'/project/beeroam/1.png',
+				'/project/beeroam/2.png',
+				'/project/beeroam/3.png',
+				'/project/beeroam/4.png',
+			],
+			stack: [
+				'Next.js',
+				'Tailwind',
+				'Zustand',
+				'Drizzle ORM',
+				'NeonDB',
+				'Sanity CMS',
+				'Stripe',
+				'Google API',
+			],
+			viewLiveUrl: 'https://beeroam.app',
+		},
+		{
 			id: 1,
 			title: 'Rent80',
 			description:
-				'This is a car rental platform developed during my time at Lascade. Rent80 has thousands of pre-rendered URLs that improves search engine visibility and provide a better browsing experience. It is fully responsive and optimized for performance, making bookings quick and hassle-free.',
+				'A car rental platform developed at Lascade that delivers a fast, SEO-optimized browsing experience with thousands of pre-rendered pages. Designed to be fully responsive and efficient for seamless online bookings.',
 			slideImages: [
 				'/project/rent80/cover.webp',
 				'/project/rent80/1.webp',
@@ -19,11 +43,12 @@ export default function Projects() {
 			stack: ['Next.js', 'Tailwind'],
 			viewLiveUrl: 'https://www.rent80.com',
 		},
+
 		{
-			id: 2,
+			id: 3,
 			title: 'Job Seeker',
 			description:
-				'Job Seeker is a Chrome extension that simplifies job search by allowing users to save job details—such as company name, job title, and job URL—with a single click. Users can create and name spreadsheets within the interface to organize their applications. This extension also has Google authentication, making signing in much more convenient.',
+				'A Chrome extension that lets users save and organize job listings in a single click. Integrated with Google services for sign-in and automated spreadsheet management.',
 			slideImages: [
 				'/project/job-seeker/cover.webp',
 				'/project/job-seeker/1.webp',
@@ -37,10 +62,10 @@ export default function Projects() {
 				'https://chromewebstore.google.com/detail/mkmlabhmaeaknoichmpkoonbdkmkpbld?utm_source=item-share-cp',
 		},
 		{
-			id: 3,
+			id: 4,
 			title: 'Doubtss',
 			description:
-				"Doubts is an AI-driven chatbot designed to assist aspirants preparing for the Union Public Service Commission (UPSC) examination, one of India's most prestigious and competitive tests. It provides in-depth explanations, answers complex queries, and offers personalized study support, making the learning process more interactive and efficient.",
+				'An AI-powered chatbot that helps UPSC aspirants learn more effectively through interactive explanations and tailored study support. Combines conversational AI with real-time data and personalized insights.',
 			slideImages: [
 				'/project/doubtss/cover.webp',
 				'/project/doubtss/1.webp',
