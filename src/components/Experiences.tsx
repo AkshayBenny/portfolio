@@ -16,8 +16,9 @@ export default function Experiences() {
 				'Developed and maintained responsive front-end pages using React and SCSS.',
 				'Maintained and optimized a Spring Boot backend, ensuring reliable data flow and performance.',
 				'Implemented a CI/CD pipeline for the Spring Boot service and deployed applications to AWS.',
-				'Integrated analytics to monitor user engagement and site performance.',
-				'Led the development and improvement of the site’s admin panel, managing a small team of developers and designers.',
+				'Built and led development of the admin panel using Next.js and Tailwind, managing a small team of developers and designers.',
+				'Integrated the PostHog API to fetch and visualize analytics data directly within the admin dashboard.',
+				'Collaborated within a diverse, international team and managed development tasks using ClickUp for project coordination.',
 			],
 			work: [
 				{
@@ -33,11 +34,11 @@ export default function Experiences() {
 			company: 'Lascade',
 			homepage: 'https://www.lascade.com',
 			responsibilities: [
-				'Optimized site performance for their major web-application by reducing page load times by 19%.',
-				'Improved SEO that expanded user reach by 14% while enhancing keyword rankings and organic traffic.',
+				'Optimized site performance for a major web application, reducing page load times by 19%.',
+				'Enhanced SEO, increasing organic reach by 14% and improving keyword visibility.',
 				'Created and maintained scalable front-end applications using Next.js.',
-				'Developed and maintained an Express.js backend that managed large-scale data flow.',
-				'Collaborated in an agile team.',
+				'Developed and maintained an Express.js backend to manage large-scale data flow.',
+				'Worked in an agile Scrum team using Jira for sprint planning, issue tracking, and project management.',
 			],
 			work: [
 				{
