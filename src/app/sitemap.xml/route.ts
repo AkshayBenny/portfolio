@@ -12,7 +12,7 @@ function generateSiteMap(pages: string[]): string {
           <url>
             <loc>${EXTERNAL_DATA_URL}/${page}</loc>
           </url>
-        `
+        `,
 		)
 		.join('')}
   </urlset>`
@@ -20,7 +20,7 @@ function generateSiteMap(pages: string[]): string {
 
 export async function GET(_request: Request): Promise<Response> {
 	// -------------------- MAKE THIS DYNAMIC LATER --------------------
-	const pages = ['about']
+	const pages = ['about', 'blogs']
 	const sitemap = generateSiteMap(pages)
 
 	return new Response(sitemap, {
