@@ -1,5 +1,4 @@
 import FadeInWrapper from '@/app/animations/FadeInWrapper'
-import { AnimatedText } from '@/app/animations/AnimateText'
 import { BlogData } from '@/types/blog' // Adjust path as needed
 import Button from '@/components/Button'
 
@@ -7,39 +6,30 @@ export default function Blogs() {
 	const blogs: BlogData[] = [
 		{
 			id: 0,
-			title: 'Understanding React Server Components',
+			title: 'Content Moderation With React',
 			excerpt:
-				'A deep dive into how Server Components change the way we build Next.js applications, offering better performance and smaller bundle sizes.',
-			date: 'Oct 12, 2025',
-			readTime: '5 min read',
-			url: 'https://medium.com/@yourusername/react-server-components',
+				'Learn how to secure React forms against offensive user-generated content using a high-performance, zero-dependency client-side architecture alongside React Hook Form.',
+			date: 'May 27, 2026',
+			readTime: '3 min read',
+			url: 'https://medium.com/@akshaybennyajh/building-a-secure-react-profanity-filter-e7ad834c715f',
 		},
 		{
 			id: 1,
-			title: 'Optimizing Spring Boot Backends for Scale',
+			title: 'Next.js Content Moderation: Building a Production-Ready Filter with React Hook Form and Edge Middleware',
 			excerpt:
-				'Practical tips and architectural patterns for ensuring your Spring Boot microservices can handle high traffic efficiently.',
-			date: 'Aug 04, 2025',
-			readTime: '8 min read',
-			url: 'https://medium.com/@yourusername/spring-boot-scale',
-		},
-		{
-			id: 2,
-			title: 'Why I Prefer Drizzle ORM over Prisma',
-			excerpt:
-				'Comparing the two popular TypeScript ORMs and why Drizzle has become my go-to choice for edge-compatible database management.',
-			date: 'Jun 22, 2025',
-			readTime: '6 min read',
-			url: 'https://medium.com/@yourusername/drizzle-vs-prisma',
+				'Discover how to implement comprehensive multi-language content moderation using Next.js Edge Middleware and Server Actions, keeping your client bundle entirely clean.',
+			date: 'June 27, 2026',
+			readTime: '5 min read',
+			url: 'https://medium.com/@akshaybennyajh/next-js-content-moderation-building-a-production-ready-filter-with-react-hook-form-and-edge-ec6faf8ca97d?postPublishedType=repub',
 		},
 	]
 
 	return (
-		<div className='w-full md:mt-80'>
+		<div className='w-full md:mt-80 pt-40'>
 			<FadeInWrapper>
 				<h4 className='font-roboto-extrabold'>My Articles</h4>
 			</FadeInWrapper>
-			<div className='border-t border-[#F5F5F5] border-opacity-10 mt-5 pt-4 md:pt-10'>
+			<div className='md:border-t border-[#F5F5F5] border-opacity-10 mt-5 pt-4 md:pt-10'>
 				{/* Desktop Layout: Table */}
 				<div className='hidden md:block'>
 					<table className='w-full table-auto border-separate border-spacing-y-10'>
@@ -58,11 +48,13 @@ export default function Blogs() {
 									</td>
 									<td className='w-2/3 p-3 align-top'>
 										<h3 className='font-robotoMono-bold text-xl mb-4'>
-											<AnimatedText
+											<a
 												href={blog.url}
-												text={blog.title}
-												type='dark'
-											/>
+												target='_blank'
+												rel='noopener noreferrer'
+												className='relative inline-block'>
+												{blog.title}
+											</a>
 										</h3>
 										<p className='text-lightText mb-6 max-w-2xl'>
 											{blog.excerpt}
@@ -94,7 +86,13 @@ export default function Blogs() {
 									<span>{blog.readTime}</span>
 								</div>
 								<h3 className='font-robotoMono-bold text-lg pt-4 pb-3'>
-									{blog.title}
+									<a
+										href={blog.url}
+										target='_blank'
+										rel='noopener noreferrer'
+										className='relative inline-block'>
+										{blog.title}
+									</a>
 								</h3>
 								<p className='text-lightText mb-6 text-sm leading-relaxed'>
 									{blog.excerpt}
