@@ -152,6 +152,14 @@ const Navbar: React.FC = () => {
 							/>
 						</li>
 						<li>
+							<TransitionLink
+								href='/blogs'
+								label='Blogs'
+								className='w-full md:w-fit'
+								onClick={() => setIsMenuOpen(false)}
+							/>
+						</li>
+						<li>
 							<ContactButton>
 								<TransitionLink
 									label='Contact'

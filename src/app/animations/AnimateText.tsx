@@ -22,7 +22,7 @@ export function AnimatedText({
 
 	const content = (
 		<span
-			className={`relative z-20 px-2 ${baseTextClasses} ${hoverTextClasses}`}>
+			className={`relative z-20 ${baseTextClasses} ${hoverTextClasses}`}>
 			{text}
 		</span>
 	)
@@ -35,7 +35,7 @@ export function AnimatedText({
 				className={`group relative inline-block overflow-hidden ${className}`}>
 				{content}
 				<span
-					className={`${overlayClasses} px-2`}
+					className={`${overlayClasses}`}
 					style={overlayStyle}></span>
 			</p>
 		</a>
